@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScrapeFlow | Automated Competitor Intelligence & ETL Pipeline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090e17;
+      --panel: #0f172a;
+      --card: rgba(30, 41, 59, 0.7);
+      --border: rgba(255, 255, 255, 0.08);
+      --primary: #0ea5e9;
+      --primary-hover: #0284c7;
+      --accent-green: #10b981;
+      --accent-amber: #f59e0b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding-bottom: 50px;
+    }
+
+    header {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 0 16px rgba(14, 165, 233, 0.3);
+    }
+
+    .container {
+      max-width: 1350px;
+      margin: 28px auto;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* KPI Cards */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+    }
+
+    .kpi-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .kpi-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .kpi-val {
+      font-size: 1.8rem;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      margin-top: 4px;
+    }
+
+    /* Terminal Console Card */
+    .terminal-card {
+      background: #060911;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .terminal-header {
+      background: rgba(255, 255, 255, 0.03);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .btn-crawl {
+      background: linear-gradient(135deg, #0ea5e9, #0284c7);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-crawl:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .terminal-window {
+      padding: 16px 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      color: #38bdf8;
+      height: 160px;
+      overflow-y: auto;
+      line-height: 1.6;
+      background: #05070d;
+    }
+
+    /* Products Section */
+    .catalog-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      backdrop-filter: blur(10px);
+    }
+
+    .filter-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .category-pills {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+    }
+
+    .pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: #cbd5e1;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .pill.active, .pill:hover {
+      background: rgba(14, 165, 233, 0.2);
+      border-color: var(--primary);
+      color: #38bdf8;
+    }
+
+    .btn-export {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-export:hover {
+      border-color: var(--primary);
+      background: rgba(14, 165, 233, 0.1);
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.74rem;
+    }
+
+    td {
+      padding: 14px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .competitor-tag {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      color: #94a3b8;
+    }
+
+    .discount-tag {
+      background: rgba(16, 185, 129, 0.12);
+      color: var(--accent-green);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-left: 6px;
+    }
+
+    .in-stock {
+      color: var(--accent-green);
+      font-weight: 600;
+      font-size: 0.78rem;
+    }
+
+    .out-stock {
+      color: #f87171;
+      font-weight: 600;
+      font-size: 0.78rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-icon">🛒</div>
+      <div>
+        <div style="font-weight:700; font-size:1.15rem;">ScrapeFlow</div>
+        <div style="font-size:0.75rem; color:var(--muted);">Automated E-Commerce & Competitor Intelligence Pipeline</div>
+      </div>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center;">
+      <span style="font-size:0.78rem; color:#38bdf8; background:rgba(14,165,233,0.1); border:1px solid rgba(14,165,233,0.3); padding:4px 12px; border-radius:20px;">Anti-Bot Headers Active</span>
+      <a href="/docs" target="_blank" style="color: var(--muted); text-decoration: none; font-size: 0.85rem; border: 1px solid var(--border); padding: 5px 12px; border-radius: 8px;">API Specs</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Top KPIs -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Active Products Tracked</div>
+        <div class="kpi-val" style="color:#38bdf8;" id="kpi-products">32</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Competitors Monitored</div>
+        <div class="kpi-val" id="kpi-competitors">4</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Average Market Discount</div>
+        <div class="kpi-val" style="color:var(--accent-green);" id="kpi-discount">8.4%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Detected Stockouts</div>
+        <div class="kpi-val" style="color:var(--accent-amber);" id="kpi-stockouts">3 Items</div>
+      </div>
+    </div>
+
+    <!-- Terminal Runner -->
+    <div class="terminal-card">
+      <div class="terminal-header">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div class="terminal-dots">
+            <div class="dot" style="background:#ef4444;"></div>
+            <div class="dot" style="background:#f59e0b;"></div>
+            <div class="dot" style="background:#10b981;"></div>
+          </div>
+          <span style="font-family:'JetBrains Mono'; font-size:0.8rem; color:var(--muted);">crawler_session.py [LIVE CONSOLE]</span>
+        </div>
+        <button class="btn-crawl" id="btn-crawl" onclick="triggerCrawl()">
+          <span>⚡ Trigger Live Crawl Cycle</span>
+        </button>
+      </div>
+      <div class="terminal-window" id="terminal-window">
+        <div>[SYSTEM] Pipeline ready. Click "Trigger Live Crawl Cycle" to extract latest competitor prices.</div>
+      </div>
+    </div>
+
+    <!-- Filter & Table -->
+    <div class="catalog-card">
+      <div class="filter-bar">
+        <div class="category-pills" id="category-pills">
+          <div class="pill active" onclick="filterCategory(null, this)">All Categories</div>
+          <div class="pill" onclick="filterCategory('Laptops', this)">Laptops</div>
+          <div class="pill" onclick="filterCategory('Smartphones', this)">Smartphones</div>
+          <div class="pill" onclick="filterCategory('Audio', this)">Audio</div>
+          <div class="pill" onclick="filterCategory('Monitors', this)">Monitors</div>
+          <div class="pill" onclick="filterCategory('PC Hardware', this)">PC Hardware</div>
+        </div>
+
+        <a class="btn-export" href="/api/export/csv" target="_blank">
+          <span>📥 Export Clean CSV</span>
+        </a>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>SKU</th>
+            <th>Product Title</th>
+            <th>Competitor</th>
+            <th>Current Price</th>
+            <th>Catalog Base</th>
+            <th>Stock Status</th>
+            <th>Rating</th>
+            <th>Updated</th>
+          </tr>
+        </thead>
+        <tbody id="products-table">
+          <!-- Dynamically populated -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    let currentCategory = null;
+
+    async function loadInsights() {
+      try {
+        const res = await fetch('/api/insights');
+        const data = await res.json();
+        document.getElementById('kpi-products').innerText = data.total_products;
+        document.getElementById('kpi-competitors').innerText = data.competitors_monitored;
+        document.getElementById('kpi-discount').innerText = data.avg_discount_pct + '%';
+        document.getElementById('kpi-stockouts').innerText = data.out_of_stock_count + ' Items';
+      } catch (e) {
+        console.warn("Insights fetch error:", e);
+      }
+    }
+
+    async function loadProducts() {
+      try {
+        let url = '/api/products';
+        if (currentCategory) url += `?category=${encodeURIComponent(currentCategory)}`;
+        const res = await fetch(url);
+        const data = await res.json();
+        const tbody = document.getElementById('products-table');
+        tbody.innerHTML = '';
+
+        data.products.forEach(p => {
+          const row = document.createElement('tr');
+          const disc = p.discount_percentage > 0 ? `<span class="discount-tag">-${p.discount_percentage}%</span>` : '';
+          const stock = p.in_stock ? `<span class="in-stock">● In Stock</span>` : `<span class="out-stock">✕ Out of Stock</span>`;
+          row.innerHTML = `
+            <td style="font-family:'JetBrains Mono'; font-weight:600; color:#94a3b8;">${p.sku}</td>
+            <td style="font-weight:600; color:#f1f5f9;">${p.title}</td>
+            <td><span class="competitor-tag">${p.competitor}</span></td>
+            <td style="font-family:'JetBrains Mono'; font-weight:700; color:#38bdf8;">$${p.current_price.toFixed(2)} ${disc}</td>
+            <td style="font-family:'JetBrains Mono'; color:#64748b; text-decoration: ${p.discount_percentage > 0 ? 'line-through' : 'none'};">$${p.original_price.toFixed(2)}</td>
+            <td>${stock}</td>
+            <td style="font-family:'JetBrains Mono'; color:#fbbf24;">★ ${p.rating}</td>
+            <td style="font-size:0.75rem; color:#64748b;">${p.last_scraped_at.split(' ')[1]}</td>
+          `;
+          tbody.appendChild(row);
+        });
+      } catch (e) {
+        console.warn("Products load error:", e);
+      }
+    }
+
+    async function triggerCrawl() {
+      const btn = document.getElementById('btn-crawl');
+      const win = document.getElementById('terminal-window');
+      btn.disabled = true;
+      btn.innerHTML = '<span>⏳ Crawling Targets...</span>';
+
+      win.innerHTML = '<div style="color:#f59e0b;">[INFO] Triggering multi-competitor extraction cycle...</div>';
+
+      try {
+        const res = await fetch('/api/scrape/trigger', { method: 'POST' });
+        const data = await res.json();
+
+        win.innerHTML = '';
+        data.logs.forEach(l => {
+          const div = document.createElement('div');
+          div.innerText = l;
+          win.appendChild(div);
+        });
+        win.scrollTop = win.scrollHeight;
+
+        loadInsights();
+        loadProducts();
+      } catch (err) {
+        win.innerHTML += '<div style="color:#ef4444;">[ERROR] Crawl request failed. Check server status.</div>';
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<span>⚡ Trigger Live Crawl Cycle</span>';
+      }
+    }
+
+    function filterCategory(cat, el) {
+      currentCategory = cat;
+      document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+      loadProducts();
+    }
+
+    window.onload = () => {
+      loadInsights();
+      loadProducts();
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,1201 @@
+customer_id,company_name,industry,contract,tenure_months,monthly_charges,support_tickets,login_freq_weekly,usage_drop_pct,nps_score,payment_method,churn
+CUST-1001,Acme-Healthcare-1,Cybersecurity,Month-to-Month,18,281.65,2,7,69,2,Electronic Check,1
+CUST-1002,Acme-E-Commerce-2,Fintech,Month-to-Month,15,529.09,0,13,83,9,Credit Card,1
+CUST-1003,Acme-EdTech-3,EdTech,One Year,11,712.23,5,18,19,4,Credit Card,1
+CUST-1004,Acme-Logistics-4,E-Commerce,Month-to-Month,7,390.03,5,17,5,8,Bank Transfer,1
+CUST-1005,Acme-Cybersecurity-5,EdTech,Month-to-Month,41,636.59,5,13,8,1,Bank Transfer,1
+CUST-1006,Acme-DevOps-6,DevOps,Month-to-Month,15,872.16,6,18,58,6,Credit Card,1
+CUST-1007,Acme-Fintech-7,E-Commerce,Month-to-Month,45,938.82,10,5,77,3,Bank Transfer,1
+CUST-1008,Acme-Healthcare-8,Healthcare,Month-to-Month,18,989.05,10,15,41,1,Bank Transfer,1
+CUST-1009,Acme-E-Commerce-9,Fintech,One Year,18,111.88,9,21,27,8,Bank Transfer,0
+CUST-1010,Acme-EdTech-10,Cybersecurity,Month-to-Month,9,283.3,8,35,33,10,Bank Transfer,1
+CUST-1011,Acme-Logistics-11,Logistics,Month-to-Month,9,533.05,1,4,14,3,Credit Card,1
+CUST-1012,Acme-Cybersecurity-12,DevOps,One Year,5,414.53,9,30,67,5,Electronic Check,1
+CUST-1013,Acme-DevOps-13,DevOps,Two Year,47,157.82,8,18,82,6,Electronic Check,0
+CUST-1014,Acme-Fintech-14,EdTech,Month-to-Month,47,881.06,4,33,22,9,Credit Card,0
+CUST-1015,Acme-Healthcare-15,DevOps,One Year,33,627.52,2,24,20,9,Electronic Check,0
+CUST-1016,Acme-E-Commerce-16,Logistics,Two Year,21,513.18,1,24,39,4,Electronic Check,0
+CUST-1017,Acme-EdTech-17,Logistics,Two Year,47,510.69,1,35,16,3,Credit Card,0
+CUST-1018,Acme-Logistics-18,Logistics,Month-to-Month,39,450.98,3,35,25,5,Electronic Check,0
+CUST-1019,Acme-Cybersecurity-19,Cybersecurity,One Year,34,477.91,3,15,8,6,Bank Transfer,0
+CUST-1020,Acme-DevOps-20,Logistics,Month-to-Month,1,116.44,10,4,29,2,Credit Card,1
+CUST-1021,Acme-Fintech-21,DevOps,Month-to-Month,16,313.55,7,14,69,3,Electronic Check,1
+CUST-1022,Acme-Healthcare-22,Logistics,One Year,31,816.12,3,7,12,7,Credit Card,0
+CUST-1023,Acme-E-Commerce-23,EdTech,Month-to-Month,4,688.7,10,7,7,7,Electronic Check,1
+CUST-1024,Acme-EdTech-24,DevOps,Two Year,13,229.7,7,9,54,3,Credit Card,1
+CUST-1025,Acme-Logistics-25,Healthcare,Two Year,29,816.62,8,7,6,9,Credit Card,0
+CUST-1026,Acme-Cybersecurity-26,Fintech,Two Year,11,435.09,7,14,51,1,Credit Card,1
+CUST-1027,Acme-DevOps-27,Fintech,Two Year,30,319.99,8,32,19,4,Bank Transfer,0
+CUST-1028,Acme-Fintech-28,Fintech,One Year,4,759.58,0,4,74,8,Electronic Check,1
+CUST-1029,Acme-Healthcare-29,DevOps,Month-to-Month,33,125.11,2,5,76,2,Credit Card,1
+CUST-1030,Acme-E-Commerce-30,Healthcare,Month-to-Month,16,598.97,0,6,53,10,Electronic Check,1
+CUST-1031,Acme-EdTech-31,E-Commerce,Two Year,43,729.38,3,17,50,3,Credit Card,0
+CUST-1032,Acme-Logistics-32,E-Commerce,Month-to-Month,1,484.37,9,7,9,9,Credit Card,1
+CUST-1033,Acme-Cybersecurity-33,E-Commerce,Month-to-Month,5,884.31,5,19,20,8,Bank Transfer,1
+CUST-1034,Acme-DevOps-34,Cybersecurity,Month-to-Month,34,56.43,8,20,84,2,Electronic Check,1
+CUST-1035,Acme-Fintech-35,Healthcare,Month-to-Month,48,574.56,4,19,77,4,Credit Card,1
+CUST-1036,Acme-Healthcare-36,Healthcare,One Year,33,513.11,0,6,81,7,Bank Transfer,0
+CUST-1037,Acme-E-Commerce-37,Fintech,Month-to-Month,41,979.81,2,29,70,7,Credit Card,1
+CUST-1038,Acme-EdTech-38,Fintech,Month-to-Month,10,567.31,5,10,55,3,Electronic Check,1
+CUST-1039,Acme-Logistics-39,E-Commerce,Two Year,23,248.57,3,7,45,9,Credit Card,0
+CUST-1040,Acme-Cybersecurity-40,EdTech,Two Year,10,928.48,3,11,22,7,Electronic Check,0
+CUST-1041,Acme-DevOps-41,Cybersecurity,Two Year,43,869.86,3,18,20,2,Bank Transfer,0
+CUST-1042,Acme-Fintech-42,Fintech,Two Year,13,824.76,7,23,39,4,Credit Card,0
+CUST-1043,Acme-Healthcare-43,Cybersecurity,Month-to-Month,18,870.14,4,23,82,9,Bank Transfer,1
+CUST-1044,Acme-E-Commerce-44,DevOps,Month-to-Month,8,882.19,4,12,74,5,Credit Card,1
+CUST-1045,Acme-EdTech-45,Logistics,Month-to-Month,21,463.57,8,8,49,10,Electronic Check,1
+CUST-1046,Acme-Logistics-46,Fintech,One Year,34,928.3,8,13,46,7,Credit Card,1
+CUST-1047,Acme-Cybersecurity-47,Cybersecurity,Two Year,21,679.22,1,20,64,5,Electronic Check,0
+CUST-1048,Acme-DevOps-48,E-Commerce,Month-to-Month,36,169.92,6,25,22,10,Bank Transfer,1
+CUST-1049,Acme-Fintech-49,EdTech,Month-to-Month,20,321.57,6,21,59,8,Credit Card,1
+CUST-1050,Acme-Healthcare-50,Healthcare,Month-to-Month,11,674.91,4,33,84,10,Electronic Check,1
+CUST-1051,Acme-E-Commerce-51,DevOps,Two Year,44,343.9,3,10,3,1,Credit Card,0
+CUST-1052,Acme-EdTech-52,EdTech,One Year,30,442.72,10,13,49,8,Credit Card,1
+CUST-1053,Acme-Logistics-53,Healthcare,One Year,7,788.5,3,12,66,8,Credit Card,0
+CUST-1054,Acme-Cybersecurity-54,Healthcare,Two Year,30,175.67,7,34,71,10,Credit Card,0
+CUST-1055,Acme-DevOps-55,DevOps,Two Year,47,896.42,6,29,20,8,Electronic Check,0
+CUST-1056,Acme-Fintech-56,DevOps,Month-to-Month,18,776.52,8,32,80,4,Electronic Check,1
+CUST-1057,Acme-Healthcare-57,Fintech,One Year,18,368.06,8,6,17,3,Credit Card,1
+CUST-1058,Acme-E-Commerce-58,Cybersecurity,Month-to-Month,5,443.12,5,35,59,7,Credit Card,1
+CUST-1059,Acme-EdTech-59,DevOps,Month-to-Month,45,67.56,9,25,61,1,Electronic Check,1
+CUST-1060,Acme-Logistics-60,E-Commerce,One Year,35,759.14,8,15,62,4,Bank Transfer,1
+CUST-1061,Acme-Cybersecurity-61,EdTech,Month-to-Month,43,694.18,6,11,59,3,Bank Transfer,1
+CUST-1062,Acme-DevOps-62,Logistics,Month-to-Month,38,585.17,0,6,82,7,Bank Transfer,1
+CUST-1063,Acme-Fintech-63,EdTech,Month-to-Month,25,359.99,7,21,43,7,Bank Transfer,1
+CUST-1064,Acme-Healthcare-64,DevOps,Month-to-Month,31,67.41,8,4,44,4,Credit Card,1
+CUST-1065,Acme-E-Commerce-65,DevOps,Two Year,2,951.13,3,2,79,3,Credit Card,1
+CUST-1066,Acme-EdTech-66,EdTech,One Year,14,490.78,4,24,21,10,Electronic Check,0
+CUST-1067,Acme-Logistics-67,Cybersecurity,One Year,20,151.69,0,20,73,7,Credit Card,0
+CUST-1068,Acme-Cybersecurity-68,Cybersecurity,Month-to-Month,45,838.04,3,7,38,10,Electronic Check,0
+CUST-1069,Acme-DevOps-69,DevOps,Two Year,23,555.11,10,24,8,9,Credit Card,0
+CUST-1070,Acme-Fintech-70,Fintech,One Year,7,460.85,5,30,19,7,Bank Transfer,0
+CUST-1071,Acme-Healthcare-71,Logistics,Two Year,40,816.79,8,31,59,7,Bank Transfer,1
+CUST-1072,Acme-E-Commerce-72,Logistics,Month-to-Month,6,313.98,7,16,59,10,Credit Card,1
+CUST-1073,Acme-EdTech-73,EdTech,Month-to-Month,21,221.75,3,23,33,6,Bank Transfer,0
+CUST-1074,Acme-Logistics-74,Logistics,One Year,36,58.64,3,6,30,7,Bank Transfer,0
+CUST-1075,Acme-Cybersecurity-75,DevOps,Month-to-Month,42,725.25,7,2,11,5,Bank Transfer,1
+CUST-1076,Acme-DevOps-76,Cybersecurity,Month-to-Month,38,399.57,8,34,44,7,Electronic Check,1
+CUST-1077,Acme-Fintech-77,Logistics,Month-to-Month,30,306.37,4,15,15,4,Electronic Check,1
+CUST-1078,Acme-Healthcare-78,Cybersecurity,Month-to-Month,12,230.96,7,18,75,9,Electronic Check,1
+CUST-1079,Acme-E-Commerce-79,Fintech,One Year,15,391.84,4,1,68,3,Bank Transfer,1
+CUST-1080,Acme-EdTech-80,Fintech,One Year,9,654.98,7,7,1,10,Electronic Check,0
+CUST-1081,Acme-Logistics-81,EdTech,Month-to-Month,4,288.85,7,8,8,7,Credit Card,1
+CUST-1082,Acme-Cybersecurity-82,Logistics,One Year,10,190.74,9,20,10,4,Credit Card,1
+CUST-1083,Acme-DevOps-83,DevOps,Month-to-Month,40,263.4,8,25,57,8,Electronic Check,1
+CUST-1084,Acme-Fintech-84,Logistics,Two Year,37,638.98,9,7,26,4,Bank Transfer,0
+CUST-1085,Acme-Healthcare-85,Fintech,Month-to-Month,36,120.31,0,27,57,10,Credit Card,1
+CUST-1086,Acme-E-Commerce-86,Fintech,Month-to-Month,19,716.84,7,5,29,5,Electronic Check,1
+CUST-1087,Acme-EdTech-87,Cybersecurity,One Year,28,158.04,3,10,34,3,Credit Card,0
+CUST-1088,Acme-Logistics-88,Healthcare,One Year,48,832.03,4,29,15,8,Electronic Check,0
+CUST-1089,Acme-Cybersecurity-89,Cybersecurity,Month-to-Month,33,561.98,7,6,76,1,Bank Transfer,1
+CUST-1090,Acme-DevOps-90,Cybersecurity,Month-to-Month,2,135.76,10,2,34,10,Bank Transfer,1
+CUST-1091,Acme-Fintech-91,DevOps,Month-to-Month,42,469.12,4,12,74,7,Electronic Check,1
+CUST-1092,Acme-Healthcare-92,EdTech,Two Year,23,436.93,5,7,20,6,Bank Transfer,0
+CUST-1093,Acme-E-Commerce-93,EdTech,Month-to-Month,36,83.86,1,21,32,6,Bank Transfer,0
+CUST-1094,Acme-EdTech-94,DevOps,Month-to-Month,1,673.78,8,30,52,1,Electronic Check,1
+CUST-1095,Acme-Logistics-95,E-Commerce,One Year,41,468.94,0,14,34,9,Bank Transfer,0
+CUST-1096,Acme-Cybersecurity-96,E-Commerce,Month-to-Month,32,164.35,10,16,20,5,Electronic Check,1
+CUST-1097,Acme-DevOps-97,Logistics,Month-to-Month,8,487.38,1,10,63,5,Credit Card,1
+CUST-1098,Acme-Fintech-98,E-Commerce,Month-to-Month,31,280.54,8,10,49,4,Bank Transfer,1
+CUST-1099,Acme-Healthcare-99,Logistics,One Year,5,311.44,6,22,64,5,Credit Card,1
+CUST-1100,Acme-E-Commerce-100,E-Commerce,One Year,38,997.96,7,10,57,9,Electronic Check,1
+CUST-1101,Acme-EdTech-101,E-Commerce,One Year,25,481.58,5,13,30,10,Electronic Check,0
+CUST-1102,Acme-Logistics-102,DevOps,One Year,21,756.47,6,25,84,3,Credit Card,1
+CUST-1103,Acme-Cybersecurity-103,Fintech,Month-to-Month,22,875.22,7,7,67,8,Electronic Check,1
+CUST-1104,Acme-DevOps-104,Healthcare,Month-to-Month,10,120.09,4,22,79,7,Electronic Check,1
+CUST-1105,Acme-Fintech-105,DevOps,Month-to-Month,35,410.01,5,32,69,1,Electronic Check,1
+CUST-1106,Acme-Healthcare-106,Healthcare,One Year,15,758.43,6,7,81,2,Bank Transfer,1
+CUST-1107,Acme-E-Commerce-107,Cybersecurity,Month-to-Month,3,357.16,0,19,45,6,Credit Card,1
+CUST-1108,Acme-EdTech-108,Healthcare,Month-to-Month,44,801.89,2,12,10,10,Electronic Check,0
+CUST-1109,Acme-Logistics-109,Logistics,One Year,38,184.96,7,17,58,5,Bank Transfer,1
+CUST-1110,Acme-Cybersecurity-110,DevOps,Month-to-Month,44,568.27,1,29,44,10,Bank Transfer,1
+CUST-1111,Acme-DevOps-111,EdTech,One Year,20,238.26,6,31,13,4,Bank Transfer,1
+CUST-1112,Acme-Fintech-112,E-Commerce,One Year,19,69.84,10,26,35,1,Electronic Check,1
+CUST-1113,Acme-Healthcare-113,Cybersecurity,One Year,39,756.91,4,15,77,6,Credit Card,0
+CUST-1114,Acme-E-Commerce-114,Healthcare,One Year,47,778.1,10,9,80,2,Electronic Check,1
+CUST-1115,Acme-EdTech-115,Cybersecurity,Month-to-Month,3,599.6,2,6,37,6,Bank Transfer,1
+CUST-1116,Acme-Logistics-116,Healthcare,Month-to-Month,24,553.31,4,11,32,8,Electronic Check,0
+CUST-1117,Acme-Cybersecurity-117,E-Commerce,One Year,8,493.91,1,10,28,7,Bank Transfer,0
+CUST-1118,Acme-DevOps-118,DevOps,One Year,26,62.22,8,8,58,6,Credit Card,1
+CUST-1119,Acme-Fintech-119,Cybersecurity,Month-to-Month,41,942.28,1,15,60,1,Bank Transfer,1
+CUST-1120,Acme-Healthcare-120,Logistics,Month-to-Month,15,664.27,10,30,38,7,Electronic Check,1
+CUST-1121,Acme-E-Commerce-121,Fintech,Two Year,32,159.31,3,35,17,7,Bank Transfer,0
+CUST-1122,Acme-EdTech-122,Cybersecurity,Two Year,35,447.17,2,27,83,2,Electronic Check,0
+CUST-1123,Acme-Logistics-123,Logistics,Month-to-Month,3,704.77,3,29,56,4,Bank Transfer,1
+CUST-1124,Acme-Cybersecurity-124,Fintech,Two Year,35,905.61,10,23,7,7,Bank Transfer,0
+CUST-1125,Acme-DevOps-125,Fintech,Two Year,6,678.63,10,2,6,6,Bank Transfer,0
+CUST-1126,Acme-Fintech-126,Healthcare,One Year,5,837.33,8,14,75,4,Credit Card,1
+CUST-1127,Acme-Healthcare-127,Healthcare,Month-to-Month,39,51.69,2,9,69,5,Credit Card,1
+CUST-1128,Acme-E-Commerce-128,Fintech,One Year,9,63.12,3,21,2,3,Credit Card,0
+CUST-1129,Acme-EdTech-129,Healthcare,One Year,8,757.38,7,29,46,9,Electronic Check,1
+CUST-1130,Acme-Logistics-130,EdTech,Month-to-Month,3,739.88,10,34,38,8,Electronic Check,1
+CUST-1131,Acme-Cybersecurity-131,Fintech,Month-to-Month,26,453.96,1,32,56,2,Bank Transfer,1
+CUST-1132,Acme-DevOps-132,E-Commerce,One Year,9,310.27,10,21,48,10,Credit Card,1
+CUST-1133,Acme-Fintech-133,EdTech,Month-to-Month,7,802.44,1,14,55,8,Bank Transfer,1
+CUST-1134,Acme-Healthcare-134,EdTech,Month-to-Month,26,444.19,1,21,54,6,Bank Transfer,1
+CUST-1135,Acme-E-Commerce-135,E-Commerce,Two Year,31,112.78,1,6,55,2,Electronic Check,0
+CUST-1136,Acme-EdTech-136,E-Commerce,One Year,4,606.14,8,22,85,2,Electronic Check,1
+CUST-1137,Acme-Logistics-137,DevOps,One Year,47,97.87,4,20,45,2,Bank Transfer,1
+CUST-1138,Acme-Cybersecurity-138,Healthcare,Month-to-Month,15,853.91,5,24,14,5,Bank Transfer,1
+CUST-1139,Acme-DevOps-139,DevOps,Month-to-Month,40,631.89,10,2,77,5,Electronic Check,1
+CUST-1140,Acme-Fintech-140,E-Commerce,One Year,22,382.47,2,10,72,7,Bank Transfer,0
+CUST-1141,Acme-Healthcare-141,Cybersecurity,One Year,6,757.81,3,25,53,8,Credit Card,0
+CUST-1142,Acme-E-Commerce-142,E-Commerce,Month-to-Month,37,615.41,0,10,20,10,Bank Transfer,0
+CUST-1143,Acme-EdTech-143,Fintech,Month-to-Month,28,510.38,7,27,34,4,Electronic Check,1
+CUST-1144,Acme-Logistics-144,Fintech,Month-to-Month,19,693.31,9,32,67,5,Credit Card,1
+CUST-1145,Acme-Cybersecurity-145,EdTech,Two Year,1,243.2,3,9,32,5,Credit Card,0
+CUST-1146,Acme-DevOps-146,Fintech,Month-to-Month,12,171.73,8,15,64,9,Bank Transfer,1
+CUST-1147,Acme-Fintech-147,DevOps,Month-to-Month,48,89.19,0,30,9,6,Bank Transfer,0
+CUST-1148,Acme-Healthcare-148,Logistics,Month-to-Month,27,324.04,6,2,41,3,Electronic Check,1
+CUST-1149,Acme-E-Commerce-149,Logistics,Month-to-Month,24,132.72,1,16,55,10,Electronic Check,1
+CUST-1150,Acme-EdTech-150,Fintech,Month-to-Month,48,371.54,5,11,9,9,Bank Transfer,1
+CUST-1151,Acme-Logistics-151,Logistics,Month-to-Month,23,740.01,10,10,30,2,Bank Transfer,1
+CUST-1152,Acme-Cybersecurity-152,Healthcare,Month-to-Month,42,120.59,10,32,59,10,Credit Card,1
+CUST-1153,Acme-DevOps-153,EdTech,One Year,42,652.53,9,21,80,6,Electronic Check,1
+CUST-1154,Acme-Fintech-154,Fintech,Month-to-Month,20,805.51,9,4,45,9,Electronic Check,1
+CUST-1155,Acme-Healthcare-155,EdTech,Month-to-Month,24,839.11,1,6,78,10,Credit Card,1
+CUST-1156,Acme-E-Commerce-156,EdTech,One Year,3,476.25,9,13,41,10,Electronic Check,1
+CUST-1157,Acme-EdTech-157,Healthcare,Two Year,7,819.42,5,6,64,3,Bank Transfer,1
+CUST-1158,Acme-Logistics-158,Cybersecurity,Month-to-Month,34,545.61,2,24,47,5,Bank Transfer,1
+CUST-1159,Acme-Cybersecurity-159,DevOps,Month-to-Month,4,798.77,10,22,8,6,Electronic Check,1
+CUST-1160,Acme-DevOps-160,Cybersecurity,Month-to-Month,47,857.99,9,10,42,2,Bank Transfer,1
+CUST-1161,Acme-Fintech-161,Healthcare,Two Year,42,712.56,6,9,76,2,Bank Transfer,1
+CUST-1162,Acme-Healthcare-162,EdTech,One Year,9,685.61,10,34,11,7,Bank Transfer,0
+CUST-1163,Acme-E-Commerce-163,Fintech,Month-to-Month,14,373.65,7,13,28,3,Credit Card,1
+CUST-1164,Acme-EdTech-164,E-Commerce,One Year,33,781.33,8,3,84,6,Credit Card,1
+CUST-1165,Acme-Logistics-165,Logistics,Month-to-Month,10,203.13,9,11,56,1,Bank Transfer,1
+CUST-1166,Acme-Cybersecurity-166,Cybersecurity,One Year,40,319.68,7,15,68,4,Bank Transfer,1
+CUST-1167,Acme-DevOps-167,DevOps,One Year,24,693.39,9,29,59,5,Credit Card,1
+CUST-1168,Acme-Fintech-168,Logistics,Month-to-Month,13,810.2,2,17,6,8,Credit Card,0
+CUST-1169,Acme-Healthcare-169,Logistics,Two Year,34,857.61,4,6,20,5,Electronic Check,0
+CUST-1170,Acme-E-Commerce-170,Logistics,Month-to-Month,6,948.09,3,29,44,1,Bank Transfer,1
+CUST-1171,Acme-EdTech-171,EdTech,Month-to-Month,25,993.8,5,15,3,6,Credit Card,1
+CUST-1172,Acme-Logistics-172,DevOps,One Year,10,179.72,4,31,17,8,Bank Transfer,0
+CUST-1173,Acme-Cybersecurity-173,Fintech,Two Year,17,253.87,2,34,54,2,Credit Card,0
+CUST-1174,Acme-DevOps-174,Healthcare,Month-to-Month,16,447.83,9,30,8,2,Credit Card,1
+CUST-1175,Acme-Fintech-175,EdTech,One Year,41,538.61,3,10,37,7,Credit Card,0
+CUST-1176,Acme-Healthcare-176,E-Commerce,Month-to-Month,12,680.15,1,34,46,2,Bank Transfer,1
+CUST-1177,Acme-E-Commerce-177,Logistics,Month-to-Month,36,68.32,7,3,81,7,Electronic Check,1
+CUST-1178,Acme-EdTech-178,E-Commerce,One Year,5,376.56,10,7,74,6,Bank Transfer,1
+CUST-1179,Acme-Logistics-179,E-Commerce,Month-to-Month,12,837.86,10,30,61,3,Electronic Check,1
+CUST-1180,Acme-Cybersecurity-180,Fintech,One Year,3,327.77,0,13,5,6,Bank Transfer,0
+CUST-1181,Acme-DevOps-181,Logistics,Month-to-Month,31,289.65,10,13,36,6,Electronic Check,1
+CUST-1182,Acme-Fintech-182,Fintech,Two Year,18,167.25,5,28,51,8,Bank Transfer,1
+CUST-1183,Acme-Healthcare-183,EdTech,Month-to-Month,32,706.47,5,34,34,2,Credit Card,1
+CUST-1184,Acme-E-Commerce-184,Fintech,Month-to-Month,35,328.08,1,6,41,5,Credit Card,1
+CUST-1185,Acme-EdTech-185,Logistics,One Year,45,470.71,7,3,45,10,Credit Card,1
+CUST-1186,Acme-Logistics-186,E-Commerce,One Year,5,686.62,6,24,65,3,Credit Card,1
+CUST-1187,Acme-Cybersecurity-187,Healthcare,One Year,29,82.06,1,16,82,6,Electronic Check,0
+CUST-1188,Acme-DevOps-188,Logistics,Month-to-Month,44,476.43,5,24,56,2,Credit Card,1
+CUST-1189,Acme-Fintech-189,Logistics,Month-to-Month,42,313.76,1,2,23,8,Bank Transfer,1
+CUST-1190,Acme-Healthcare-190,Logistics,Month-to-Month,46,472.96,9,19,62,4,Bank Transfer,1
+CUST-1191,Acme-E-Commerce-191,DevOps,Month-to-Month,46,471.86,1,21,85,6,Credit Card,1
+CUST-1192,Acme-EdTech-192,Logistics,Month-to-Month,11,725.22,10,12,46,9,Bank Transfer,1
+CUST-1193,Acme-Logistics-193,Healthcare,One Year,32,73.97,8,24,59,9,Credit Card,1
+CUST-1194,Acme-Cybersecurity-194,Fintech,Month-to-Month,46,731.93,8,27,52,10,Bank Transfer,1
+CUST-1195,Acme-DevOps-195,E-Commerce,One Year,30,695.1,5,9,70,10,Bank Transfer,1
+CUST-1196,Acme-Fintech-196,Healthcare,Month-to-Month,8,541.2,4,11,20,6,Credit Card,0
+CUST-1197,Acme-Healthcare-197,Healthcare,Month-to-Month,19,852.64,4,13,81,9,Electronic Check,1
+CUST-1198,Acme-E-Commerce-198,Cybersecurity,Month-to-Month,6,526.44,2,10,21,10,Electronic Check,0
+CUST-1199,Acme-EdTech-199,Logistics,Month-to-Month,3,832.97,0,6,5,10,Electronic Check,1
+CUST-1200,Acme-Logistics-200,Healthcare,One Year,40,656.04,7,35,37,5,Bank Transfer,0
+CUST-1201,Acme-Cybersecurity-201,DevOps,One Year,20,479.87,0,11,56,7,Bank Transfer,0
+CUST-1202,Acme-DevOps-202,Healthcare,Month-to-Month,21,867.41,5,23,51,3,Credit Card,1
+CUST-1203,Acme-Fintech-203,Logistics,One Year,16,492.15,4,29,31,3,Bank Transfer,0
+CUST-1204,Acme-Healthcare-204,E-Commerce,Two Year,27,284.86,2,21,73,6,Electronic Check,0
+CUST-1205,Acme-E-Commerce-205,Healthcare,Month-to-Month,30,522.82,4,32,2,2,Electronic Check,1
+CUST-1206,Acme-EdTech-206,Logistics,Month-to-Month,14,603.18,0,4,36,8,Credit Card,0
+CUST-1207,Acme-Logistics-207,DevOps,One Year,19,558.86,1,28,17,5,Bank Transfer,0
+CUST-1208,Acme-Cybersecurity-208,DevOps,Month-to-Month,26,97.6,8,13,46,9,Credit Card,1
+CUST-1209,Acme-DevOps-209,EdTech,Month-to-Month,18,833.05,9,8,16,2,Electronic Check,1
+CUST-1210,Acme-Fintech-210,DevOps,Two Year,24,766.22,3,33,51,9,Electronic Check,0
+CUST-1211,Acme-Healthcare-211,Fintech,Month-to-Month,31,542.37,2,33,17,6,Bank Transfer,0
+CUST-1212,Acme-E-Commerce-212,E-Commerce,Month-to-Month,48,849.47,9,22,64,9,Electronic Check,1
+CUST-1213,Acme-EdTech-213,Cybersecurity,One Year,2,398.94,10,8,53,10,Bank Transfer,1
+CUST-1214,Acme-Logistics-214,Cybersecurity,Two Year,2,616.06,4,15,6,10,Electronic Check,0
+CUST-1215,Acme-Cybersecurity-215,Logistics,One Year,25,189.39,10,16,4,10,Electronic Check,0
+CUST-1216,Acme-DevOps-216,Fintech,Month-to-Month,21,446.84,6,14,52,9,Bank Transfer,1
+CUST-1217,Acme-Fintech-217,EdTech,Two Year,47,108.17,2,34,26,9,Electronic Check,0
+CUST-1218,Acme-Healthcare-218,Cybersecurity,Month-to-Month,21,957.85,7,35,43,9,Bank Transfer,1
+CUST-1219,Acme-E-Commerce-219,DevOps,Two Year,42,812.47,4,31,24,4,Electronic Check,0
+CUST-1220,Acme-EdTech-220,E-Commerce,Month-to-Month,19,718.66,7,21,61,6,Bank Transfer,1
+CUST-1221,Acme-Logistics-221,DevOps,One Year,8,593.8,8,25,50,6,Bank Transfer,1
+CUST-1222,Acme-Cybersecurity-222,DevOps,Month-to-Month,19,956.55,1,23,56,5,Credit Card,1
+CUST-1223,Acme-DevOps-223,Healthcare,Month-to-Month,18,935.37,4,9,13,10,Electronic Check,0
+CUST-1224,Acme-Fintech-224,Healthcare,Month-to-Month,34,263.39,3,4,12,7,Electronic Check,0
+CUST-1225,Acme-Healthcare-225,EdTech,Month-to-Month,1,965.29,2,27,83,8,Credit Card,1
+CUST-1226,Acme-E-Commerce-226,Healthcare,One Year,21,320.14,0,6,83,10,Bank Transfer,0
+CUST-1227,Acme-EdTech-227,Cybersecurity,One Year,12,445.99,2,3,50,8,Credit Card,0
+CUST-1228,Acme-Logistics-228,Cybersecurity,Two Year,3,57.8,9,7,42,5,Bank Transfer,1
+CUST-1229,Acme-Cybersecurity-229,Cybersecurity,Month-to-Month,9,857.51,7,18,24,2,Bank Transfer,1
+CUST-1230,Acme-DevOps-230,Cybersecurity,Month-to-Month,46,225.89,5,19,72,4,Bank Transfer,1
+CUST-1231,Acme-Fintech-231,DevOps,One Year,28,538.52,1,26,85,2,Bank Transfer,0
+CUST-1232,Acme-Healthcare-232,Healthcare,Month-to-Month,1,296.75,3,29,34,6,Credit Card,1
+CUST-1233,Acme-E-Commerce-233,Cybersecurity,One Year,42,390.57,3,4,85,2,Bank Transfer,1
+CUST-1234,Acme-EdTech-234,Healthcare,Month-to-Month,46,780.35,1,19,47,10,Electronic Check,1
+CUST-1235,Acme-Logistics-235,Healthcare,Month-to-Month,48,988.4,5,27,70,8,Bank Transfer,1
+CUST-1236,Acme-Cybersecurity-236,DevOps,One Year,16,695.32,9,6,67,8,Credit Card,1
+CUST-1237,Acme-DevOps-237,E-Commerce,Month-to-Month,8,107.67,8,33,25,10,Electronic Check,1
+CUST-1238,Acme-Fintech-238,Healthcare,Month-to-Month,29,159.43,3,32,11,9,Electronic Check,0
+CUST-1239,Acme-Healthcare-239,Fintech,Month-to-Month,27,482.96,0,30,39,1,Electronic Check,1
+CUST-1240,Acme-E-Commerce-240,DevOps,Month-to-Month,38,118.38,6,23,8,9,Credit Card,1
+CUST-1241,Acme-EdTech-241,Fintech,Two Year,3,321.74,2,9,82,7,Bank Transfer,0
+CUST-1242,Acme-Logistics-242,EdTech,Month-to-Month,25,125.24,10,35,17,6,Bank Transfer,1
+CUST-1243,Acme-Cybersecurity-243,Logistics,Month-to-Month,47,978.79,0,2,38,8,Credit Card,1
+CUST-1244,Acme-DevOps-244,Logistics,Month-to-Month,15,284.14,5,10,35,4,Bank Transfer,1
+CUST-1245,Acme-Fintech-245,Cybersecurity,One Year,43,447.28,0,16,26,2,Credit Card,0
+CUST-1246,Acme-Healthcare-246,Fintech,Month-to-Month,46,877.6,3,3,51,8,Electronic Check,1
+CUST-1247,Acme-E-Commerce-247,Healthcare,One Year,9,527.7,4,15,73,6,Credit Card,0
+CUST-1248,Acme-EdTech-248,DevOps,One Year,16,335.68,2,34,28,7,Bank Transfer,0
+CUST-1249,Acme-Logistics-249,Fintech,One Year,48,915.0,10,28,71,8,Electronic Check,1
+CUST-1250,Acme-Cybersecurity-250,E-Commerce,Two Year,25,795.51,5,27,52,3,Electronic Check,1
+CUST-1251,Acme-DevOps-251,Healthcare,One Year,16,855.87,4,10,59,1,Bank Transfer,1
+CUST-1252,Acme-Fintech-252,EdTech,One Year,25,279.72,3,22,82,2,Credit Card,1
+CUST-1253,Acme-Healthcare-253,DevOps,Month-to-Month,47,836.94,0,18,48,10,Electronic Check,1
+CUST-1254,Acme-E-Commerce-254,DevOps,Month-to-Month,47,686.88,3,31,26,6,Electronic Check,0
+CUST-1255,Acme-EdTech-255,Fintech,Month-to-Month,48,160.45,7,16,77,4,Credit Card,1
+CUST-1256,Acme-Logistics-256,Healthcare,One Year,25,491.94,10,23,39,5,Bank Transfer,0
+CUST-1257,Acme-Cybersecurity-257,EdTech,Month-to-Month,31,772.55,5,14,47,6,Electronic Check,1
+CUST-1258,Acme-DevOps-258,Logistics,Two Year,10,64.41,8,27,37,3,Electronic Check,0
+CUST-1259,Acme-Fintech-259,Healthcare,Month-to-Month,32,572.11,10,22,32,8,Credit Card,1
+CUST-1260,Acme-Healthcare-260,Cybersecurity,One Year,11,745.13,5,11,17,9,Bank Transfer,0
+CUST-1261,Acme-E-Commerce-261,Logistics,Two Year,34,81.13,1,4,0,7,Credit Card,0
+CUST-1262,Acme-EdTech-262,Cybersecurity,Month-to-Month,10,57.68,8,30,47,1,Electronic Check,1
+CUST-1263,Acme-Logistics-263,Cybersecurity,Two Year,43,512.46,0,35,70,7,Bank Transfer,0
+CUST-1264,Acme-Cybersecurity-264,Logistics,One Year,19,65.29,10,28,22,2,Electronic Check,1
+CUST-1265,Acme-DevOps-265,Logistics,Month-to-Month,40,549.13,5,18,50,2,Credit Card,1
+CUST-1266,Acme-Fintech-266,EdTech,Month-to-Month,45,263.56,10,6,83,1,Credit Card,1
+CUST-1267,Acme-Healthcare-267,EdTech,Month-to-Month,4,653.91,2,6,63,7,Bank Transfer,1
+CUST-1268,Acme-E-Commerce-268,E-Commerce,One Year,34,922.19,3,14,72,8,Credit Card,0
+CUST-1269,Acme-EdTech-269,Fintech,One Year,35,584.33,0,12,40,1,Bank Transfer,1
+CUST-1270,Acme-Logistics-270,Logistics,Month-to-Month,26,931.43,4,11,72,4,Electronic Check,1
+CUST-1271,Acme-Cybersecurity-271,DevOps,Month-to-Month,22,413.65,2,6,64,6,Electronic Check,1
+CUST-1272,Acme-DevOps-272,EdTech,Month-to-Month,22,623.91,9,26,41,1,Credit Card,1
+CUST-1273,Acme-Fintech-273,DevOps,Two Year,15,387.02,6,28,23,10,Bank Transfer,0
+CUST-1274,Acme-Healthcare-274,Fintech,One Year,16,726.45,1,18,19,7,Bank Transfer,0
+CUST-1275,Acme-E-Commerce-275,Cybersecurity,Month-to-Month,21,391.67,1,1,39,8,Bank Transfer,1
+CUST-1276,Acme-EdTech-276,E-Commerce,Month-to-Month,12,458.43,8,33,52,2,Credit Card,1
+CUST-1277,Acme-Logistics-277,E-Commerce,One Year,39,794.22,6,1,37,7,Electronic Check,1
+CUST-1278,Acme-Cybersecurity-278,Fintech,One Year,16,592.36,2,25,21,3,Electronic Check,0
+CUST-1279,Acme-DevOps-279,E-Commerce,Month-to-Month,11,461.94,6,20,61,2,Credit Card,1
+CUST-1280,Acme-Fintech-280,Healthcare,One Year,39,634.84,7,7,17,5,Bank Transfer,0
+CUST-1281,Acme-Healthcare-281,EdTech,Month-to-Month,25,812.87,5,29,42,7,Electronic Check,1
+CUST-1282,Acme-E-Commerce-282,DevOps,One Year,9,334.41,9,13,61,6,Electronic Check,1
+CUST-1283,Acme-EdTech-283,EdTech,Two Year,48,709.21,7,16,41,7,Bank Transfer,0
+CUST-1284,Acme-Logistics-284,DevOps,Month-to-Month,37,238.81,8,12,70,1,Credit Card,1
+CUST-1285,Acme-Cybersecurity-285,EdTech,Two Year,29,806.8,1,27,63,3,Credit Card,0
+CUST-1286,Acme-DevOps-286,Healthcare,Month-to-Month,46,450.97,6,5,57,10,Credit Card,1
+CUST-1287,Acme-Fintech-287,EdTech,Month-to-Month,27,565.46,5,35,76,2,Electronic Check,1
+CUST-1288,Acme-Healthcare-288,Healthcare,One Year,11,663.65,0,26,42,7,Bank Transfer,0
+CUST-1289,Acme-E-Commerce-289,Fintech,Month-to-Month,48,541.86,9,15,57,6,Electronic Check,1
+CUST-1290,Acme-EdTech-290,DevOps,One Year,33,192.21,0,31,13,5,Electronic Check,0
+CUST-1291,Acme-Logistics-291,Fintech,Month-to-Month,10,379.91,5,30,26,9,Electronic Check,1
+CUST-1292,Acme-Cybersecurity-292,EdTech,Month-to-Month,45,478.82,1,20,5,2,Electronic Check,0
+CUST-1293,Acme-DevOps-293,E-Commerce,One Year,11,932.43,3,34,22,9,Electronic Check,0
+CUST-1294,Acme-Fintech-294,Logistics,Month-to-Month,15,806.87,10,12,23,7,Bank Transfer,1
+CUST-1295,Acme-Healthcare-295,Cybersecurity,One Year,29,611.59,6,1,27,4,Credit Card,1
+CUST-1296,Acme-E-Commerce-296,Cybersecurity,One Year,37,145.66,8,12,46,6,Credit Card,1
+CUST-1297,Acme-EdTech-297,Fintech,Month-to-Month,34,966.62,5,25,78,7,Bank Transfer,1
+CUST-1298,Acme-Logistics-298,E-Commerce,Month-to-Month,40,212.9,10,20,78,10,Bank Transfer,1
+CUST-1299,Acme-Cybersecurity-299,Healthcare,Month-to-Month,20,160.1,5,10,65,7,Credit Card,1
+CUST-1300,Acme-DevOps-300,Healthcare,One Year,12,511.34,8,12,71,3,Bank Transfer,1
+CUST-1301,Acme-Fintech-301,Healthcare,Month-to-Month,40,99.93,5,1,62,3,Bank Transfer,1
+CUST-1302,Acme-Healthcare-302,EdTech,Two Year,42,519.22,10,32,53,8,Electronic Check,0
+CUST-1303,Acme-E-Commerce-303,Fintech,One Year,19,80.06,3,35,36,3,Credit Card,0
+CUST-1304,Acme-EdTech-304,Logistics,One Year,36,534.27,9,8,34,9,Bank Transfer,0
+CUST-1305,Acme-Logistics-305,E-Commerce,Month-to-Month,47,468.3,3,28,13,4,Credit Card,1
+CUST-1306,Acme-Cybersecurity-306,Fintech,Month-to-Month,6,466.12,1,16,26,10,Bank Transfer,0
+CUST-1307,Acme-DevOps-307,DevOps,One Year,28,206.68,2,14,26,1,Electronic Check,0
+CUST-1308,Acme-Fintech-308,Logistics,Month-to-Month,11,356.47,4,19,73,5,Electronic Check,1
+CUST-1309,Acme-Healthcare-309,Logistics,Two Year,7,177.81,6,4,35,3,Electronic Check,1
+CUST-1310,Acme-E-Commerce-310,Healthcare,Month-to-Month,21,836.06,10,26,62,3,Electronic Check,1
+CUST-1311,Acme-EdTech-311,E-Commerce,One Year,29,120.74,1,26,65,5,Bank Transfer,0
+CUST-1312,Acme-Logistics-312,E-Commerce,Month-to-Month,21,601.86,1,30,81,6,Bank Transfer,1
+CUST-1313,Acme-Cybersecurity-313,DevOps,Month-to-Month,28,832.61,7,18,41,5,Credit Card,1
+CUST-1314,Acme-DevOps-314,Logistics,Month-to-Month,22,898.45,0,3,12,8,Bank Transfer,0
+CUST-1315,Acme-Fintech-315,DevOps,Month-to-Month,1,991.25,6,13,16,5,Bank Transfer,1
+CUST-1316,Acme-Healthcare-316,E-Commerce,Month-to-Month,17,127.3,10,11,6,7,Bank Transfer,1
+CUST-1317,Acme-E-Commerce-317,Cybersecurity,One Year,28,671.71,1,1,27,8,Credit Card,0
+CUST-1318,Acme-EdTech-318,Logistics,Month-to-Month,29,57.82,5,8,54,3,Electronic Check,1
+CUST-1319,Acme-Logistics-319,Healthcare,Month-to-Month,7,147.04,5,20,17,7,Electronic Check,1
+CUST-1320,Acme-Cybersecurity-320,DevOps,Two Year,44,184.71,8,1,78,3,Electronic Check,1
+CUST-1321,Acme-DevOps-321,Cybersecurity,Month-to-Month,10,922.9,9,29,27,2,Electronic Check,1
+CUST-1322,Acme-Fintech-322,Healthcare,One Year,47,413.83,6,21,17,4,Electronic Check,1
+CUST-1323,Acme-Healthcare-323,Fintech,Month-to-Month,39,734.12,4,2,84,5,Electronic Check,1
+CUST-1324,Acme-E-Commerce-324,Logistics,Month-to-Month,26,329.76,0,16,63,7,Electronic Check,1
+CUST-1325,Acme-EdTech-325,EdTech,One Year,34,893.29,0,24,40,3,Credit Card,1
+CUST-1326,Acme-Logistics-326,DevOps,One Year,35,697.79,7,5,2,10,Bank Transfer,0
+CUST-1327,Acme-Cybersecurity-327,E-Commerce,Month-to-Month,26,530.28,10,33,53,7,Credit Card,1
+CUST-1328,Acme-DevOps-328,Fintech,One Year,40,194.05,1,20,10,9,Electronic Check,0
+CUST-1329,Acme-Fintech-329,DevOps,Month-to-Month,26,606.12,10,5,39,7,Bank Transfer,1
+CUST-1330,Acme-Healthcare-330,DevOps,Month-to-Month,6,927.4,1,30,78,10,Credit Card,1
+CUST-1331,Acme-E-Commerce-331,Cybersecurity,One Year,12,162.47,2,1,20,8,Electronic Check,0
+CUST-1332,Acme-EdTech-332,Logistics,Month-to-Month,17,207.61,2,18,15,1,Electronic Check,1
+CUST-1333,Acme-Logistics-333,EdTech,Month-to-Month,17,725.71,9,5,63,8,Credit Card,1
+CUST-1334,Acme-Cybersecurity-334,Fintech,Month-to-Month,11,398.3,4,7,73,2,Electronic Check,1
+CUST-1335,Acme-DevOps-335,Logistics,Month-to-Month,16,92.68,5,25,19,3,Credit Card,1
+CUST-1336,Acme-Fintech-336,DevOps,Month-to-Month,48,671.92,3,21,31,7,Electronic Check,0
+CUST-1337,Acme-Healthcare-337,E-Commerce,Month-to-Month,37,403.17,8,4,22,4,Credit Card,1
+CUST-1338,Acme-E-Commerce-338,Fintech,Two Year,30,871.73,4,21,11,9,Credit Card,0
+CUST-1339,Acme-EdTech-339,E-Commerce,Month-to-Month,20,751.6,3,30,47,10,Electronic Check,1
+CUST-1340,Acme-Logistics-340,DevOps,One Year,35,771.46,3,10,0,7,Electronic Check,0
+CUST-1341,Acme-Cybersecurity-341,Logistics,Month-to-Month,1,952.44,0,25,39,2,Electronic Check,1
+CUST-1342,Acme-DevOps-342,Healthcare,Month-to-Month,10,725.07,1,3,29,9,Credit Card,1
+CUST-1343,Acme-Fintech-343,E-Commerce,Month-to-Month,6,600.73,8,9,81,7,Electronic Check,1
+CUST-1344,Acme-Healthcare-344,Logistics,Month-to-Month,9,273.93,4,21,50,6,Electronic Check,1
+CUST-1345,Acme-E-Commerce-345,E-Commerce,Month-to-Month,9,789.94,9,7,19,2,Credit Card,1
+CUST-1346,Acme-EdTech-346,EdTech,Month-to-Month,35,389.37,3,29,39,8,Credit Card,0
+CUST-1347,Acme-Logistics-347,Fintech,Month-to-Month,20,834.07,9,3,27,6,Electronic Check,1
+CUST-1348,Acme-Cybersecurity-348,Cybersecurity,Month-to-Month,26,536.79,10,20,33,3,Bank Transfer,1
+CUST-1349,Acme-DevOps-349,EdTech,Two Year,48,571.61,1,30,13,3,Electronic Check,0
+CUST-1350,Acme-Fintech-350,Fintech,One Year,9,237.23,6,24,80,2,Credit Card,1
+CUST-1351,Acme-Healthcare-351,E-Commerce,Two Year,2,996.3,3,29,16,2,Credit Card,0
+CUST-1352,Acme-E-Commerce-352,DevOps,One Year,3,944.17,0,11,73,7,Credit Card,1
+CUST-1353,Acme-EdTech-353,EdTech,Month-to-Month,44,454.33,5,14,23,5,Bank Transfer,1
+CUST-1354,Acme-Logistics-354,Healthcare,Month-to-Month,40,282.5,4,32,52,9,Electronic Check,1
+CUST-1355,Acme-Cybersecurity-355,Fintech,Month-to-Month,27,238.48,8,16,80,9,Credit Card,1
+CUST-1356,Acme-DevOps-356,EdTech,One Year,31,566.29,7,23,72,9,Bank Transfer,1
+CUST-1357,Acme-Fintech-357,E-Commerce,Month-to-Month,39,257.07,4,4,60,9,Bank Transfer,1
+CUST-1358,Acme-Healthcare-358,Logistics,Two Year,7,284.46,3,18,68,1,Credit Card,0
+CUST-1359,Acme-E-Commerce-359,Healthcare,One Year,23,937.45,2,12,30,10,Bank Transfer,0
+CUST-1360,Acme-EdTech-360,Cybersecurity,One Year,2,717.28,5,10,72,4,Electronic Check,1
+CUST-1361,Acme-Logistics-361,DevOps,Two Year,35,342.6,7,3,11,1,Bank Transfer,1
+CUST-1362,Acme-Cybersecurity-362,Healthcare,Month-to-Month,1,364.15,9,13,16,6,Bank Transfer,1
+CUST-1363,Acme-DevOps-363,DevOps,One Year,4,69.82,9,10,14,9,Bank Transfer,1
+CUST-1364,Acme-Fintech-364,Fintech,Month-to-Month,26,605.72,5,20,41,3,Electronic Check,1
+CUST-1365,Acme-Healthcare-365,Cybersecurity,Two Year,32,665.72,2,23,28,10,Electronic Check,0
+CUST-1366,Acme-E-Commerce-366,EdTech,Month-to-Month,19,169.98,0,26,72,1,Electronic Check,1
+CUST-1367,Acme-EdTech-367,E-Commerce,Two Year,15,656.66,1,32,18,6,Electronic Check,0
+CUST-1368,Acme-Logistics-368,Healthcare,Month-to-Month,11,653.38,1,22,57,1,Bank Transfer,1
+CUST-1369,Acme-Cybersecurity-369,Healthcare,One Year,17,796.67,0,4,49,8,Bank Transfer,0
+CUST-1370,Acme-DevOps-370,Healthcare,Two Year,25,382.67,6,7,61,10,Bank Transfer,1
+CUST-1371,Acme-Fintech-371,Cybersecurity,Month-to-Month,5,808.23,0,19,2,6,Bank Transfer,1
+CUST-1372,Acme-Healthcare-372,Fintech,Month-to-Month,25,201.86,1,6,43,10,Credit Card,1
+CUST-1373,Acme-E-Commerce-373,EdTech,One Year,42,205.75,6,11,6,2,Bank Transfer,1
+CUST-1374,Acme-EdTech-374,Healthcare,Month-to-Month,47,928.29,8,17,84,5,Electronic Check,1
+CUST-1375,Acme-Logistics-375,Fintech,Month-to-Month,36,846.86,2,4,46,1,Electronic Check,1
+CUST-1376,Acme-Cybersecurity-376,E-Commerce,One Year,39,505.31,1,2,26,3,Electronic Check,1
+CUST-1377,Acme-DevOps-377,Fintech,Month-to-Month,20,794.63,7,32,84,5,Credit Card,1
+CUST-1378,Acme-Fintech-378,Logistics,Month-to-Month,25,399.93,7,3,33,8,Bank Transfer,1
+CUST-1379,Acme-Healthcare-379,Healthcare,One Year,4,192.57,10,7,10,6,Electronic Check,1
+CUST-1380,Acme-E-Commerce-380,EdTech,Two Year,15,574.92,6,34,53,9,Electronic Check,1
+CUST-1381,Acme-EdTech-381,EdTech,One Year,31,332.91,6,3,64,10,Credit Card,1
+CUST-1382,Acme-Logistics-382,DevOps,One Year,10,163.27,7,12,21,4,Electronic Check,1
+CUST-1383,Acme-Cybersecurity-383,Healthcare,Month-to-Month,44,462.62,10,10,76,5,Credit Card,1
+CUST-1384,Acme-DevOps-384,Cybersecurity,Two Year,6,417.69,6,21,35,9,Credit Card,0
+CUST-1385,Acme-Fintech-385,DevOps,Month-to-Month,40,607.2,6,8,53,3,Electronic Check,1
+CUST-1386,Acme-Healthcare-386,Logistics,One Year,7,583.55,1,19,68,6,Credit Card,0
+CUST-1387,Acme-E-Commerce-387,E-Commerce,Month-to-Month,37,627.51,0,12,35,7,Bank Transfer,0
+CUST-1388,Acme-EdTech-388,Logistics,One Year,3,425.0,5,16,6,8,Bank Transfer,1
+CUST-1389,Acme-Logistics-389,E-Commerce,Month-to-Month,20,315.33,7,7,29,3,Bank Transfer,1
+CUST-1390,Acme-Cybersecurity-390,Cybersecurity,Month-to-Month,18,741.36,9,6,24,8,Bank Transfer,1
+CUST-1391,Acme-DevOps-391,DevOps,Month-to-Month,34,872.83,0,33,20,2,Bank Transfer,1
+CUST-1392,Acme-Fintech-392,Logistics,Month-to-Month,37,76.5,3,13,7,4,Electronic Check,0
+CUST-1393,Acme-Healthcare-393,Fintech,Two Year,13,309.28,7,33,50,2,Electronic Check,1
+CUST-1394,Acme-E-Commerce-394,Healthcare,Month-to-Month,29,217.7,7,23,44,3,Electronic Check,1
+CUST-1395,Acme-EdTech-395,E-Commerce,One Year,6,319.82,6,4,20,10,Electronic Check,0
+CUST-1396,Acme-Logistics-396,Healthcare,Two Year,15,692.81,4,27,65,1,Electronic Check,0
+CUST-1397,Acme-Cybersecurity-397,DevOps,One Year,9,664.0,9,1,28,5,Bank Transfer,1
+CUST-1398,Acme-DevOps-398,E-Commerce,One Year,42,310.61,6,23,58,5,Electronic Check,1
+CUST-1399,Acme-Fintech-399,E-Commerce,One Year,26,604.26,0,33,84,6,Electronic Check,0
+CUST-1400,Acme-Healthcare-400,Logistics,One Year,44,151.7,1,22,35,6,Bank Transfer,0
+CUST-1401,Acme-E-Commerce-401,E-Commerce,One Year,20,227.94,8,16,7,10,Electronic Check,0
+CUST-1402,Acme-EdTech-402,E-Commerce,One Year,2,671.63,4,17,53,7,Electronic Check,1
+CUST-1403,Acme-Logistics-403,Fintech,One Year,13,375.01,3,35,81,8,Electronic Check,0
+CUST-1404,Acme-Cybersecurity-404,Cybersecurity,Month-to-Month,11,847.61,8,12,37,2,Bank Transfer,1
+CUST-1405,Acme-DevOps-405,Cybersecurity,Month-to-Month,12,948.58,5,6,28,6,Electronic Check,1
+CUST-1406,Acme-Fintech-406,DevOps,Month-to-Month,24,296.53,4,30,15,8,Bank Transfer,0
+CUST-1407,Acme-Healthcare-407,Cybersecurity,One Year,5,497.61,3,33,15,7,Electronic Check,0
+CUST-1408,Acme-E-Commerce-408,EdTech,Month-to-Month,9,991.73,5,27,72,8,Credit Card,1
+CUST-1409,Acme-EdTech-409,DevOps,One Year,32,365.0,2,21,81,1,Credit Card,0
+CUST-1410,Acme-Logistics-410,E-Commerce,Month-to-Month,37,775.26,7,6,16,10,Credit Card,1
+CUST-1411,Acme-Cybersecurity-411,EdTech,Month-to-Month,25,53.44,8,13,47,1,Bank Transfer,1
+CUST-1412,Acme-DevOps-412,DevOps,One Year,2,691.91,10,16,28,6,Credit Card,1
+CUST-1413,Acme-Fintech-413,Fintech,Month-to-Month,20,207.67,0,20,37,8,Electronic Check,0
+CUST-1414,Acme-Healthcare-414,Logistics,Month-to-Month,44,994.7,5,32,45,4,Bank Transfer,1
+CUST-1415,Acme-E-Commerce-415,DevOps,Month-to-Month,15,739.81,2,14,2,10,Credit Card,0
+CUST-1416,Acme-EdTech-416,Fintech,Month-to-Month,3,405.43,10,17,68,10,Electronic Check,1
+CUST-1417,Acme-Logistics-417,Fintech,One Year,2,94.82,1,27,56,7,Electronic Check,0
+CUST-1418,Acme-Cybersecurity-418,E-Commerce,Month-to-Month,14,709.43,10,1,38,7,Credit Card,1
+CUST-1419,Acme-DevOps-419,Cybersecurity,Month-to-Month,39,714.69,6,7,65,10,Electronic Check,1
+CUST-1420,Acme-Fintech-420,Fintech,One Year,13,627.55,4,34,25,6,Bank Transfer,0
+CUST-1421,Acme-Healthcare-421,E-Commerce,Month-to-Month,32,913.84,7,22,30,1,Electronic Check,1
+CUST-1422,Acme-E-Commerce-422,Fintech,Two Year,43,518.4,1,33,9,2,Electronic Check,0
+CUST-1423,Acme-EdTech-423,Cybersecurity,Month-to-Month,17,490.06,1,12,5,5,Bank Transfer,0
+CUST-1424,Acme-Logistics-424,Cybersecurity,Month-to-Month,8,139.25,0,1,17,3,Electronic Check,1
+CUST-1425,Acme-Cybersecurity-425,EdTech,Two Year,47,137.3,5,12,14,7,Bank Transfer,0
+CUST-1426,Acme-DevOps-426,EdTech,Month-to-Month,45,857.14,6,11,14,3,Bank Transfer,1
+CUST-1427,Acme-Fintech-427,Fintech,Two Year,7,444.23,9,31,72,8,Credit Card,0
+CUST-1428,Acme-Healthcare-428,EdTech,One Year,2,868.45,2,31,62,2,Electronic Check,1
+CUST-1429,Acme-E-Commerce-429,EdTech,Month-to-Month,42,347.53,10,34,73,10,Bank Transfer,1
+CUST-1430,Acme-EdTech-430,Cybersecurity,Two Year,34,702.83,9,7,55,4,Electronic Check,1
+CUST-1431,Acme-Logistics-431,Cybersecurity,One Year,10,846.08,8,4,1,3,Bank Transfer,1
+CUST-1432,Acme-Cybersecurity-432,EdTech,Two Year,5,762.86,5,16,42,5,Credit Card,1
+CUST-1433,Acme-DevOps-433,Healthcare,One Year,26,825.25,1,30,56,10,Bank Transfer,0
+CUST-1434,Acme-Fintech-434,DevOps,Month-to-Month,8,980.64,10,2,13,7,Bank Transfer,1
+CUST-1435,Acme-Healthcare-435,Logistics,Month-to-Month,39,964.01,10,20,65,9,Credit Card,1
+CUST-1436,Acme-E-Commerce-436,Cybersecurity,Month-to-Month,24,833.05,3,30,42,9,Bank Transfer,1
+CUST-1437,Acme-EdTech-437,Logistics,Month-to-Month,24,729.12,1,7,84,4,Electronic Check,1
+CUST-1438,Acme-Logistics-438,E-Commerce,One Year,36,544.89,1,3,21,8,Bank Transfer,0
+CUST-1439,Acme-Cybersecurity-439,Cybersecurity,One Year,7,290.57,3,13,15,7,Bank Transfer,0
+CUST-1440,Acme-DevOps-440,DevOps,One Year,22,151.38,6,3,81,10,Electronic Check,1
+CUST-1441,Acme-Fintech-441,EdTech,Month-to-Month,33,176.9,7,1,67,1,Electronic Check,1
+CUST-1442,Acme-Healthcare-442,EdTech,One Year,33,791.03,2,12,16,2,Bank Transfer,0
+CUST-1443,Acme-E-Commerce-443,Logistics,One Year,33,886.32,6,16,35,7,Bank Transfer,1
+CUST-1444,Acme-EdTech-444,E-Commerce,Month-to-Month,9,441.11,8,20,70,6,Credit Card,1
+CUST-1445,Acme-Logistics-445,Logistics,One Year,14,641.96,4,23,16,3,Credit Card,0
+CUST-1446,Acme-Cybersecurity-446,Cybersecurity,One Year,8,771.74,8,31,74,10,Electronic Check,1
+CUST-1447,Acme-DevOps-447,Cybersecurity,Month-to-Month,35,320.63,6,1,66,2,Electronic Check,1
+CUST-1448,Acme-Fintech-448,Healthcare,Month-to-Month,13,302.63,2,19,32,3,Credit Card,1
+CUST-1449,Acme-Healthcare-449,Cybersecurity,One Year,35,79.69,7,7,78,9,Credit Card,1
+CUST-1450,Acme-E-Commerce-450,Cybersecurity,One Year,16,534.38,4,4,48,7,Bank Transfer,0
+CUST-1451,Acme-EdTech-451,DevOps,Two Year,36,100.11,4,13,79,8,Bank Transfer,0
+CUST-1452,Acme-Logistics-452,Cybersecurity,One Year,24,766.35,8,13,24,5,Electronic Check,0
+CUST-1453,Acme-Cybersecurity-453,Cybersecurity,Month-to-Month,48,537.15,6,3,54,5,Credit Card,1
+CUST-1454,Acme-DevOps-454,Healthcare,Month-to-Month,1,363.03,2,3,19,6,Bank Transfer,1
+CUST-1455,Acme-Fintech-455,DevOps,Two Year,43,335.1,9,23,9,6,Electronic Check,0
+CUST-1456,Acme-Healthcare-456,Healthcare,Month-to-Month,11,444.13,8,26,11,6,Electronic Check,1
+CUST-1457,Acme-E-Commerce-457,Healthcare,One Year,24,327.9,9,34,60,9,Bank Transfer,1
+CUST-1458,Acme-EdTech-458,Cybersecurity,Month-to-Month,23,472.38,10,16,5,6,Electronic Check,1
+CUST-1459,Acme-Logistics-459,DevOps,Two Year,17,562.23,4,2,66,6,Bank Transfer,0
+CUST-1460,Acme-Cybersecurity-460,Logistics,Month-to-Month,19,902.37,3,21,65,2,Credit Card,1
+CUST-1461,Acme-DevOps-461,Healthcare,Two Year,35,55.96,1,14,85,4,Electronic Check,0
+CUST-1462,Acme-Fintech-462,EdTech,One Year,35,836.31,6,5,19,1,Credit Card,1
+CUST-1463,Acme-Healthcare-463,E-Commerce,Month-to-Month,4,218.09,4,5,73,4,Credit Card,1
+CUST-1464,Acme-E-Commerce-464,EdTech,Month-to-Month,26,460.37,0,25,15,9,Electronic Check,0
+CUST-1465,Acme-EdTech-465,Cybersecurity,One Year,38,92.24,1,23,64,2,Electronic Check,1
+CUST-1466,Acme-Logistics-466,Cybersecurity,Month-to-Month,19,776.01,7,25,50,1,Credit Card,1
+CUST-1467,Acme-Cybersecurity-467,Logistics,Month-to-Month,26,805.93,8,19,81,3,Electronic Check,1
+CUST-1468,Acme-DevOps-468,DevOps,Two Year,24,958.52,0,10,15,1,Electronic Check,0
+CUST-1469,Acme-Fintech-469,Logistics,Month-to-Month,6,338.46,5,14,52,9,Electronic Check,1
+CUST-1470,Acme-Healthcare-470,Healthcare,Month-to-Month,13,157.89,10,4,70,8,Bank Transfer,1
+CUST-1471,Acme-E-Commerce-471,Fintech,Month-to-Month,17,142.29,9,32,42,6,Credit Card,1
+CUST-1472,Acme-EdTech-472,Cybersecurity,Month-to-Month,40,115.32,3,21,62,8,Bank Transfer,1
+CUST-1473,Acme-Logistics-473,Cybersecurity,Month-to-Month,10,586.27,5,21,54,3,Electronic Check,1
+CUST-1474,Acme-Cybersecurity-474,Healthcare,One Year,48,657.8,4,24,17,6,Electronic Check,0
+CUST-1475,Acme-DevOps-475,EdTech,Month-to-Month,32,573.09,2,6,35,3,Bank Transfer,1
+CUST-1476,Acme-Fintech-476,Healthcare,Month-to-Month,5,740.05,0,33,80,1,Electronic Check,1
+CUST-1477,Acme-Healthcare-477,Logistics,Month-to-Month,14,909.99,8,17,69,9,Electronic Check,1
+CUST-1478,Acme-E-Commerce-478,DevOps,Month-to-Month,15,895.87,9,19,17,8,Bank Transfer,1
+CUST-1479,Acme-EdTech-479,Fintech,Month-to-Month,1,678.54,9,11,65,3,Electronic Check,1
+CUST-1480,Acme-Logistics-480,Healthcare,One Year,43,877.59,2,31,45,1,Electronic Check,0
+CUST-1481,Acme-Cybersecurity-481,EdTech,Month-to-Month,24,271.32,10,14,66,6,Bank Transfer,1
+CUST-1482,Acme-DevOps-482,EdTech,Two Year,42,356.87,8,18,33,10,Credit Card,0
+CUST-1483,Acme-Fintech-483,Healthcare,Month-to-Month,24,607.29,1,34,32,7,Bank Transfer,0
+CUST-1484,Acme-Healthcare-484,Healthcare,Month-to-Month,23,511.52,7,1,64,3,Bank Transfer,1
+CUST-1485,Acme-E-Commerce-485,Healthcare,Month-to-Month,18,249.94,2,11,46,10,Electronic Check,1
+CUST-1486,Acme-EdTech-486,Fintech,One Year,22,733.24,7,31,61,4,Bank Transfer,1
+CUST-1487,Acme-Logistics-487,Cybersecurity,One Year,16,89.99,9,11,17,9,Credit Card,0
+CUST-1488,Acme-Cybersecurity-488,Logistics,Month-to-Month,17,925.32,8,26,76,10,Credit Card,1
+CUST-1489,Acme-DevOps-489,Cybersecurity,One Year,6,254.76,9,31,61,3,Bank Transfer,1
+CUST-1490,Acme-Fintech-490,EdTech,One Year,12,641.05,8,17,21,6,Electronic Check,0
+CUST-1491,Acme-Healthcare-491,Logistics,One Year,25,415.19,1,2,25,9,Credit Card,0
+CUST-1492,Acme-E-Commerce-492,Logistics,One Year,39,140.48,7,3,68,9,Credit Card,1
+CUST-1493,Acme-EdTech-493,Fintech,Month-to-Month,39,561.32,0,28,66,7,Credit Card,1
+CUST-1494,Acme-Logistics-494,Fintech,One Year,15,940.5,7,25,44,10,Bank Transfer,1
+CUST-1495,Acme-Cybersecurity-495,DevOps,One Year,7,453.21,4,31,29,2,Electronic Check,0
+CUST-1496,Acme-DevOps-496,Logistics,Month-to-Month,1,722.69,0,34,15,9,Credit Card,0
+CUST-1497,Acme-Fintech-497,Cybersecurity,Month-to-Month,27,393.16,2,28,83,10,Bank Transfer,1
+CUST-1498,Acme-Healthcare-498,DevOps,Month-to-Month,24,630.29,10,26,26,7,Electronic Check,1
+CUST-1499,Acme-E-Commerce-499,Logistics,Month-to-Month,36,576.17,4,20,73,6,Bank Transfer,1
+CUST-1500,Acme-EdTech-500,EdTech,One Year,8,759.42,7,11,12,4,Electronic Check,1
+CUST-1501,Acme-Logistics-501,DevOps,Month-to-Month,40,711.2,0,11,49,1,Electronic Check,1
+CUST-1502,Acme-Cybersecurity-502,DevOps,Month-to-Month,28,132.73,4,15,47,2,Electronic Check,1
+CUST-1503,Acme-DevOps-503,Cybersecurity,Month-to-Month,40,672.37,4,4,22,8,Bank Transfer,0
+CUST-1504,Acme-Fintech-504,Healthcare,Two Year,19,234.01,9,33,66,4,Electronic Check,1
+CUST-1505,Acme-Healthcare-505,Cybersecurity,Month-to-Month,42,49.27,2,6,35,7,Credit Card,0
+CUST-1506,Acme-E-Commerce-506,EdTech,Month-to-Month,34,63.6,1,6,70,5,Credit Card,1
+CUST-1507,Acme-EdTech-507,Logistics,Two Year,23,964.12,4,15,77,4,Bank Transfer,0
+CUST-1508,Acme-Logistics-508,EdTech,One Year,12,435.78,1,5,64,5,Bank Transfer,0
+CUST-1509,Acme-Cybersecurity-509,Fintech,One Year,35,821.49,9,17,56,7,Bank Transfer,1
+CUST-1510,Acme-DevOps-510,DevOps,Month-to-Month,30,696.51,9,2,61,2,Bank Transfer,1
+CUST-1511,Acme-Fintech-511,EdTech,One Year,44,715.12,5,27,45,9,Credit Card,1
+CUST-1512,Acme-Healthcare-512,Cybersecurity,One Year,19,137.36,10,22,9,9,Credit Card,0
+CUST-1513,Acme-E-Commerce-513,EdTech,Month-to-Month,37,304.62,10,13,63,4,Credit Card,1
+CUST-1514,Acme-EdTech-514,Healthcare,Two Year,15,241.63,3,23,19,2,Credit Card,0
+CUST-1515,Acme-Logistics-515,Fintech,One Year,32,632.14,8,3,61,6,Electronic Check,1
+CUST-1516,Acme-Cybersecurity-516,EdTech,Two Year,18,515.27,8,18,50,4,Electronic Check,1
+CUST-1517,Acme-DevOps-517,Healthcare,Month-to-Month,31,941.67,0,33,44,7,Bank Transfer,1
+CUST-1518,Acme-Fintech-518,DevOps,Month-to-Month,45,541.29,5,1,1,4,Credit Card,1
+CUST-1519,Acme-Healthcare-519,Fintech,Month-to-Month,17,226.79,4,16,34,8,Electronic Check,0
+CUST-1520,Acme-E-Commerce-520,E-Commerce,Month-to-Month,28,249.01,5,24,51,5,Bank Transfer,1
+CUST-1521,Acme-EdTech-521,Logistics,Month-to-Month,44,266.14,1,18,30,9,Electronic Check,0
+CUST-1522,Acme-Logistics-522,EdTech,Month-to-Month,10,498.34,0,12,53,8,Electronic Check,1
+CUST-1523,Acme-Cybersecurity-523,DevOps,One Year,47,348.94,7,20,32,9,Electronic Check,0
+CUST-1524,Acme-DevOps-524,Fintech,Month-to-Month,11,106.03,4,31,80,2,Electronic Check,1
+CUST-1525,Acme-Fintech-525,E-Commerce,Month-to-Month,36,578.62,4,23,2,7,Bank Transfer,0
+CUST-1526,Acme-Healthcare-526,DevOps,One Year,13,597.01,10,35,22,5,Electronic Check,0
+CUST-1527,Acme-E-Commerce-527,Cybersecurity,Month-to-Month,29,894.15,6,19,59,3,Electronic Check,1
+CUST-1528,Acme-EdTech-528,Cybersecurity,One Year,27,648.71,9,26,9,2,Bank Transfer,1
+CUST-1529,Acme-Logistics-529,Healthcare,Month-to-Month,19,723.91,9,26,34,8,Electronic Check,1
+CUST-1530,Acme-Cybersecurity-530,E-Commerce,One Year,29,442.29,2,2,16,4,Electronic Check,1
+CUST-1531,Acme-DevOps-531,Cybersecurity,One Year,14,207.56,1,7,8,8,Credit Card,0
+CUST-1532,Acme-Fintech-532,Fintech,One Year,6,147.73,9,10,10,7,Electronic Check,0
+CUST-1533,Acme-Healthcare-533,Healthcare,One Year,41,169.09,8,11,3,1,Bank Transfer,1
+CUST-1534,Acme-E-Commerce-534,DevOps,Two Year,30,975.23,8,18,70,8,Bank Transfer,0
+CUST-1535,Acme-EdTech-535,Cybersecurity,Month-to-Month,39,482.72,10,28,67,9,Electronic Check,1
+CUST-1536,Acme-Logistics-536,E-Commerce,Month-to-Month,6,468.77,5,27,33,3,Credit Card,1
+CUST-1537,Acme-Cybersecurity-537,Fintech,Month-to-Month,23,321.42,8,1,62,8,Credit Card,1
+CUST-1538,Acme-DevOps-538,DevOps,Month-to-Month,39,268.65,0,24,24,7,Bank Transfer,0
+CUST-1539,Acme-Fintech-539,EdTech,Month-to-Month,46,749.26,6,25,28,5,Credit Card,1
+CUST-1540,Acme-Healthcare-540,Cybersecurity,Month-to-Month,45,699.41,4,35,34,7,Electronic Check,0
+CUST-1541,Acme-E-Commerce-541,Fintech,Month-to-Month,8,654.05,9,29,34,10,Bank Transfer,1
+CUST-1542,Acme-EdTech-542,E-Commerce,Month-to-Month,35,70.02,1,19,34,3,Credit Card,1
+CUST-1543,Acme-Logistics-543,Cybersecurity,Month-to-Month,10,62.99,3,22,53,5,Credit Card,1
+CUST-1544,Acme-Cybersecurity-544,EdTech,Two Year,45,800.85,5,6,18,1,Bank Transfer,0
+CUST-1545,Acme-DevOps-545,EdTech,Month-to-Month,12,231.58,4,25,1,2,Bank Transfer,1
+CUST-1546,Acme-Fintech-546,Cybersecurity,Month-to-Month,16,749.74,0,13,58,2,Bank Transfer,1
+CUST-1547,Acme-Healthcare-547,Healthcare,Month-to-Month,20,938.4,2,3,70,9,Electronic Check,1
+CUST-1548,Acme-E-Commerce-548,EdTech,One Year,24,892.14,10,14,14,4,Credit Card,1
+CUST-1549,Acme-EdTech-549,E-Commerce,Month-to-Month,38,162.67,3,1,5,10,Bank Transfer,1
+CUST-1550,Acme-Logistics-550,EdTech,One Year,24,781.26,3,11,63,2,Credit Card,1
+CUST-1551,Acme-Cybersecurity-551,E-Commerce,Two Year,4,105.79,10,10,68,2,Electronic Check,1
+CUST-1552,Acme-DevOps-552,Healthcare,Month-to-Month,42,767.86,7,13,2,7,Electronic Check,1
+CUST-1553,Acme-Fintech-553,Healthcare,Month-to-Month,32,720.29,8,19,69,8,Credit Card,1
+CUST-1554,Acme-Healthcare-554,Healthcare,Month-to-Month,47,493.97,9,11,8,9,Bank Transfer,1
+CUST-1555,Acme-E-Commerce-555,E-Commerce,One Year,24,480.38,10,33,48,3,Electronic Check,1
+CUST-1556,Acme-EdTech-556,Logistics,Two Year,16,353.66,1,35,49,4,Electronic Check,0
+CUST-1557,Acme-Logistics-557,EdTech,One Year,40,317.97,6,21,14,2,Credit Card,1
+CUST-1558,Acme-Cybersecurity-558,Fintech,Month-to-Month,12,878.82,3,7,62,4,Credit Card,1
+CUST-1559,Acme-DevOps-559,Logistics,One Year,43,514.41,9,17,6,6,Bank Transfer,0
+CUST-1560,Acme-Fintech-560,Cybersecurity,Month-to-Month,42,515.84,1,30,81,1,Credit Card,1
+CUST-1561,Acme-Healthcare-561,Cybersecurity,Two Year,24,803.54,0,18,67,1,Bank Transfer,0
+CUST-1562,Acme-E-Commerce-562,DevOps,Month-to-Month,34,141.26,3,35,49,4,Credit Card,1
+CUST-1563,Acme-EdTech-563,Cybersecurity,Month-to-Month,12,579.5,8,27,13,10,Electronic Check,1
+CUST-1564,Acme-Logistics-564,EdTech,One Year,7,207.47,2,26,64,6,Bank Transfer,0
+CUST-1565,Acme-Cybersecurity-565,Logistics,Two Year,23,906.36,8,21,47,7,Bank Transfer,1
+CUST-1566,Acme-DevOps-566,EdTech,One Year,39,277.69,8,14,48,9,Bank Transfer,1
+CUST-1567,Acme-Fintech-567,E-Commerce,Month-to-Month,29,960.83,0,3,36,10,Bank Transfer,0
+CUST-1568,Acme-Healthcare-568,Healthcare,Two Year,1,334.32,3,14,40,1,Bank Transfer,1
+CUST-1569,Acme-E-Commerce-569,Cybersecurity,One Year,33,577.51,9,10,12,1,Electronic Check,1
+CUST-1570,Acme-EdTech-570,Healthcare,Month-to-Month,38,286.36,4,20,11,10,Bank Transfer,0
+CUST-1571,Acme-Logistics-571,Healthcare,One Year,21,802.26,2,32,73,2,Electronic Check,1
+CUST-1572,Acme-Cybersecurity-572,E-Commerce,Month-to-Month,25,123.55,0,22,44,7,Electronic Check,1
+CUST-1573,Acme-DevOps-573,DevOps,Month-to-Month,48,669.14,9,1,81,7,Credit Card,1
+CUST-1574,Acme-Fintech-574,Logistics,Month-to-Month,37,191.1,8,15,19,1,Electronic Check,1
+CUST-1575,Acme-Healthcare-575,EdTech,Two Year,37,528.49,3,28,37,7,Electronic Check,0
+CUST-1576,Acme-E-Commerce-576,E-Commerce,Month-to-Month,48,95.85,6,17,10,7,Electronic Check,1
+CUST-1577,Acme-EdTech-577,DevOps,One Year,31,580.33,7,26,83,10,Credit Card,1
+CUST-1578,Acme-Logistics-578,Logistics,Two Year,16,279.2,4,28,41,10,Electronic Check,0
+CUST-1579,Acme-Cybersecurity-579,Cybersecurity,Month-to-Month,23,229.97,5,2,39,3,Bank Transfer,1
+CUST-1580,Acme-DevOps-580,Logistics,One Year,40,187.53,0,15,25,6,Bank Transfer,0
+CUST-1581,Acme-Fintech-581,Cybersecurity,Two Year,48,100.81,9,10,36,1,Credit Card,0
+CUST-1582,Acme-Healthcare-582,DevOps,Month-to-Month,31,70.61,3,35,27,4,Bank Transfer,1
+CUST-1583,Acme-E-Commerce-583,DevOps,Month-to-Month,40,742.43,2,2,48,10,Bank Transfer,1
+CUST-1584,Acme-EdTech-584,Logistics,Month-to-Month,4,318.81,9,18,6,8,Credit Card,1
+CUST-1585,Acme-Logistics-585,Fintech,Month-to-Month,18,678.83,10,24,13,1,Electronic Check,1
+CUST-1586,Acme-Cybersecurity-586,Cybersecurity,Month-to-Month,33,976.78,1,21,62,10,Bank Transfer,1
+CUST-1587,Acme-DevOps-587,Healthcare,Month-to-Month,36,929.03,0,3,31,9,Bank Transfer,0
+CUST-1588,Acme-Fintech-588,EdTech,Month-to-Month,2,378.44,5,23,80,5,Credit Card,1
+CUST-1589,Acme-Healthcare-589,Logistics,Month-to-Month,41,293.8,6,2,71,5,Credit Card,1
+CUST-1590,Acme-E-Commerce-590,E-Commerce,Two Year,9,132.41,6,34,78,4,Electronic Check,1
+CUST-1591,Acme-EdTech-591,Logistics,Month-to-Month,39,361.82,8,9,26,3,Bank Transfer,1
+CUST-1592,Acme-Logistics-592,Cybersecurity,One Year,20,703.11,8,9,55,3,Credit Card,1
+CUST-1593,Acme-Cybersecurity-593,Logistics,Two Year,5,578.47,1,12,40,3,Bank Transfer,1
+CUST-1594,Acme-DevOps-594,DevOps,Month-to-Month,27,337.18,10,18,19,4,Bank Transfer,1
+CUST-1595,Acme-Fintech-595,Healthcare,Month-to-Month,40,302.52,9,15,76,4,Electronic Check,1
+CUST-1596,Acme-Healthcare-596,Fintech,Month-to-Month,31,176.38,9,31,83,6,Electronic Check,1
+CUST-1597,Acme-E-Commerce-597,EdTech,Month-to-Month,11,232.6,0,27,1,5,Credit Card,0
+CUST-1598,Acme-EdTech-598,Healthcare,One Year,14,111.83,7,32,41,8,Credit Card,1
+CUST-1599,Acme-Logistics-599,EdTech,Month-to-Month,39,747.57,6,21,50,10,Credit Card,1
+CUST-1600,Acme-Cybersecurity-600,Logistics,One Year,42,880.99,0,34,13,8,Electronic Check,0
+CUST-1601,Acme-DevOps-601,Fintech,Two Year,34,559.98,0,25,66,1,Credit Card,0
+CUST-1602,Acme-Fintech-602,EdTech,Month-to-Month,19,487.28,6,19,78,1,Bank Transfer,1
+CUST-1603,Acme-Healthcare-603,Healthcare,Month-to-Month,29,134.92,8,8,23,10,Electronic Check,1
+CUST-1604,Acme-E-Commerce-604,Cybersecurity,Month-to-Month,27,356.29,0,12,58,10,Bank Transfer,1
+CUST-1605,Acme-EdTech-605,Healthcare,Two Year,17,356.87,10,11,15,2,Credit Card,0
+CUST-1606,Acme-Logistics-606,EdTech,One Year,34,720.92,8,11,48,9,Credit Card,1
+CUST-1607,Acme-Cybersecurity-607,DevOps,Month-to-Month,37,876.74,2,11,18,3,Bank Transfer,1
+CUST-1608,Acme-DevOps-608,Fintech,Month-to-Month,47,779.2,7,19,80,3,Bank Transfer,1
+CUST-1609,Acme-Fintech-609,Healthcare,Two Year,40,776.13,0,30,63,8,Credit Card,0
+CUST-1610,Acme-Healthcare-610,Fintech,One Year,16,255.03,10,31,58,7,Bank Transfer,1
+CUST-1611,Acme-E-Commerce-611,Logistics,One Year,36,313.21,10,14,6,3,Credit Card,1
+CUST-1612,Acme-EdTech-612,Cybersecurity,Month-to-Month,3,682.65,9,20,42,2,Credit Card,1
+CUST-1613,Acme-Logistics-613,EdTech,Two Year,44,319.16,10,12,58,10,Credit Card,0
+CUST-1614,Acme-Cybersecurity-614,Fintech,Month-to-Month,21,399.14,6,5,54,9,Bank Transfer,1
+CUST-1615,Acme-DevOps-615,EdTech,Month-to-Month,18,361.75,6,34,26,4,Electronic Check,1
+CUST-1616,Acme-Fintech-616,Fintech,One Year,34,986.83,7,19,54,10,Electronic Check,1
+CUST-1617,Acme-Healthcare-617,E-Commerce,Month-to-Month,23,929.75,9,32,66,8,Electronic Check,1
+CUST-1618,Acme-E-Commerce-618,Healthcare,Two Year,46,324.96,3,1,15,1,Credit Card,0
+CUST-1619,Acme-EdTech-619,DevOps,Month-to-Month,40,998.04,6,3,42,6,Credit Card,1
+CUST-1620,Acme-Logistics-620,Cybersecurity,Month-to-Month,13,704.52,4,5,39,5,Electronic Check,0
+CUST-1621,Acme-Cybersecurity-621,E-Commerce,One Year,44,365.62,6,2,22,4,Credit Card,1
+CUST-1622,Acme-DevOps-622,E-Commerce,Two Year,31,806.39,10,9,61,3,Bank Transfer,1
+CUST-1623,Acme-Fintech-623,DevOps,Month-to-Month,30,793.79,6,4,66,5,Bank Transfer,1
+CUST-1624,Acme-Healthcare-624,Cybersecurity,Month-to-Month,2,246.85,10,22,45,2,Electronic Check,1
+CUST-1625,Acme-E-Commerce-625,E-Commerce,One Year,25,644.19,2,25,23,10,Bank Transfer,0
+CUST-1626,Acme-EdTech-626,DevOps,One Year,21,723.35,4,27,11,8,Electronic Check,0
+CUST-1627,Acme-Logistics-627,E-Commerce,Month-to-Month,14,547.85,2,8,47,1,Bank Transfer,1
+CUST-1628,Acme-Cybersecurity-628,Fintech,Month-to-Month,31,908.71,2,13,43,8,Credit Card,1
+CUST-1629,Acme-DevOps-629,Logistics,Month-to-Month,10,780.01,1,34,16,4,Bank Transfer,1
+CUST-1630,Acme-Fintech-630,EdTech,Month-to-Month,8,52.9,0,6,42,8,Electronic Check,1
+CUST-1631,Acme-Healthcare-631,Fintech,Month-to-Month,48,345.86,9,20,81,4,Electronic Check,1
+CUST-1632,Acme-E-Commerce-632,Healthcare,Month-to-Month,21,783.15,10,8,34,3,Electronic Check,1
+CUST-1633,Acme-EdTech-633,Fintech,Month-to-Month,36,537.36,3,35,44,9,Electronic Check,1
+CUST-1634,Acme-Logistics-634,Healthcare,Two Year,37,281.58,1,20,78,6,Bank Transfer,0
+CUST-1635,Acme-Cybersecurity-635,Fintech,Month-to-Month,44,96.93,6,4,11,7,Bank Transfer,1
+CUST-1636,Acme-DevOps-636,Cybersecurity,One Year,41,843.37,7,23,39,6,Electronic Check,0
+CUST-1637,Acme-Fintech-637,Cybersecurity,One Year,6,974.0,7,9,11,8,Electronic Check,0
+CUST-1638,Acme-Healthcare-638,E-Commerce,One Year,30,496.02,3,10,78,5,Electronic Check,0
+CUST-1639,Acme-E-Commerce-639,EdTech,Month-to-Month,22,798.34,5,30,62,1,Electronic Check,1
+CUST-1640,Acme-EdTech-640,Fintech,Month-to-Month,11,317.14,5,9,65,2,Bank Transfer,1
+CUST-1641,Acme-Logistics-641,Cybersecurity,One Year,36,665.98,4,35,59,7,Bank Transfer,0
+CUST-1642,Acme-Cybersecurity-642,Healthcare,One Year,11,974.2,6,5,43,4,Electronic Check,1
+CUST-1643,Acme-DevOps-643,Logistics,Month-to-Month,37,796.96,8,16,22,2,Bank Transfer,1
+CUST-1644,Acme-Fintech-644,Cybersecurity,One Year,8,611.55,7,21,71,2,Bank Transfer,1
+CUST-1645,Acme-Healthcare-645,Healthcare,Month-to-Month,5,617.35,10,25,41,8,Bank Transfer,1
+CUST-1646,Acme-E-Commerce-646,Fintech,Month-to-Month,38,907.09,10,1,18,3,Credit Card,1
+CUST-1647,Acme-EdTech-647,E-Commerce,Month-to-Month,29,234.88,10,21,38,10,Electronic Check,1
+CUST-1648,Acme-Logistics-648,Cybersecurity,Month-to-Month,46,982.45,5,6,74,1,Bank Transfer,1
+CUST-1649,Acme-Cybersecurity-649,Logistics,Month-to-Month,19,108.29,8,4,0,9,Credit Card,1
+CUST-1650,Acme-DevOps-650,E-Commerce,Month-to-Month,2,272.48,9,26,80,6,Bank Transfer,1
+CUST-1651,Acme-Fintech-651,EdTech,Month-to-Month,14,678.36,7,9,24,9,Electronic Check,1
+CUST-1652,Acme-Healthcare-652,E-Commerce,One Year,19,996.58,10,9,17,1,Credit Card,1
+CUST-1653,Acme-E-Commerce-653,Fintech,Month-to-Month,43,463.9,2,6,17,7,Bank Transfer,0
+CUST-1654,Acme-EdTech-654,DevOps,One Year,40,219.81,8,28,70,8,Bank Transfer,1
+CUST-1655,Acme-Logistics-655,Healthcare,Month-to-Month,1,598.04,3,33,34,7,Electronic Check,1
+CUST-1656,Acme-Cybersecurity-656,Logistics,Month-to-Month,37,508.1,5,8,74,8,Credit Card,1
+CUST-1657,Acme-DevOps-657,Fintech,Month-to-Month,34,983.4,4,30,66,2,Electronic Check,1
+CUST-1658,Acme-Fintech-658,Logistics,Month-to-Month,41,753.6,10,5,81,9,Bank Transfer,1
+CUST-1659,Acme-Healthcare-659,E-Commerce,One Year,35,788.6,7,30,65,8,Bank Transfer,1
+CUST-1660,Acme-E-Commerce-660,E-Commerce,Month-to-Month,19,208.13,9,20,72,5,Bank Transfer,1
+CUST-1661,Acme-EdTech-661,EdTech,One Year,4,672.5,4,2,36,8,Electronic Check,0
+CUST-1662,Acme-Logistics-662,Logistics,Month-to-Month,17,174.91,4,18,32,1,Bank Transfer,1
+CUST-1663,Acme-Cybersecurity-663,Logistics,Month-to-Month,48,192.58,7,24,22,5,Electronic Check,1
+CUST-1664,Acme-DevOps-664,Healthcare,Month-to-Month,3,374.71,1,10,76,3,Electronic Check,1
+CUST-1665,Acme-Fintech-665,DevOps,Two Year,16,676.63,10,11,26,10,Bank Transfer,0
+CUST-1666,Acme-Healthcare-666,E-Commerce,Month-to-Month,8,98.9,7,26,60,5,Bank Transfer,1
+CUST-1667,Acme-E-Commerce-667,DevOps,Two Year,25,698.33,6,31,33,3,Credit Card,0
+CUST-1668,Acme-EdTech-668,EdTech,Month-to-Month,25,693.57,8,3,12,9,Bank Transfer,1
+CUST-1669,Acme-Logistics-669,DevOps,Month-to-Month,18,367.22,4,7,32,10,Electronic Check,0
+CUST-1670,Acme-Cybersecurity-670,DevOps,One Year,47,687.3,3,34,43,3,Credit Card,1
+CUST-1671,Acme-DevOps-671,Fintech,One Year,1,439.69,8,7,57,6,Credit Card,1
+CUST-1672,Acme-Fintech-672,E-Commerce,Month-to-Month,2,637.43,0,14,76,2,Credit Card,1
+CUST-1673,Acme-Healthcare-673,Fintech,Month-to-Month,9,406.16,10,12,14,3,Electronic Check,1
+CUST-1674,Acme-E-Commerce-674,EdTech,One Year,41,479.77,4,28,85,6,Credit Card,0
+CUST-1675,Acme-EdTech-675,DevOps,Month-to-Month,25,418.16,0,17,33,3,Credit Card,1
+CUST-1676,Acme-Logistics-676,EdTech,Two Year,40,422.0,10,32,13,3,Credit Card,0
+CUST-1677,Acme-Cybersecurity-677,EdTech,Month-to-Month,7,915.98,4,7,4,2,Electronic Check,0
+CUST-1678,Acme-DevOps-678,Cybersecurity,Month-to-Month,2,900.69,2,1,4,7,Bank Transfer,1
+CUST-1679,Acme-Fintech-679,Cybersecurity,Month-to-Month,37,52.52,7,31,55,7,Bank Transfer,1
+CUST-1680,Acme-Healthcare-680,DevOps,One Year,35,263.55,6,31,15,10,Credit Card,0
+CUST-1681,Acme-E-Commerce-681,E-Commerce,Month-to-Month,26,101.43,10,6,46,9,Bank Transfer,1
+CUST-1682,Acme-EdTech-682,E-Commerce,Month-to-Month,19,664.4,2,3,49,4,Bank Transfer,1
+CUST-1683,Acme-Logistics-683,EdTech,Two Year,45,390.3,1,29,24,3,Electronic Check,0
+CUST-1684,Acme-Cybersecurity-684,Fintech,One Year,16,513.77,1,35,82,5,Electronic Check,0
+CUST-1685,Acme-DevOps-685,DevOps,One Year,3,371.32,5,3,51,2,Credit Card,1
+CUST-1686,Acme-Fintech-686,Cybersecurity,One Year,44,875.69,8,10,74,4,Bank Transfer,1
+CUST-1687,Acme-Healthcare-687,Fintech,One Year,42,67.11,9,3,31,3,Bank Transfer,1
+CUST-1688,Acme-E-Commerce-688,Cybersecurity,Month-to-Month,7,482.38,2,5,13,2,Bank Transfer,1
+CUST-1689,Acme-EdTech-689,DevOps,One Year,13,453.9,10,26,41,2,Credit Card,1
+CUST-1690,Acme-Logistics-690,Logistics,Month-to-Month,14,775.02,9,12,42,2,Bank Transfer,1
+CUST-1691,Acme-Cybersecurity-691,Healthcare,One Year,45,400.43,2,29,31,10,Credit Card,0
+CUST-1692,Acme-DevOps-692,Fintech,One Year,40,406.32,2,2,62,2,Electronic Check,1
+CUST-1693,Acme-Fintech-693,Healthcare,Two Year,42,613.04,4,27,60,3,Electronic Check,0
+CUST-1694,Acme-Healthcare-694,Cybersecurity,Month-to-Month,27,276.29,2,3,76,3,Bank Transfer,1
+CUST-1695,Acme-E-Commerce-695,Logistics,Two Year,20,379.46,0,16,24,2,Electronic Check,0
+CUST-1696,Acme-EdTech-696,Fintech,One Year,33,257.31,10,14,35,1,Electronic Check,1
+CUST-1697,Acme-Logistics-697,DevOps,Month-to-Month,32,216.51,10,3,6,6,Bank Transfer,1
+CUST-1698,Acme-Cybersecurity-698,EdTech,Month-to-Month,30,90.15,0,35,22,3,Electronic Check,1
+CUST-1699,Acme-DevOps-699,EdTech,Month-to-Month,16,734.33,9,21,53,4,Credit Card,1
+CUST-1700,Acme-Fintech-700,E-Commerce,Month-to-Month,21,265.39,3,27,25,7,Credit Card,0
+CUST-1701,Acme-Healthcare-701,Fintech,Month-to-Month,4,894.96,2,14,78,8,Bank Transfer,1
+CUST-1702,Acme-E-Commerce-702,E-Commerce,Month-to-Month,13,649.42,4,13,42,3,Electronic Check,1
+CUST-1703,Acme-EdTech-703,Logistics,Month-to-Month,8,858.07,7,27,21,6,Credit Card,1
+CUST-1704,Acme-Logistics-704,E-Commerce,One Year,40,909.3,9,15,11,7,Electronic Check,0
+CUST-1705,Acme-Cybersecurity-705,EdTech,Two Year,38,498.81,7,18,1,7,Credit Card,0
+CUST-1706,Acme-DevOps-706,Healthcare,Month-to-Month,38,260.29,9,10,73,1,Bank Transfer,1
+CUST-1707,Acme-Fintech-707,Fintech,Month-to-Month,47,779.18,0,28,67,7,Bank Transfer,1
+CUST-1708,Acme-Healthcare-708,DevOps,One Year,29,519.52,1,1,52,4,Credit Card,1
+CUST-1709,Acme-E-Commerce-709,E-Commerce,Month-to-Month,2,504.79,4,11,58,10,Credit Card,1
+CUST-1710,Acme-EdTech-710,Fintech,Two Year,9,879.49,6,12,47,8,Bank Transfer,1
+CUST-1711,Acme-Logistics-711,Fintech,Two Year,25,897.76,5,34,4,5,Credit Card,0
+CUST-1712,Acme-Cybersecurity-712,E-Commerce,One Year,35,595.47,3,6,79,6,Electronic Check,0
+CUST-1713,Acme-DevOps-713,Fintech,Month-to-Month,24,892.58,1,25,46,8,Electronic Check,1
+CUST-1714,Acme-Fintech-714,E-Commerce,Month-to-Month,36,718.63,8,14,17,6,Electronic Check,1
+CUST-1715,Acme-Healthcare-715,Fintech,One Year,38,876.57,3,15,41,6,Electronic Check,0
+CUST-1716,Acme-E-Commerce-716,Logistics,One Year,4,109.2,5,29,62,9,Bank Transfer,1
+CUST-1717,Acme-EdTech-717,Fintech,Month-to-Month,44,833.11,4,29,79,6,Electronic Check,1
+CUST-1718,Acme-Logistics-718,Cybersecurity,One Year,13,896.31,7,6,10,7,Credit Card,0
+CUST-1719,Acme-Cybersecurity-719,E-Commerce,Two Year,7,205.53,1,10,63,3,Credit Card,0
+CUST-1720,Acme-DevOps-720,Logistics,Two Year,19,444.71,10,35,16,8,Credit Card,0
+CUST-1721,Acme-Fintech-721,EdTech,One Year,19,228.61,0,15,66,6,Credit Card,0
+CUST-1722,Acme-Healthcare-722,E-Commerce,One Year,32,612.69,8,29,58,5,Bank Transfer,1
+CUST-1723,Acme-E-Commerce-723,DevOps,Month-to-Month,15,509.03,4,4,18,6,Bank Transfer,0
+CUST-1724,Acme-EdTech-724,Healthcare,One Year,46,557.55,2,12,85,3,Credit Card,0
+CUST-1725,Acme-Logistics-725,Fintech,Month-to-Month,37,169.15,4,24,23,4,Bank Transfer,1
+CUST-1726,Acme-Cybersecurity-726,Fintech,One Year,10,403.27,8,11,68,5,Bank Transfer,1
+CUST-1727,Acme-DevOps-727,Fintech,Month-to-Month,10,949.4,5,10,0,9,Bank Transfer,1
+CUST-1728,Acme-Fintech-728,E-Commerce,One Year,31,900.18,9,10,72,8,Bank Transfer,1
+CUST-1729,Acme-Healthcare-729,Fintech,One Year,9,693.11,1,20,3,7,Credit Card,0
+CUST-1730,Acme-E-Commerce-730,Healthcare,Month-to-Month,21,101.28,10,13,74,9,Credit Card,1
+CUST-1731,Acme-EdTech-731,DevOps,Month-to-Month,6,560.49,7,6,65,7,Credit Card,1
+CUST-1732,Acme-Logistics-732,E-Commerce,One Year,4,912.02,5,26,18,7,Electronic Check,1
+CUST-1733,Acme-Cybersecurity-733,E-Commerce,Month-to-Month,23,341.68,7,6,27,8,Bank Transfer,1
+CUST-1734,Acme-DevOps-734,EdTech,One Year,11,814.39,6,27,17,10,Bank Transfer,0
+CUST-1735,Acme-Fintech-735,Healthcare,Month-to-Month,34,986.31,1,25,11,1,Bank Transfer,1
+CUST-1736,Acme-Healthcare-736,E-Commerce,Month-to-Month,30,723.73,2,13,23,7,Electronic Check,0
+CUST-1737,Acme-E-Commerce-737,EdTech,Month-to-Month,38,337.72,8,30,28,1,Bank Transfer,1
+CUST-1738,Acme-EdTech-738,Healthcare,Month-to-Month,41,497.91,10,19,53,3,Electronic Check,1
+CUST-1739,Acme-Logistics-739,Cybersecurity,One Year,8,775.48,7,5,76,6,Credit Card,1
+CUST-1740,Acme-Cybersecurity-740,Logistics,Month-to-Month,41,700.62,1,24,65,10,Bank Transfer,1
+CUST-1741,Acme-DevOps-741,E-Commerce,Month-to-Month,10,352.7,2,23,20,1,Credit Card,1
+CUST-1742,Acme-Fintech-742,EdTech,One Year,4,324.36,8,5,65,4,Bank Transfer,1
+CUST-1743,Acme-Healthcare-743,Healthcare,One Year,11,565.53,5,20,34,6,Electronic Check,0
+CUST-1744,Acme-E-Commerce-744,Logistics,Month-to-Month,1,179.1,4,24,62,7,Credit Card,1
+CUST-1745,Acme-EdTech-745,Healthcare,Month-to-Month,33,259.06,3,34,68,9,Credit Card,1
+CUST-1746,Acme-Logistics-746,DevOps,Month-to-Month,5,159.74,2,2,61,6,Bank Transfer,1
+CUST-1747,Acme-Cybersecurity-747,E-Commerce,Month-to-Month,39,545.97,5,12,38,1,Bank Transfer,1
+CUST-1748,Acme-DevOps-748,Fintech,Month-to-Month,10,702.64,4,9,26,3,Electronic Check,1
+CUST-1749,Acme-Fintech-749,EdTech,One Year,5,66.87,7,28,5,4,Credit Card,1
+CUST-1750,Acme-Healthcare-750,DevOps,One Year,4,494.63,4,3,8,5,Electronic Check,0
+CUST-1751,Acme-E-Commerce-751,DevOps,Month-to-Month,39,244.13,3,12,85,6,Credit Card,1
+CUST-1752,Acme-EdTech-752,Healthcare,One Year,38,379.44,2,33,78,4,Bank Transfer,1
+CUST-1753,Acme-Logistics-753,Fintech,Month-to-Month,1,551.4,3,19,21,9,Electronic Check,0
+CUST-1754,Acme-Cybersecurity-754,Cybersecurity,Month-to-Month,33,857.73,7,24,75,3,Credit Card,1
+CUST-1755,Acme-DevOps-755,Fintech,Month-to-Month,25,451.89,8,15,52,2,Bank Transfer,1
+CUST-1756,Acme-Fintech-756,E-Commerce,Month-to-Month,34,178.12,5,19,71,1,Credit Card,1
+CUST-1757,Acme-Healthcare-757,EdTech,Month-to-Month,30,619.37,4,29,28,9,Bank Transfer,0
+CUST-1758,Acme-E-Commerce-758,DevOps,Month-to-Month,31,941.13,5,12,1,8,Credit Card,1
+CUST-1759,Acme-EdTech-759,EdTech,Month-to-Month,44,129.76,2,26,51,10,Electronic Check,1
+CUST-1760,Acme-Logistics-760,Cybersecurity,Two Year,5,394.52,3,22,25,10,Credit Card,0
+CUST-1761,Acme-Cybersecurity-761,EdTech,Month-to-Month,47,523.15,9,18,82,7,Bank Transfer,1
+CUST-1762,Acme-DevOps-762,Cybersecurity,One Year,32,534.84,2,30,13,2,Bank Transfer,0
+CUST-1763,Acme-Fintech-763,EdTech,Month-to-Month,2,143.62,0,5,63,1,Credit Card,1
+CUST-1764,Acme-Healthcare-764,EdTech,One Year,10,336.61,9,7,9,9,Bank Transfer,0
+CUST-1765,Acme-E-Commerce-765,DevOps,Month-to-Month,43,522.0,8,17,69,6,Bank Transfer,1
+CUST-1766,Acme-EdTech-766,Logistics,Month-to-Month,28,885.12,1,25,57,6,Credit Card,1
+CUST-1767,Acme-Logistics-767,EdTech,Month-to-Month,12,577.83,4,11,62,7,Credit Card,1
+CUST-1768,Acme-Cybersecurity-768,Cybersecurity,Month-to-Month,37,690.27,10,35,73,8,Credit Card,1
+CUST-1769,Acme-DevOps-769,DevOps,Month-to-Month,26,299.22,9,25,78,6,Credit Card,1
+CUST-1770,Acme-Fintech-770,E-Commerce,Month-to-Month,38,91.86,5,23,74,1,Credit Card,1
+CUST-1771,Acme-Healthcare-771,Cybersecurity,Month-to-Month,28,376.89,5,27,44,1,Credit Card,1
+CUST-1772,Acme-E-Commerce-772,Healthcare,Month-to-Month,38,129.69,1,20,14,6,Bank Transfer,0
+CUST-1773,Acme-EdTech-773,Logistics,Month-to-Month,43,869.2,9,33,53,5,Bank Transfer,1
+CUST-1774,Acme-Logistics-774,EdTech,One Year,25,590.84,5,7,62,2,Bank Transfer,1
+CUST-1775,Acme-Cybersecurity-775,Healthcare,Month-to-Month,43,371.56,9,20,46,7,Electronic Check,1
+CUST-1776,Acme-DevOps-776,Cybersecurity,One Year,35,252.38,4,4,38,10,Credit Card,0
+CUST-1777,Acme-Fintech-777,Healthcare,One Year,46,850.98,1,22,34,2,Credit Card,0
+CUST-1778,Acme-Healthcare-778,Logistics,Month-to-Month,23,804.87,10,20,64,5,Credit Card,1
+CUST-1779,Acme-E-Commerce-779,Logistics,Month-to-Month,26,287.7,8,30,85,9,Bank Transfer,1
+CUST-1780,Acme-EdTech-780,Fintech,One Year,12,597.0,3,30,34,9,Electronic Check,0
+CUST-1781,Acme-Logistics-781,DevOps,One Year,37,739.28,0,34,25,6,Bank Transfer,0
+CUST-1782,Acme-Cybersecurity-782,Healthcare,Month-to-Month,20,850.92,6,21,8,4,Electronic Check,1
+CUST-1783,Acme-DevOps-783,E-Commerce,One Year,11,292.62,9,16,51,4,Electronic Check,1
+CUST-1784,Acme-Fintech-784,Healthcare,Month-to-Month,30,510.11,6,28,82,1,Bank Transfer,1
+CUST-1785,Acme-Healthcare-785,E-Commerce,Month-to-Month,18,674.74,2,3,62,1,Bank Transfer,1
+CUST-1786,Acme-E-Commerce-786,Fintech,Month-to-Month,5,904.55,6,24,85,2,Bank Transfer,1
+CUST-1787,Acme-EdTech-787,DevOps,One Year,16,155.34,8,8,66,10,Credit Card,1
+CUST-1788,Acme-Logistics-788,Logistics,Month-to-Month,16,618.83,5,22,74,7,Credit Card,1
+CUST-1789,Acme-Cybersecurity-789,Cybersecurity,Month-to-Month,14,186.06,2,14,35,8,Bank Transfer,0
+CUST-1790,Acme-DevOps-790,DevOps,One Year,35,404.97,1,21,69,7,Bank Transfer,0
+CUST-1791,Acme-Fintech-791,Healthcare,Two Year,24,500.46,5,20,2,10,Credit Card,0
+CUST-1792,Acme-Healthcare-792,Cybersecurity,One Year,45,920.58,10,16,32,9,Credit Card,0
+CUST-1793,Acme-E-Commerce-793,Cybersecurity,Two Year,44,164.95,3,29,49,1,Bank Transfer,0
+CUST-1794,Acme-EdTech-794,EdTech,Two Year,20,134.74,3,20,26,3,Bank Transfer,0
+CUST-1795,Acme-Logistics-795,Cybersecurity,Month-to-Month,27,798.85,4,6,62,8,Electronic Check,1
+CUST-1796,Acme-Cybersecurity-796,DevOps,Month-to-Month,7,832.18,4,33,8,6,Bank Transfer,0
+CUST-1797,Acme-DevOps-797,Cybersecurity,One Year,21,479.6,0,4,82,3,Electronic Check,1
+CUST-1798,Acme-Fintech-798,DevOps,One Year,26,239.07,4,21,73,2,Credit Card,0
+CUST-1799,Acme-Healthcare-799,Healthcare,Month-to-Month,9,853.61,10,27,40,8,Electronic Check,1
+CUST-1800,Acme-E-Commerce-800,Cybersecurity,Month-to-Month,44,612.37,5,19,25,2,Credit Card,1
+CUST-1801,Acme-EdTech-801,Healthcare,Month-to-Month,37,262.26,0,15,11,8,Bank Transfer,0
+CUST-1802,Acme-Logistics-802,Cybersecurity,Two Year,26,636.1,9,17,19,2,Credit Card,1
+CUST-1803,Acme-Cybersecurity-803,Healthcare,Two Year,1,731.65,6,30,63,2,Credit Card,1
+CUST-1804,Acme-DevOps-804,Healthcare,Month-to-Month,19,758.12,6,9,55,4,Bank Transfer,1
+CUST-1805,Acme-Fintech-805,DevOps,Month-to-Month,13,446.41,6,10,3,5,Electronic Check,1
+CUST-1806,Acme-Healthcare-806,Healthcare,One Year,24,602.76,10,30,10,1,Credit Card,1
+CUST-1807,Acme-E-Commerce-807,DevOps,Month-to-Month,26,701.51,6,28,76,5,Electronic Check,1
+CUST-1808,Acme-EdTech-808,Logistics,Month-to-Month,16,496.39,5,3,0,5,Bank Transfer,1
+CUST-1809,Acme-Logistics-809,EdTech,Month-to-Month,43,401.36,8,3,74,3,Bank Transfer,1
+CUST-1810,Acme-Cybersecurity-810,Logistics,Month-to-Month,30,174.32,5,34,55,3,Bank Transfer,1
+CUST-1811,Acme-DevOps-811,E-Commerce,Month-to-Month,32,877.1,4,24,55,5,Credit Card,1
+CUST-1812,Acme-Fintech-812,E-Commerce,One Year,34,346.36,2,21,62,3,Bank Transfer,1
+CUST-1813,Acme-Healthcare-813,Cybersecurity,One Year,4,228.47,0,15,23,1,Bank Transfer,1
+CUST-1814,Acme-E-Commerce-814,Healthcare,One Year,8,994.44,7,3,56,6,Bank Transfer,1
+CUST-1815,Acme-EdTech-815,Logistics,Month-to-Month,8,852.55,2,8,44,2,Bank Transfer,1
+CUST-1816,Acme-Logistics-816,E-Commerce,Month-to-Month,48,532.3,4,14,74,1,Credit Card,1
+CUST-1817,Acme-Cybersecurity-817,Logistics,Month-to-Month,16,778.84,10,7,42,1,Credit Card,1
+CUST-1818,Acme-DevOps-818,Cybersecurity,Month-to-Month,38,931.69,1,21,19,1,Bank Transfer,0
+CUST-1819,Acme-Fintech-819,DevOps,One Year,30,645.94,4,1,42,1,Bank Transfer,1
+CUST-1820,Acme-Healthcare-820,EdTech,Month-to-Month,47,910.53,9,9,27,1,Electronic Check,1
+CUST-1821,Acme-E-Commerce-821,E-Commerce,Month-to-Month,48,116.19,9,25,11,7,Credit Card,1
+CUST-1822,Acme-EdTech-822,Healthcare,Two Year,6,68.49,3,11,49,7,Bank Transfer,0
+CUST-1823,Acme-Logistics-823,DevOps,Two Year,8,332.62,6,20,77,3,Credit Card,1
+CUST-1824,Acme-Cybersecurity-824,Fintech,One Year,13,514.14,6,31,34,10,Electronic Check,0
+CUST-1825,Acme-DevOps-825,Fintech,One Year,40,226.04,10,28,11,1,Bank Transfer,1
+CUST-1826,Acme-Fintech-826,EdTech,One Year,44,726.95,7,34,80,9,Electronic Check,1
+CUST-1827,Acme-Healthcare-827,EdTech,Month-to-Month,20,190.18,2,20,31,9,Bank Transfer,0
+CUST-1828,Acme-E-Commerce-828,Logistics,Month-to-Month,3,536.74,8,28,52,2,Credit Card,1
+CUST-1829,Acme-EdTech-829,Cybersecurity,One Year,23,291.12,1,33,2,2,Bank Transfer,0
+CUST-1830,Acme-Logistics-830,EdTech,Month-to-Month,26,92.0,6,20,40,10,Credit Card,1
+CUST-1831,Acme-Cybersecurity-831,DevOps,One Year,17,373.27,2,14,23,2,Electronic Check,0
+CUST-1832,Acme-DevOps-832,Logistics,Month-to-Month,7,461.11,0,1,50,2,Electronic Check,1
+CUST-1833,Acme-Fintech-833,Cybersecurity,Month-to-Month,26,874.34,9,32,38,10,Electronic Check,1
+CUST-1834,Acme-Healthcare-834,Logistics,Month-to-Month,45,690.35,4,6,16,3,Electronic Check,0
+CUST-1835,Acme-E-Commerce-835,Fintech,One Year,13,865.06,3,31,83,3,Electronic Check,1
+CUST-1836,Acme-EdTech-836,EdTech,One Year,13,130.79,7,10,60,7,Electronic Check,1
+CUST-1837,Acme-Logistics-837,Healthcare,Two Year,45,472.0,7,31,2,8,Electronic Check,0
+CUST-1838,Acme-Cybersecurity-838,Healthcare,Month-to-Month,4,366.16,1,28,53,8,Bank Transfer,1
+CUST-1839,Acme-DevOps-839,Logistics,One Year,3,512.12,7,33,75,10,Bank Transfer,1
+CUST-1840,Acme-Fintech-840,DevOps,Two Year,46,106.67,0,28,73,6,Credit Card,0
+CUST-1841,Acme-Healthcare-841,E-Commerce,Two Year,31,160.09,9,23,57,7,Bank Transfer,0
+CUST-1842,Acme-E-Commerce-842,E-Commerce,One Year,23,465.21,8,15,75,6,Bank Transfer,1
+CUST-1843,Acme-EdTech-843,DevOps,One Year,30,173.6,4,25,53,6,Electronic Check,0
+CUST-1844,Acme-Logistics-844,DevOps,Two Year,40,245.85,1,31,16,3,Credit Card,0
+CUST-1845,Acme-Cybersecurity-845,Logistics,Month-to-Month,32,337.47,3,4,2,6,Bank Transfer,0
+CUST-1846,Acme-DevOps-846,E-Commerce,One Year,33,79.37,1,22,55,2,Credit Card,1
+CUST-1847,Acme-Fintech-847,Fintech,One Year,17,992.98,5,3,71,5,Bank Transfer,1
+CUST-1848,Acme-Healthcare-848,DevOps,One Year,39,685.01,0,29,58,2,Electronic Check,1
+CUST-1849,Acme-E-Commerce-849,DevOps,One Year,36,88.87,1,11,80,2,Credit Card,1
+CUST-1850,Acme-EdTech-850,E-Commerce,Month-to-Month,46,468.44,8,32,12,3,Bank Transfer,1
+CUST-1851,Acme-Logistics-851,E-Commerce,One Year,13,466.15,6,1,31,8,Credit Card,1
+CUST-1852,Acme-Cybersecurity-852,Logistics,Month-to-Month,24,728.44,6,24,80,4,Bank Transfer,1
+CUST-1853,Acme-DevOps-853,DevOps,Month-to-Month,9,810.68,6,27,58,9,Credit Card,1
+CUST-1854,Acme-Fintech-854,E-Commerce,Two Year,10,780.64,8,5,10,6,Bank Transfer,0
+CUST-1855,Acme-Healthcare-855,DevOps,Month-to-Month,26,770.23,10,10,73,1,Credit Card,1
+CUST-1856,Acme-E-Commerce-856,Cybersecurity,One Year,19,447.34,10,20,40,6,Electronic Check,1
+CUST-1857,Acme-EdTech-857,E-Commerce,Two Year,10,714.28,7,14,69,10,Electronic Check,1
+CUST-1858,Acme-Logistics-858,Cybersecurity,Month-to-Month,42,433.28,3,20,10,1,Bank Transfer,1
+CUST-1859,Acme-Cybersecurity-859,EdTech,One Year,9,543.45,8,19,27,2,Electronic Check,1
+CUST-1860,Acme-DevOps-860,E-Commerce,Month-to-Month,11,71.25,8,17,30,5,Electronic Check,1
+CUST-1861,Acme-Fintech-861,Logistics,Month-to-Month,24,295.77,8,23,15,1,Credit Card,1
+CUST-1862,Acme-Healthcare-862,Fintech,Month-to-Month,48,53.95,5,16,74,10,Electronic Check,1
+CUST-1863,Acme-E-Commerce-863,Cybersecurity,One Year,15,381.82,4,9,48,9,Electronic Check,0
+CUST-1864,Acme-EdTech-864,Fintech,Month-to-Month,13,830.7,5,30,12,3,Electronic Check,1
+CUST-1865,Acme-Logistics-865,DevOps,Month-to-Month,4,452.64,2,31,27,8,Credit Card,0
+CUST-1866,Acme-Cybersecurity-866,Cybersecurity,Month-to-Month,36,542.0,6,17,74,8,Electronic Check,1
+CUST-1867,Acme-DevOps-867,EdTech,One Year,47,973.61,2,10,64,3,Bank Transfer,1
+CUST-1868,Acme-Fintech-868,EdTech,Month-to-Month,33,869.11,1,14,58,8,Electronic Check,1
+CUST-1869,Acme-Healthcare-869,Healthcare,Two Year,8,620.52,6,8,15,6,Bank Transfer,0
+CUST-1870,Acme-E-Commerce-870,Fintech,Month-to-Month,24,338.68,5,20,37,8,Credit Card,1
+CUST-1871,Acme-EdTech-871,Healthcare,Month-to-Month,27,95.22,4,19,27,3,Electronic Check,1
+CUST-1872,Acme-Logistics-872,EdTech,Month-to-Month,23,113.19,0,27,61,10,Electronic Check,1
+CUST-1873,Acme-Cybersecurity-873,EdTech,Two Year,31,841.74,9,9,17,9,Bank Transfer,0
+CUST-1874,Acme-DevOps-874,DevOps,Month-to-Month,10,872.03,5,6,79,10,Bank Transfer,1
+CUST-1875,Acme-Fintech-875,Healthcare,Two Year,35,92.53,10,29,35,2,Bank Transfer,1
+CUST-1876,Acme-Healthcare-876,Cybersecurity,Month-to-Month,46,342.41,10,8,82,9,Electronic Check,1
+CUST-1877,Acme-E-Commerce-877,Logistics,Month-to-Month,37,544.67,7,33,2,2,Credit Card,1
+CUST-1878,Acme-EdTech-878,Logistics,Month-to-Month,18,796.42,3,29,10,9,Credit Card,0
+CUST-1879,Acme-Logistics-879,EdTech,One Year,2,371.96,2,27,3,9,Bank Transfer,0
+CUST-1880,Acme-Cybersecurity-880,E-Commerce,Month-to-Month,35,208.75,2,12,32,2,Credit Card,1
+CUST-1881,Acme-DevOps-881,EdTech,One Year,40,962.07,2,2,7,5,Credit Card,0
+CUST-1882,Acme-Fintech-882,E-Commerce,Month-to-Month,17,405.74,1,4,25,4,Bank Transfer,1
+CUST-1883,Acme-Healthcare-883,Logistics,Month-to-Month,33,414.8,1,18,7,6,Electronic Check,0
+CUST-1884,Acme-E-Commerce-884,EdTech,Month-to-Month,27,650.86,0,18,70,10,Credit Card,1
+CUST-1885,Acme-EdTech-885,Healthcare,One Year,9,338.38,6,29,10,9,Electronic Check,0
+CUST-1886,Acme-Logistics-886,Healthcare,Month-to-Month,16,559.66,6,29,5,1,Credit Card,1
+CUST-1887,Acme-Cybersecurity-887,DevOps,One Year,11,49.52,7,18,76,5,Electronic Check,1
+CUST-1888,Acme-DevOps-888,EdTech,Two Year,14,604.9,8,19,5,3,Electronic Check,1
+CUST-1889,Acme-Fintech-889,Logistics,Month-to-Month,26,712.51,2,18,55,4,Credit Card,1
+CUST-1890,Acme-Healthcare-890,DevOps,Month-to-Month,22,652.41,7,18,31,6,Electronic Check,1
+CUST-1891,Acme-E-Commerce-891,EdTech,Two Year,2,917.32,2,1,77,8,Bank Transfer,0
+CUST-1892,Acme-EdTech-892,Fintech,One Year,36,899.5,7,26,68,2,Bank Transfer,1
+CUST-1893,Acme-Logistics-893,Cybersecurity,One Year,2,896.94,10,29,15,6,Electronic Check,1
+CUST-1894,Acme-Cybersecurity-894,EdTech,One Year,25,217.33,0,8,59,6,Bank Transfer,0
+CUST-1895,Acme-DevOps-895,EdTech,Month-to-Month,2,769.5,10,23,24,2,Electronic Check,1
+CUST-1896,Acme-Fintech-896,Cybersecurity,Month-to-Month,15,271.55,7,24,4,5,Electronic Check,1
+CUST-1897,Acme-Healthcare-897,Cybersecurity,One Year,1,235.28,10,26,14,5,Credit Card,1
+CUST-1898,Acme-E-Commerce-898,EdTech,Month-to-Month,43,750.87,10,12,8,10,Credit Card,1
+CUST-1899,Acme-EdTech-899,Fintech,Month-to-Month,15,885.95,4,13,2,9,Electronic Check,0
+CUST-1900,Acme-Logistics-900,Cybersecurity,One Year,1,940.0,10,4,41,7,Bank Transfer,1
+CUST-1901,Acme-Cybersecurity-901,EdTech,Month-to-Month,34,492.26,5,34,5,4,Electronic Check,1
+CUST-1902,Acme-DevOps-902,EdTech,Month-to-Month,1,421.27,5,6,73,1,Bank Transfer,1
+CUST-1903,Acme-Fintech-903,Healthcare,Two Year,5,920.15,3,11,42,5,Bank Transfer,0
+CUST-1904,Acme-Healthcare-904,Cybersecurity,Month-to-Month,28,816.66,9,22,32,4,Bank Transfer,1
+CUST-1905,Acme-E-Commerce-905,Healthcare,Two Year,22,542.69,3,5,76,10,Credit Card,0
+CUST-1906,Acme-EdTech-906,Fintech,One Year,8,130.26,0,3,48,6,Electronic Check,1
+CUST-1907,Acme-Logistics-907,Cybersecurity,Month-to-Month,4,922.16,7,4,38,10,Credit Card,1
+CUST-1908,Acme-Cybersecurity-908,Fintech,Month-to-Month,36,98.59,6,26,12,10,Credit Card,1
+CUST-1909,Acme-DevOps-909,Healthcare,Two Year,40,59.08,6,30,54,10,Electronic Check,1
+CUST-1910,Acme-Fintech-910,E-Commerce,One Year,2,480.37,5,13,13,2,Electronic Check,1
+CUST-1911,Acme-Healthcare-911,Cybersecurity,Month-to-Month,37,168.68,8,17,45,7,Credit Card,1
+CUST-1912,Acme-E-Commerce-912,Logistics,Month-to-Month,9,806.17,0,9,39,10,Credit Card,0
+CUST-1913,Acme-EdTech-913,Cybersecurity,One Year,38,889.96,2,10,60,5,Bank Transfer,0
+CUST-1914,Acme-Logistics-914,E-Commerce,Month-to-Month,34,606.12,10,10,7,4,Credit Card,1
+CUST-1915,Acme-Cybersecurity-915,DevOps,One Year,28,375.63,3,13,8,6,Credit Card,0
+CUST-1916,Acme-DevOps-916,EdTech,One Year,39,706.79,9,22,78,5,Bank Transfer,1
+CUST-1917,Acme-Fintech-917,Healthcare,Month-to-Month,32,257.44,0,15,29,8,Credit Card,0
+CUST-1918,Acme-Healthcare-918,Healthcare,Month-to-Month,48,406.12,6,12,0,6,Bank Transfer,1
+CUST-1919,Acme-E-Commerce-919,E-Commerce,Month-to-Month,10,325.05,3,24,5,1,Credit Card,1
+CUST-1920,Acme-EdTech-920,E-Commerce,Month-to-Month,47,214.57,8,16,22,4,Bank Transfer,1
+CUST-1921,Acme-Logistics-921,DevOps,Month-to-Month,2,838.87,2,25,83,2,Credit Card,1
+CUST-1922,Acme-Cybersecurity-922,Healthcare,Month-to-Month,24,818.01,10,11,67,10,Credit Card,1
+CUST-1923,Acme-DevOps-923,Cybersecurity,Month-to-Month,9,804.15,3,35,48,6,Credit Card,1
+CUST-1924,Acme-Fintech-924,EdTech,Two Year,3,773.93,9,13,68,5,Credit Card,1
+CUST-1925,Acme-Healthcare-925,E-Commerce,Month-to-Month,18,878.21,8,32,26,2,Electronic Check,1
+CUST-1926,Acme-E-Commerce-926,DevOps,One Year,11,532.18,10,33,47,8,Credit Card,1
+CUST-1927,Acme-EdTech-927,Healthcare,Month-to-Month,34,708.78,7,31,34,10,Bank Transfer,1
+CUST-1928,Acme-Logistics-928,DevOps,One Year,14,257.55,3,29,30,7,Credit Card,0
+CUST-1929,Acme-Cybersecurity-929,EdTech,Two Year,11,937.72,5,17,70,2,Electronic Check,1
+CUST-1930,Acme-DevOps-930,Fintech,Month-to-Month,23,267.67,0,30,65,10,Electronic Check,1
+CUST-1931,Acme-Fintech-931,EdTech,Month-to-Month,24,813.28,5,18,48,1,Bank Transfer,1
+CUST-1932,Acme-Healthcare-932,Healthcare,Month-to-Month,23,905.4,4,33,65,9,Credit Card,1
+CUST-1933,Acme-E-Commerce-933,DevOps,Month-to-Month,7,161.66,5,3,69,4,Credit Card,1
+CUST-1934,Acme-EdTech-934,Cybersecurity,Month-to-Month,48,823.79,10,18,24,10,Bank Transfer,1
+CUST-1935,Acme-Logistics-935,DevOps,One Year,35,915.76,0,20,36,6,Electronic Check,0
+CUST-1936,Acme-Cybersecurity-936,EdTech,Two Year,42,60.3,10,33,19,7,Electronic Check,0
+CUST-1937,Acme-DevOps-937,Cybersecurity,One Year,15,539.03,8,30,59,6,Bank Transfer,1
+CUST-1938,Acme-Fintech-938,E-Commerce,One Year,45,445.8,7,29,71,1,Bank Transfer,1
+CUST-1939,Acme-Healthcare-939,Logistics,Two Year,48,58.2,10,23,43,4,Bank Transfer,1
+CUST-1940,Acme-E-Commerce-940,Cybersecurity,One Year,35,333.66,9,2,72,1,Electronic Check,1
+CUST-1941,Acme-EdTech-941,Healthcare,Two Year,37,647.35,9,26,48,4,Bank Transfer,1
+CUST-1942,Acme-Logistics-942,Fintech,Month-to-Month,31,152.21,9,29,81,5,Credit Card,1
+CUST-1943,Acme-Cybersecurity-943,Fintech,One Year,3,834.15,9,32,3,3,Credit Card,1
+CUST-1944,Acme-DevOps-944,EdTech,Month-to-Month,19,675.59,1,30,7,6,Credit Card,0
+CUST-1945,Acme-Fintech-945,Healthcare,Month-to-Month,26,198.18,1,9,68,7,Bank Transfer,1
+CUST-1946,Acme-Healthcare-946,Fintech,Month-to-Month,9,875.93,4,28,85,8,Credit Card,1
+CUST-1947,Acme-E-Commerce-947,Logistics,Two Year,13,526.35,10,30,35,4,Electronic Check,0
+CUST-1948,Acme-EdTech-948,Healthcare,Month-to-Month,39,816.19,8,22,72,8,Bank Transfer,1
+CUST-1949,Acme-Logistics-949,Logistics,Month-to-Month,19,662.98,7,23,38,7,Credit Card,1
+CUST-1950,Acme-Cybersecurity-950,DevOps,One Year,16,219.6,9,28,58,7,Bank Transfer,1
+CUST-1951,Acme-DevOps-951,Healthcare,One Year,26,712.71,0,16,20,5,Credit Card,0
+CUST-1952,Acme-Fintech-952,Logistics,Month-to-Month,45,739.21,3,32,52,9,Credit Card,1
+CUST-1953,Acme-Healthcare-953,E-Commerce,Month-to-Month,33,777.21,5,27,57,3,Credit Card,1
+CUST-1954,Acme-E-Commerce-954,Logistics,Month-to-Month,5,655.92,10,30,48,6,Credit Card,1
+CUST-1955,Acme-EdTech-955,DevOps,Month-to-Month,1,287.08,2,21,85,8,Credit Card,1
+CUST-1956,Acme-Logistics-956,Fintech,Month-to-Month,16,726.9,7,9,60,5,Electronic Check,1
+CUST-1957,Acme-Cybersecurity-957,Healthcare,One Year,7,217.37,1,35,50,3,Electronic Check,0
+CUST-1958,Acme-DevOps-958,DevOps,Month-to-Month,10,467.63,2,14,4,9,Bank Transfer,0
+CUST-1959,Acme-Fintech-959,Cybersecurity,Month-to-Month,34,657.96,10,7,49,5,Electronic Check,1
+CUST-1960,Acme-Healthcare-960,Logistics,Month-to-Month,13,931.38,5,16,25,2,Bank Transfer,1
+CUST-1961,Acme-E-Commerce-961,Fintech,Two Year,13,694.96,1,15,12,3,Bank Transfer,0
+CUST-1962,Acme-EdTech-962,Fintech,Month-to-Month,21,355.55,10,13,79,4,Credit Card,1
+CUST-1963,Acme-Logistics-963,EdTech,Two Year,15,252.09,5,21,22,1,Credit Card,0
+CUST-1964,Acme-Cybersecurity-964,E-Commerce,Month-to-Month,30,258.09,10,18,83,10,Credit Card,1
+CUST-1965,Acme-DevOps-965,Fintech,Two Year,20,778.17,7,7,68,10,Bank Transfer,0
+CUST-1966,Acme-Fintech-966,Fintech,One Year,45,418.14,2,22,22,6,Electronic Check,0
+CUST-1967,Acme-Healthcare-967,Cybersecurity,Month-to-Month,2,627.11,9,29,48,9,Bank Transfer,1
+CUST-1968,Acme-E-Commerce-968,Healthcare,Month-to-Month,1,269.98,9,8,39,4,Electronic Check,1
+CUST-1969,Acme-EdTech-969,DevOps,Month-to-Month,4,179.68,7,19,25,3,Credit Card,1
+CUST-1970,Acme-Logistics-970,Cybersecurity,Month-to-Month,39,988.12,7,22,17,5,Electronic Check,1
+CUST-1971,Acme-Cybersecurity-971,DevOps,One Year,27,664.64,4,2,29,6,Electronic Check,0
+CUST-1972,Acme-DevOps-972,Healthcare,Month-to-Month,16,810.38,3,25,66,6,Electronic Check,1
+CUST-1973,Acme-Fintech-973,Cybersecurity,Month-to-Month,5,954.98,0,10,26,3,Bank Transfer,1
+CUST-1974,Acme-Healthcare-974,Logistics,Month-to-Month,16,531.05,6,30,39,3,Credit Card,1
+CUST-1975,Acme-E-Commerce-975,Healthcare,Month-to-Month,16,336.95,9,29,81,4,Electronic Check,1
+CUST-1976,Acme-EdTech-976,DevOps,Month-to-Month,26,407.83,7,29,54,9,Bank Transfer,1
+CUST-1977,Acme-Logistics-977,EdTech,One Year,2,772.83,6,6,38,10,Bank Transfer,1
+CUST-1978,Acme-Cybersecurity-978,Logistics,One Year,25,489.47,7,19,48,9,Bank Transfer,1
+CUST-1979,Acme-DevOps-979,Fintech,Month-to-Month,31,234.93,3,1,1,9,Electronic Check,1
+CUST-1980,Acme-Fintech-980,E-Commerce,Month-to-Month,26,970.97,5,25,62,5,Bank Transfer,1
+CUST-1981,Acme-Healthcare-981,Logistics,Month-to-Month,8,414.58,9,11,24,7,Credit Card,1
+CUST-1982,Acme-E-Commerce-982,DevOps,Two Year,23,533.13,7,24,7,7,Electronic Check,0
+CUST-1983,Acme-EdTech-983,Cybersecurity,Month-to-Month,3,924.4,5,2,85,3,Bank Transfer,1
+CUST-1984,Acme-Logistics-984,EdTech,Two Year,17,284.04,9,11,1,2,Credit Card,1
+CUST-1985,Acme-Cybersecurity-985,Cybersecurity,One Year,26,719.77,1,34,24,7,Bank Transfer,0
+CUST-1986,Acme-DevOps-986,EdTech,Month-to-Month,33,968.3,10,25,75,5,Bank Transfer,1
+CUST-1987,Acme-Fintech-987,DevOps,Two Year,6,152.81,9,23,18,5,Electronic Check,0
+CUST-1988,Acme-Healthcare-988,Cybersecurity,Month-to-Month,1,986.67,7,1,12,2,Bank Transfer,1
+CUST-1989,Acme-E-Commerce-989,EdTech,Month-to-Month,19,745.39,2,12,47,3,Electronic Check,1
+CUST-1990,Acme-EdTech-990,Healthcare,Month-to-Month,8,477.13,3,12,25,1,Electronic Check,1
+CUST-1991,Acme-Logistics-991,DevOps,One Year,27,467.69,9,7,81,3,Bank Transfer,1
+CUST-1992,Acme-Cybersecurity-992,Fintech,Month-to-Month,5,374.04,9,16,61,8,Bank Transfer,1
+CUST-1993,Acme-DevOps-993,Fintech,Month-to-Month,1,681.06,0,7,27,9,Bank Transfer,1
+CUST-1994,Acme-Fintech-994,EdTech,One Year,32,498.57,5,28,43,6,Bank Transfer,1
+CUST-1995,Acme-Healthcare-995,E-Commerce,Two Year,24,680.82,6,4,45,6,Credit Card,1
+CUST-1996,Acme-E-Commerce-996,Fintech,Month-to-Month,26,737.96,2,2,77,2,Electronic Check,1
+CUST-1997,Acme-EdTech-997,E-Commerce,Two Year,24,478.32,10,31,65,7,Credit Card,1
+CUST-1998,Acme-Logistics-998,Fintech,Two Year,2,651.09,0,21,56,4,Bank Transfer,1
+CUST-1999,Acme-Cybersecurity-999,EdTech,One Year,23,455.52,7,7,49,5,Credit Card,1
+CUST-2000,Acme-DevOps-1000,Cybersecurity,Month-to-Month,37,794.62,8,3,16,8,Electronic Check,1
+CUST-2001,Acme-Fintech-1001,E-Commerce,One Year,30,208.65,7,8,61,9,Electronic Check,1
+CUST-2002,Acme-Healthcare-1002,Healthcare,Month-to-Month,45,133.96,6,2,20,6,Electronic Check,1
+CUST-2003,Acme-E-Commerce-1003,DevOps,Month-to-Month,17,681.64,10,8,85,3,Electronic Check,1
+CUST-2004,Acme-EdTech-1004,Cybersecurity,One Year,45,365.16,3,5,82,6,Credit Card,0
+CUST-2005,Acme-Logistics-1005,Cybersecurity,One Year,25,670.22,8,28,29,4,Electronic Check,1
+CUST-2006,Acme-Cybersecurity-1006,E-Commerce,Month-to-Month,22,752.55,3,8,73,6,Credit Card,1
+CUST-2007,Acme-DevOps-1007,E-Commerce,Two Year,48,50.59,0,35,24,7,Electronic Check,0
+CUST-2008,Acme-Fintech-1008,E-Commerce,One Year,9,542.76,9,15,13,7,Electronic Check,0
+CUST-2009,Acme-Healthcare-1009,DevOps,Month-to-Month,19,844.36,7,30,18,10,Credit Card,1
+CUST-2010,Acme-E-Commerce-1010,Cybersecurity,One Year,3,617.94,4,33,15,5,Electronic Check,0
+CUST-2011,Acme-EdTech-1011,Cybersecurity,One Year,14,519.27,6,4,42,3,Electronic Check,1
+CUST-2012,Acme-Logistics-1012,Healthcare,One Year,45,747.94,2,32,50,5,Credit Card,0
+CUST-2013,Acme-Cybersecurity-1013,Cybersecurity,Two Year,2,569.55,5,28,60,6,Credit Card,1
+CUST-2014,Acme-DevOps-1014,EdTech,Month-to-Month,19,317.25,3,26,12,3,Electronic Check,1
+CUST-2015,Acme-Fintech-1015,DevOps,One Year,46,337.87,10,11,73,3,Credit Card,1
+CUST-2016,Acme-Healthcare-1016,EdTech,Month-to-Month,14,256.23,3,1,46,10,Credit Card,1
+CUST-2017,Acme-E-Commerce-1017,DevOps,Two Year,25,951.88,6,11,7,2,Credit Card,0
+CUST-2018,Acme-EdTech-1018,EdTech,Month-to-Month,8,980.26,10,22,75,7,Credit Card,1
+CUST-2019,Acme-Logistics-1019,Cybersecurity,One Year,3,161.86,6,32,38,10,Credit Card,1
+CUST-2020,Acme-Cybersecurity-1020,Cybersecurity,One Year,43,674.59,7,25,35,8,Electronic Check,0
+CUST-2021,Acme-DevOps-1021,Fintech,Month-to-Month,32,658.34,8,15,2,10,Credit Card,1
+CUST-2022,Acme-Fintech-1022,Logistics,Month-to-Month,48,138.83,9,12,49,8,Electronic Check,1
+CUST-2023,Acme-Healthcare-1023,Cybersecurity,Month-to-Month,9,143.47,1,35,23,7,Electronic Check,0
+CUST-2024,Acme-E-Commerce-1024,Fintech,Month-to-Month,34,513.14,8,35,83,2,Electronic Check,1
+CUST-2025,Acme-EdTech-1025,Healthcare,Two Year,12,867.9,2,1,71,8,Credit Card,0
+CUST-2026,Acme-Logistics-1026,Fintech,Month-to-Month,14,669.01,1,17,4,2,Electronic Check,1
+CUST-2027,Acme-Cybersecurity-1027,Logistics,Month-to-Month,11,450.9,10,1,31,5,Electronic Check,1
+CUST-2028,Acme-DevOps-1028,Logistics,Two Year,43,556.4,2,32,40,9,Bank Transfer,0
+CUST-2029,Acme-Fintech-1029,E-Commerce,One Year,14,702.53,10,3,30,1,Electronic Check,1
+CUST-2030,Acme-Healthcare-1030,E-Commerce,Two Year,9,621.04,3,23,35,3,Credit Card,0
+CUST-2031,Acme-E-Commerce-1031,EdTech,Month-to-Month,17,411.69,2,26,58,2,Bank Transfer,1
+CUST-2032,Acme-EdTech-1032,Cybersecurity,Month-to-Month,10,558.11,1,18,81,4,Electronic Check,1
+CUST-2033,Acme-Logistics-1033,Logistics,One Year,39,204.84,2,21,55,7,Electronic Check,0
+CUST-2034,Acme-Cybersecurity-1034,Logistics,Month-to-Month,8,553.9,10,27,8,6,Bank Transfer,1
+CUST-2035,Acme-DevOps-1035,E-Commerce,Two Year,10,874.41,3,18,1,2,Bank Transfer,0
+CUST-2036,Acme-Fintech-1036,Healthcare,Month-to-Month,8,215.94,4,32,12,9,Credit Card,0
+CUST-2037,Acme-Healthcare-1037,Logistics,Two Year,18,626.09,0,11,40,7,Electronic Check,0
+CUST-2038,Acme-E-Commerce-1038,DevOps,One Year,36,613.89,6,31,75,3,Electronic Check,1
+CUST-2039,Acme-EdTech-1039,Cybersecurity,Month-to-Month,43,169.05,6,18,6,6,Credit Card,1
+CUST-2040,Acme-Logistics-1040,Healthcare,One Year,46,483.9,7,23,59,9,Bank Transfer,1
+CUST-2041,Acme-Cybersecurity-1041,EdTech,Month-to-Month,15,338.93,1,20,52,6,Electronic Check,1
+CUST-2042,Acme-DevOps-1042,Cybersecurity,Month-to-Month,16,946.62,2,4,10,5,Electronic Check,0
+CUST-2043,Acme-Fintech-1043,EdTech,One Year,28,692.18,2,31,63,9,Credit Card,0
+CUST-2044,Acme-Healthcare-1044,Cybersecurity,Two Year,8,434.2,9,13,0,7,Electronic Check,0
+CUST-2045,Acme-E-Commerce-1045,Cybersecurity,Month-to-Month,43,952.32,8,3,77,8,Electronic Check,1
+CUST-2046,Acme-EdTech-1046,Cybersecurity,Two Year,15,215.07,5,9,65,6,Electronic Check,1
+CUST-2047,Acme-Logistics-1047,EdTech,Month-to-Month,24,970.24,5,16,69,2,Credit Card,1
+CUST-2048,Acme-Cybersecurity-1048,EdTech,Month-to-Month,1,750.12,9,26,27,5,Credit Card,1
+CUST-2049,Acme-DevOps-1049,Cybersecurity,Month-to-Month,30,896.87,7,4,45,1,Credit Card,1
+CUST-2050,Acme-Fintech-1050,E-Commerce,Month-to-Month,1,381.24,2,26,45,1,Credit Card,1
+CUST-2051,Acme-Healthcare-1051,EdTech,Month-to-Month,33,902.58,6,8,62,1,Electronic Check,1
+CUST-2052,Acme-E-Commerce-1052,Cybersecurity,Month-to-Month,26,404.59,5,28,23,9,Bank Transfer,1
+CUST-2053,Acme-EdTech-1053,Fintech,Two Year,29,202.74,5,28,0,6,Electronic Check,0
+CUST-2054,Acme-Logistics-1054,Cybersecurity,Month-to-Month,19,87.24,6,27,42,1,Credit Card,1
+CUST-2055,Acme-Cybersecurity-1055,Healthcare,Two Year,18,161.85,7,32,16,6,Electronic Check,0
+CUST-2056,Acme-DevOps-1056,DevOps,Two Year,47,926.38,6,9,14,2,Electronic Check,1
+CUST-2057,Acme-Fintech-1057,Healthcare,Month-to-Month,1,778.02,3,4,43,7,Electronic Check,1
+CUST-2058,Acme-Healthcare-1058,Cybersecurity,Month-to-Month,19,317.11,1,28,31,10,Bank Transfer,0
+CUST-2059,Acme-E-Commerce-1059,Logistics,Month-to-Month,8,869.96,3,28,25,8,Bank Transfer,0
+CUST-2060,Acme-EdTech-1060,DevOps,Month-to-Month,33,629.55,3,10,29,2,Electronic Check,1
+CUST-2061,Acme-Logistics-1061,Fintech,Month-to-Month,10,453.99,9,13,11,1,Credit Card,1
+CUST-2062,Acme-Cybersecurity-1062,Logistics,Month-to-Month,15,259.69,6,31,7,9,Electronic Check,1
+CUST-2063,Acme-DevOps-1063,Fintech,Month-to-Month,24,315.53,5,27,31,6,Bank Transfer,1
+CUST-2064,Acme-Fintech-1064,Healthcare,Month-to-Month,43,756.52,3,19,60,5,Credit Card,1
+CUST-2065,Acme-Healthcare-1065,Fintech,Month-to-Month,32,394.4,4,8,12,1,Bank Transfer,1
+CUST-2066,Acme-E-Commerce-1066,DevOps,Two Year,24,753.23,5,34,77,6,Bank Transfer,0
+CUST-2067,Acme-EdTech-1067,E-Commerce,Month-to-Month,6,891.83,2,8,5,10,Bank Transfer,0
+CUST-2068,Acme-Logistics-1068,Cybersecurity,One Year,46,472.48,1,5,69,10,Credit Card,0
+CUST-2069,Acme-Cybersecurity-1069,Cybersecurity,Month-to-Month,35,733.73,0,9,24,7,Credit Card,0
+CUST-2070,Acme-DevOps-1070,E-Commerce,Two Year,23,899.17,7,8,55,2,Electronic Check,1
+CUST-2071,Acme-Fintech-1071,Logistics,Two Year,2,207.59,4,9,37,1,Electronic Check,0
+CUST-2072,Acme-Healthcare-1072,Fintech,One Year,13,752.68,6,32,68,9,Electronic Check,1
+CUST-2073,Acme-E-Commerce-1073,Healthcare,Month-to-Month,25,583.37,6,26,77,5,Electronic Check,1
+CUST-2074,Acme-EdTech-1074,Fintech,Month-to-Month,38,710.89,8,30,64,9,Credit Card,1
+CUST-2075,Acme-Logistics-1075,DevOps,Month-to-Month,18,573.54,2,15,5,9,Electronic Check,0
+CUST-2076,Acme-Cybersecurity-1076,Fintech,One Year,9,305.91,0,16,26,9,Bank Transfer,0
+CUST-2077,Acme-DevOps-1077,Cybersecurity,Month-to-Month,24,357.33,8,17,17,7,Electronic Check,1
+CUST-2078,Acme-Fintech-1078,E-Commerce,Month-to-Month,41,824.13,5,15,35,3,Credit Card,1
+CUST-2079,Acme-Healthcare-1079,Fintech,Month-to-Month,7,735.47,6,17,80,10,Electronic Check,1
+CUST-2080,Acme-E-Commerce-1080,DevOps,Month-to-Month,18,242.72,10,26,19,8,Bank Transfer,1
+CUST-2081,Acme-EdTech-1081,Cybersecurity,Month-to-Month,31,138.01,2,30,23,3,Credit Card,1
+CUST-2082,Acme-Logistics-1082,EdTech,Two Year,42,316.94,4,11,22,7,Credit Card,0
+CUST-2083,Acme-Cybersecurity-1083,Healthcare,Month-to-Month,28,281.99,10,26,12,9,Credit Card,1
+CUST-2084,Acme-DevOps-1084,DevOps,One Year,7,407.98,0,8,1,1,Electronic Check,0
+CUST-2085,Acme-Fintech-1085,DevOps,Month-to-Month,41,618.66,0,7,69,6,Credit Card,1
+CUST-2086,Acme-Healthcare-1086,Fintech,Month-to-Month,37,896.77,2,20,42,8,Bank Transfer,1
+CUST-2087,Acme-E-Commerce-1087,Fintech,Month-to-Month,41,565.43,0,3,13,9,Bank Transfer,0
+CUST-2088,Acme-EdTech-1088,Logistics,Two Year,10,50.15,3,2,29,7,Bank Transfer,0
+CUST-2089,Acme-Logistics-1089,E-Commerce,One Year,44,414.51,1,32,21,2,Credit Card,0
+CUST-2090,Acme-Cybersecurity-1090,E-Commerce,Month-to-Month,22,161.43,1,3,77,3,Electronic Check,1
+CUST-2091,Acme-DevOps-1091,Logistics,Month-to-Month,44,452.98,10,20,79,5,Credit Card,1
+CUST-2092,Acme-Fintech-1092,Fintech,Month-to-Month,43,399.66,4,5,0,3,Bank Transfer,1
+CUST-2093,Acme-Healthcare-1093,Healthcare,Month-to-Month,29,734.28,7,5,14,10,Bank Transfer,1
+CUST-2094,Acme-E-Commerce-1094,Cybersecurity,Month-to-Month,21,994.03,2,25,45,6,Credit Card,1
+CUST-2095,Acme-EdTech-1095,EdTech,One Year,39,802.83,5,9,83,4,Bank Transfer,1
+CUST-2096,Acme-Logistics-1096,Logistics,Month-to-Month,32,554.85,3,25,10,10,Electronic Check,0
+CUST-2097,Acme-Cybersecurity-1097,Logistics,One Year,48,257.37,1,16,46,1,Electronic Check,0
+CUST-2098,Acme-DevOps-1098,DevOps,Month-to-Month,31,958.73,1,4,44,6,Electronic Check,1
+CUST-2099,Acme-Fintech-1099,DevOps,One Year,19,486.37,8,27,31,4,Credit Card,1
+CUST-2100,Acme-Healthcare-1100,Fintech,One Year,45,717.76,6,2,54,6,Credit Card,1
+CUST-2101,Acme-E-Commerce-1101,Fintech,One Year,31,844.57,2,2,18,6,Credit Card,0
+CUST-2102,Acme-EdTech-1102,Healthcare,Month-to-Month,27,191.23,2,31,17,9,Electronic Check,0
+CUST-2103,Acme-Logistics-1103,E-Commerce,Month-to-Month,22,470.77,10,1,36,2,Electronic Check,1
+CUST-2104,Acme-Cybersecurity-1104,Cybersecurity,Month-to-Month,33,201.33,6,28,58,9,Credit Card,1
+CUST-2105,Acme-DevOps-1105,E-Commerce,Two Year,20,722.89,6,11,34,2,Electronic Check,0
+CUST-2106,Acme-Fintech-1106,Healthcare,One Year,40,102.2,6,12,71,10,Bank Transfer,1
+CUST-2107,Acme-Healthcare-1107,DevOps,One Year,21,669.06,6,25,21,1,Bank Transfer,1
+CUST-2108,Acme-E-Commerce-1108,Cybersecurity,Month-to-Month,7,148.18,5,22,3,4,Bank Transfer,1
+CUST-2109,Acme-EdTech-1109,Logistics,Month-to-Month,39,59.43,4,13,70,4,Credit Card,1
+CUST-2110,Acme-Logistics-1110,Fintech,Month-to-Month,37,585.56,9,31,5,1,Credit Card,1
+CUST-2111,Acme-Cybersecurity-1111,E-Commerce,Month-to-Month,19,959.8,8,13,40,7,Bank Transfer,1
+CUST-2112,Acme-DevOps-1112,Healthcare,One Year,22,435.92,8,7,64,3,Credit Card,1
+CUST-2113,Acme-Fintech-1113,DevOps,Month-to-Month,3,324.61,2,30,10,2,Electronic Check,1
+CUST-2114,Acme-Healthcare-1114,Healthcare,Two Year,42,182.82,2,33,66,10,Electronic Check,0
+CUST-2115,Acme-E-Commerce-1115,DevOps,Month-to-Month,22,325.3,9,28,5,7,Credit Card,1
+CUST-2116,Acme-EdTech-1116,Logistics,One Year,37,645.4,7,7,1,3,Credit Card,1
+CUST-2117,Acme-Logistics-1117,E-Commerce,Month-to-Month,32,138.41,5,11,37,3,Credit Card,1
+CUST-2118,Acme-Cybersecurity-1118,Logistics,Month-to-Month,5,219.23,7,17,60,5,Credit Card,1
+CUST-2119,Acme-DevOps-1119,EdTech,One Year,8,972.1,7,3,46,5,Credit Card,1
+CUST-2120,Acme-Fintech-1120,DevOps,One Year,9,467.79,8,21,47,2,Electronic Check,1
+CUST-2121,Acme-Healthcare-1121,Logistics,Month-to-Month,3,638.58,10,4,31,9,Electronic Check,1
+CUST-2122,Acme-E-Commerce-1122,DevOps,Month-to-Month,11,590.63,1,15,49,8,Bank Transfer,1
+CUST-2123,Acme-EdTech-1123,E-Commerce,Month-to-Month,35,904.12,7,7,10,3,Electronic Check,1
+CUST-2124,Acme-Logistics-1124,EdTech,One Year,26,361.28,5,22,77,8,Credit Card,1
+CUST-2125,Acme-Cybersecurity-1125,Cybersecurity,Month-to-Month,30,85.37,2,31,18,4,Bank Transfer,1
+CUST-2126,Acme-DevOps-1126,Fintech,Two Year,4,938.64,5,28,60,4,Bank Transfer,1
+CUST-2127,Acme-Fintech-1127,DevOps,Month-to-Month,28,305.36,10,12,10,3,Electronic Check,1
+CUST-2128,Acme-Healthcare-1128,EdTech,Month-to-Month,29,876.72,8,14,85,5,Electronic Check,1
+CUST-2129,Acme-E-Commerce-1129,Fintech,Month-to-Month,22,964.2,4,11,25,6,Bank Transfer,0
+CUST-2130,Acme-EdTech-1130,EdTech,Month-to-Month,11,966.31,6,23,73,7,Electronic Check,1
+CUST-2131,Acme-Logistics-1131,Logistics,One Year,13,122.92,10,10,41,6,Electronic Check,1
+CUST-2132,Acme-Cybersecurity-1132,EdTech,Two Year,21,156.93,10,27,33,9,Bank Transfer,0
+CUST-2133,Acme-DevOps-1133,EdTech,Two Year,41,475.86,9,7,4,4,Credit Card,1
+CUST-2134,Acme-Fintech-1134,Healthcare,Month-to-Month,11,619.9,3,23,26,4,Electronic Check,1
+CUST-2135,Acme-Healthcare-1135,Logistics,Two Year,24,64.38,4,33,15,8,Bank Transfer,0
+CUST-2136,Acme-E-Commerce-1136,EdTech,Month-to-Month,23,835.78,6,34,42,2,Bank Transfer,1
+CUST-2137,Acme-EdTech-1137,EdTech,Month-to-Month,36,614.15,8,28,48,5,Credit Card,1
+CUST-2138,Acme-Logistics-1138,Cybersecurity,One Year,19,715.99,1,6,13,2,Electronic Check,0
+CUST-2139,Acme-Cybersecurity-1139,Logistics,Two Year,32,761.45,9,35,12,8,Credit Card,0
+CUST-2140,Acme-DevOps-1140,DevOps,Month-to-Month,27,250.28,7,25,14,4,Bank Transfer,1
+CUST-2141,Acme-Fintech-1141,Fintech,Month-to-Month,27,911.59,10,26,0,6,Bank Transfer,1
+CUST-2142,Acme-Healthcare-1142,Logistics,Month-to-Month,17,341.03,6,16,0,7,Electronic Check,1
+CUST-2143,Acme-E-Commerce-1143,Fintech,Month-to-Month,34,828.03,9,21,42,3,Bank Transfer,1
+CUST-2144,Acme-EdTech-1144,EdTech,Month-to-Month,13,634.45,6,4,73,7,Bank Transfer,1
+CUST-2145,Acme-Logistics-1145,Cybersecurity,Month-to-Month,12,431.96,5,34,20,7,Electronic Check,1
+CUST-2146,Acme-Cybersecurity-1146,Cybersecurity,One Year,8,648.87,6,17,70,3,Electronic Check,1
+CUST-2147,Acme-DevOps-1147,Healthcare,Month-to-Month,28,59.96,9,10,3,10,Credit Card,1
+CUST-2148,Acme-Fintech-1148,Fintech,One Year,48,746.46,7,23,23,4,Credit Card,1
+CUST-2149,Acme-Healthcare-1149,Healthcare,Month-to-Month,16,739.0,6,17,84,1,Electronic Check,1
+CUST-2150,Acme-E-Commerce-1150,Healthcare,One Year,38,872.59,1,30,76,2,Electronic Check,0
+CUST-2151,Acme-EdTech-1151,E-Commerce,Month-to-Month,6,122.51,5,14,50,2,Credit Card,1
+CUST-2152,Acme-Logistics-1152,Fintech,Month-to-Month,41,121.5,10,27,48,6,Bank Transfer,1
+CUST-2153,Acme-Cybersecurity-1153,EdTech,One Year,20,58.63,2,3,15,6,Credit Card,0
+CUST-2154,Acme-DevOps-1154,EdTech,Two Year,35,53.76,8,17,15,4,Electronic Check,0
+CUST-2155,Acme-Fintech-1155,Logistics,Month-to-Month,10,254.49,5,8,27,1,Electronic Check,1
+CUST-2156,Acme-Healthcare-1156,Healthcare,Month-to-Month,9,303.21,7,13,11,6,Electronic Check,1
+CUST-2157,Acme-E-Commerce-1157,Cybersecurity,Month-to-Month,32,463.26,6,13,32,3,Electronic Check,1
+CUST-2158,Acme-EdTech-1158,DevOps,Two Year,26,146.75,9,20,21,4,Bank Transfer,1
+CUST-2159,Acme-Logistics-1159,EdTech,Month-to-Month,28,615.51,4,21,79,2,Bank Transfer,1
+CUST-2160,Acme-Cybersecurity-1160,EdTech,Month-to-Month,24,902.0,1,29,21,1,Bank Transfer,1
+CUST-2161,Acme-DevOps-1161,E-Commerce,One Year,39,834.35,10,34,45,7,Bank Transfer,1
+CUST-2162,Acme-Fintech-1162,Healthcare,One Year,12,388.86,1,14,84,6,Bank Transfer,0
+CUST-2163,Acme-Healthcare-1163,DevOps,Month-to-Month,21,702.88,5,14,59,10,Credit Card,1
+CUST-2164,Acme-E-Commerce-1164,Healthcare,One Year,19,620.71,8,14,13,9,Bank Transfer,0
+CUST-2165,Acme-EdTech-1165,Logistics,Two Year,5,594.25,10,27,55,6,Electronic Check,1
+CUST-2166,Acme-Logistics-1166,Healthcare,Month-to-Month,32,93.45,4,27,15,2,Bank Transfer,1
+CUST-2167,Acme-Cybersecurity-1167,Logistics,Month-to-Month,16,596.59,4,2,82,10,Bank Transfer,1
+CUST-2168,Acme-DevOps-1168,EdTech,Month-to-Month,3,900.04,8,3,43,1,Bank Transfer,1
+CUST-2169,Acme-Fintech-1169,Fintech,One Year,47,334.95,5,23,51,2,Bank Transfer,1
+CUST-2170,Acme-Healthcare-1170,E-Commerce,Month-to-Month,26,332.52,7,32,82,2,Credit Card,1
+CUST-2171,Acme-E-Commerce-1171,Logistics,Month-to-Month,4,833.18,2,7,41,7,Credit Card,1
+CUST-2172,Acme-EdTech-1172,Fintech,Month-to-Month,35,989.09,0,17,5,2,Bank Transfer,0
+CUST-2173,Acme-Logistics-1173,E-Commerce,Month-to-Month,45,631.11,6,18,21,3,Bank Transfer,1
+CUST-2174,Acme-Cybersecurity-1174,Fintech,Month-to-Month,38,892.41,6,29,85,2,Credit Card,1
+CUST-2175,Acme-DevOps-1175,Healthcare,One Year,32,976.53,5,31,28,2,Electronic Check,1
+CUST-2176,Acme-Fintech-1176,E-Commerce,One Year,36,842.76,3,14,9,2,Bank Transfer,0
+CUST-2177,Acme-Healthcare-1177,Fintech,Month-to-Month,14,493.74,6,13,62,2,Electronic Check,1
+CUST-2178,Acme-E-Commerce-1178,DevOps,One Year,33,864.54,4,30,83,3,Electronic Check,1
+CUST-2179,Acme-EdTech-1179,Fintech,Two Year,24,415.3,7,33,25,7,Credit Card,0
+CUST-2180,Acme-Logistics-1180,E-Commerce,Month-to-Month,20,952.92,9,7,18,8,Electronic Check,1
+CUST-2181,Acme-Cybersecurity-1181,Cybersecurity,Month-to-Month,30,226.68,0,31,84,9,Credit Card,1
+CUST-2182,Acme-DevOps-1182,E-Commerce,Month-to-Month,6,385.71,3,10,50,9,Electronic Check,1
+CUST-2183,Acme-Fintech-1183,E-Commerce,Month-to-Month,24,141.92,10,25,54,4,Bank Transfer,1
+CUST-2184,Acme-Healthcare-1184,EdTech,Month-to-Month,34,626.08,8,28,13,1,Bank Transfer,1
+CUST-2185,Acme-E-Commerce-1185,Fintech,Month-to-Month,3,595.47,3,5,68,2,Credit Card,1
+CUST-2186,Acme-EdTech-1186,Logistics,One Year,26,422.24,3,18,63,4,Bank Transfer,0
+CUST-2187,Acme-Logistics-1187,Healthcare,Month-to-Month,46,615.5,0,7,23,9,Bank Transfer,0
+CUST-2188,Acme-Cybersecurity-1188,Logistics,Month-to-Month,45,275.69,5,5,21,3,Bank Transfer,1
+CUST-2189,Acme-DevOps-1189,EdTech,Month-to-Month,43,499.87,5,2,22,5,Credit Card,1
+CUST-2190,Acme-Fintech-1190,Healthcare,One Year,39,383.54,7,1,62,4,Credit Card,1
+CUST-2191,Acme-Healthcare-1191,Fintech,One Year,44,989.89,3,34,64,3,Electronic Check,1
+CUST-2192,Acme-E-Commerce-1192,DevOps,Month-to-Month,48,367.89,7,23,69,5,Bank Transfer,1
+CUST-2193,Acme-EdTech-1193,E-Commerce,Month-to-Month,23,335.08,5,34,84,10,Credit Card,1
+CUST-2194,Acme-Logistics-1194,E-Commerce,One Year,41,68.69,6,15,84,3,Electronic Check,1
+CUST-2195,Acme-Cybersecurity-1195,Fintech,Month-to-Month,45,973.63,5,14,11,4,Electronic Check,1
+CUST-2196,Acme-DevOps-1196,EdTech,One Year,41,693.86,7,34,22,5,Bank Transfer,0
+CUST-2197,Acme-Fintech-1197,E-Commerce,Two Year,38,445.43,4,20,24,1,Bank Transfer,0
+CUST-2198,Acme-Healthcare-1198,Cybersecurity,Month-to-Month,8,460.79,7,23,36,2,Electronic Check,1
+CUST-2199,Acme-E-Commerce-1199,EdTech,Two Year,30,695.88,8,19,79,9,Credit Card,1
+CUST-2200,Acme-EdTech-1200,E-Commerce,Month-to-Month,19,63.81,0,14,36,10,Credit Card,0

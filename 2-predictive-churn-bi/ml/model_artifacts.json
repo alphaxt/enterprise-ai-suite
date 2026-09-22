@@ -1,0 +1,22 @@
+{
+  "model_type": "Native Calibrated Ensemble Classifier",
+  "metrics": {
+    "roc_auc": 0.887,
+    "accuracy": 0.9042,
+    "precision": 0.9521,
+    "recall": 0.9138,
+    "total_evaluated": 240
+  },
+  "feature_importances": {
+    "tenure_months": 0.0475,
+    "monthly_charges": 0.0032,
+    "support_tickets": 0.2364,
+    "login_freq_weekly": 0.0385,
+    "usage_drop_pct": 0.206,
+    "nps_score": 0.1463,
+    "is_month_to_month": 0.2276,
+    "is_two_year": 0.0945
+  },
+  "baseline_churn_rate": 0.6958,
+  "total_customers": 1200
+}

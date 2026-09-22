@@ -1,0 +1,22 @@
+AI INFRASTRUCTURE & RETRIEVAL SPECIFICATION (PRD-v4.2)
+Project Codename: DocuMind Autonomous RAG System
+Author: Principal AI Architect
+
+CHAPTER 1: SYSTEM ARCHITECTURE & LATENCY BUDGET
+1.1 Pipeline Overview: The retrieval engine employs a bi-encoder hierarchical hybrid search architecture. Ingestion automatically chunks incoming documentation using RecursiveCharacterTextSplitter with an optimal chunk size of 512 tokens and a 64-token sliding window overlap.
+1.2 Hybrid Retrieval:
+    - Dense Vector Search: Dense embeddings mapped into a 1536-dimensional manifold (or 384-dim BGE-small for local CPU inference).
+    - Sparse Keyword Match: BM25 Okapi algorithm with parameters k1=1.5 and b=0.75 for precision acronym and clause identifier recall.
+    - Reciprocal Rank Fusion (RRF): Combines dense and sparse rank lists using a ranking constant k=60 to elevate cross-relevant passages.
+1.3 Latency Budget:
+    - Vector Index Lookup: < 45 milliseconds
+    - Reranking (Cross-Encoder): < 110 milliseconds
+    - First Token Time-To-First-Token (TTFT): < 350 milliseconds on Groq Llama-3-70b or Claude 3.5 Sonnet.
+
+CHAPTER 2: AGENTIC ROUTING & GUARDRAILS
+2.1 Intent Classification: Before executing document search, an autonomous query router classifies user intent into four states:
+    - Direct Factual Extraction: Direct single-document vector query.
+    - Multi-Doc Synthesis: Parallel map-reduce search across multiple collections.
+    - Summarization: Full document map-reduce cluster condensation.
+    - Out of Scope / Malicious Injection: Prompt jailbreak rejection with standard safety guardrails.
+2.2 Hallucination Verification: Generated answers are automatically subjected to an entailment verification pass. Any claim lacking at least one matching citation span with a confidence score > 0.82 is flagged and rewritten or redacted.

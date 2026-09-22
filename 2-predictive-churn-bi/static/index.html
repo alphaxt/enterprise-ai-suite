@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulsePredict BI | Executive Churn & Retention ML Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #090d16;
+      --bg-surface: #101626;
+      --bg-card: rgba(22, 31, 52, 0.7);
+      --border: rgba(255, 255, 255, 0.08);
+      --primary: #3b82f6;
+      --accent-green: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-red: #ef4444;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      padding-bottom: 40px;
+    }
+
+    header {
+      background: rgba(16, 22, 38, 0.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 28px auto;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* KPI Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      backdrop-filter: blur(10px);
+    }
+
+    .kpi-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .kpi-val {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .kpi-sub {
+      font-size: 0.78rem;
+      color: var(--accent-green);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Workspace 2-Column Split */
+    .workspace-grid {
+      display: grid;
+      grid-template-columns: 460px 1fr;
+      gap: 24px;
+    }
+
+    /* Simulator Panel */
+    .simulator-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      backdrop-filter: blur(12px);
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .slider-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .slider-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+    }
+
+    .slider-label span:last-child {
+      font-family: 'JetBrains Mono', monospace;
+      color: #93c5fd;
+      font-weight: 600;
+    }
+
+    input[type=range] {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      outline: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #3b82f6;
+      box-shadow: 0 0 10px #3b82f6;
+      cursor: pointer;
+    }
+
+    select {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      outline: none;
+      font-family: inherit;
+    }
+
+    /* Risk Score Gauge Box */
+    .risk-gauge-box {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .risk-badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      align-self: center;
+    }
+
+    .risk-meter-bar {
+      height: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .risk-meter-fill {
+      height: 100%;
+      width: 45%;
+      transition: width 0.3s ease, background-color 0.3s ease;
+      border-radius: 8px;
+    }
+
+    .drivers-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .driver-pill {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Right Main Panel */
+    .right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Feature Importance Bars */
+    .features-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 180px 1fr 60px;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+    }
+
+    .bar-track {
+      height: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      border-radius: 6px;
+    }
+
+    /* Customers Table */
+    .table-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      overflow-x: auto;
+    }
+
+    .table-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 12px;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: #e2e8f0;
+    }
+
+    .btn-download {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-download:hover {
+      background: rgba(59, 130, 246, 0.2);
+      border-color: #3b82f6;
+    }
+
+    @media (max-width: 1024px) {
+      .workspace-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-icon">📊</div>
+      <div>
+        <div style="font-weight:700; font-size:1.15rem;">PulsePredict BI</div>
+        <div style="font-size:0.75rem; color:var(--text-muted);">Predictive Customer Churn & Retention Machine Learning</div>
+      </div>
+    </div>
+    <div style="display: flex; gap: 12px; align-items:center;">
+      <span style="font-size:0.8rem; color:#10b981; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); padding:4px 12px; border-radius:20px;">Ensemble Model Ready</span>
+      <a href="/docs" target="_blank" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem; border: 1px solid var(--border); padding: 5px 12px; border-radius: 8px;">API Specs</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Top Executive KPIs -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Analyzed ARR Portfolio</div>
+        <div class="kpi-val" id="kpi-total-arr">$6,482,000</div>
+        <div class="kpi-sub">Across 1,200 Accounts</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Identified ARR at Risk</div>
+        <div class="kpi-val" style="color:#f87171;" id="kpi-at-risk">$1,920,400</div>
+        <div class="kpi-sub" style="color:#f87171;">Proactive Action Required</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Baseline Churn Rate</div>
+        <div class="kpi-val" id="kpi-churn-rate">29.6%</div>
+        <div class="kpi-sub">Industry Benchmark: 32%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Model Accuracy (ROC-AUC)</div>
+        <div class="kpi-val" style="color:#60a5fa;" id="kpi-roc-auc">0.887</div>
+        <div class="kpi-sub">Cross-Validated ROC-AUC</div>
+      </div>
+    </div>
+
+    <!-- Main Workspace Split -->
+    <div class="workspace-grid">
+      <!-- Left: Interactive What-If Simulator -->
+      <div class="simulator-card">
+        <div class="card-title">
+          <span>🎛️ What-If Retention Simulator</span>
+        </div>
+        <p style="font-size:0.82rem; color:var(--text-muted); margin-top:-10px;">Adjust account parameters to observe real-time ML risk inference and drivers.</p>
+
+        <div class="slider-group">
+          <div class="slider-label">
+            <span>Contract Type</span>
+          </div>
+          <select id="sim-contract" onchange="runSimulation()">
+            <option value="Month-to-Month">Month-to-Month (Higher Churn Risk)</option>
+            <option value="One Year">One Year Commitment</option>
+            <option value="Two Year">Two Year Contract (High Retention)</option>
+          </select>
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-label">
+            <span>Support Tickets (Past 60 Days)</span>
+            <span id="lbl-tickets">5 tickets</span>
+          </div>
+          <input type="range" id="sim-tickets" min="0" max="10" value="5" oninput="updateSliders(); runSimulation();">
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-label">
+            <span>Usage Drop (%)</span>
+            <span id="lbl-usage">45%</span>
+          </div>
+          <input type="range" id="sim-usage" min="0" max="80" value="45" oninput="updateSliders(); runSimulation();">
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-label">
+            <span>Account Tenure (Months)</span>
+            <span id="lbl-tenure">4 months</span>
+          </div>
+          <input type="range" id="sim-tenure" min="1" max="48" value="4" oninput="updateSliders(); runSimulation();">
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-label">
+            <span>Monthly Subscription Fee ($)</span>
+            <span id="lbl-monthly">$450/mo</span>
+          </div>
+          <input type="range" id="sim-monthly" min="49" max="999" value="450" step="10" oninput="updateSliders(); runSimulation();">
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-label">
+            <span>NPS Score (1-10)</span>
+            <span id="lbl-nps">4 / 10</span>
+          </div>
+          <input type="range" id="sim-nps" min="1" max="10" value="4" oninput="updateSliders(); runSimulation();">
+        </div>
+
+        <!-- Real-Time Risk Gauge -->
+        <div class="risk-gauge-box">
+          <div style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase;">Predicted Churn Probability</div>
+          <div style="font-size:2.4rem; font-weight:800; font-family:'JetBrains Mono', monospace;" id="sim-probability">78.5%</div>
+          <div class="risk-badge" id="sim-badge" style="background:rgba(239,68,68,0.2); color:#ef4444; border:1px solid #ef4444;">CRITICAL RISK</div>
+          
+          <div class="risk-meter-bar">
+            <div class="risk-meter-fill" id="sim-bar" style="width: 78%; background: #ef4444;"></div>
+          </div>
+
+          <div style="font-size:0.85rem; color:#cbd5e1; margin-top:4px;">
+            Estimated ARR at Risk: <strong style="color:#f87171;" id="sim-arr-risk">$4,239 / yr</strong>
+          </div>
+        </div>
+
+        <!-- Key Contributing Drivers (XAI) -->
+        <div>
+          <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted); font-weight:700; margin-bottom:8px;">Explainable AI Drivers (XAI):</div>
+          <div class="drivers-list" id="sim-drivers">
+            <!-- Dynamic driver pills -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Model Insights & High Risk Table -->
+      <div class="right-col">
+        <!-- Feature Importances -->
+        <div class="features-card">
+          <div class="card-title" style="margin-bottom: 16px;">
+            <span>📈 Global Feature Importances (Model Interpretability)</span>
+          </div>
+          <div id="features-container">
+            <div class="bar-row">
+              <span>Support Ticket Spikes</span>
+              <div class="bar-track"><div class="bar-fill" style="width: 28%;"></div></div>
+              <span style="font-family:'JetBrains Mono';">28.4%</span>
+            </div>
+            <div class="bar-row">
+              <span>Contract Type (M-to-M)</span>
+              <div class="bar-track"><div class="bar-fill" style="width: 24%;"></div></div>
+              <span style="font-family:'JetBrains Mono';">24.1%</span>
+            </div>
+            <div class="bar-row">
+              <span>Usage Decline %</span>
+              <div class="bar-track"><div class="bar-fill" style="width: 22%;"></div></div>
+              <span style="font-family:'JetBrains Mono';">21.8%</span>
+            </div>
+            <div class="bar-row">
+              <span>Tenure (< 6 Months)</span>
+              <div class="bar-track"><div class="bar-fill" style="width: 14%;"></div></div>
+              <span style="font-family:'JetBrains Mono';">14.3%</span>
+            </div>
+            <div class="bar-row">
+              <span>Low NPS Detractor</span>
+              <div class="bar-track"><div class="bar-fill" style="width: 11%;"></div></div>
+              <span style="font-family:'JetBrains Mono';">11.4%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- High Risk Accounts Table -->
+        <div class="table-card">
+          <div class="table-header">
+            <div>
+              <div class="card-title">🚨 Accounts Requiring Immediate Retention Action</div>
+              <div style="font-size:0.78rem; color:var(--text-muted); margin-top:2px;">Real-time batch inference across subscription database.</div>
+            </div>
+            <button class="btn-download" onclick="exportCSV()">
+              <span>📥 Export CSV</span>
+            </button>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Customer ID</th>
+                <th>Company</th>
+                <th>Industry</th>
+                <th>Contract</th>
+                <th>Monthly</th>
+                <th>Tickets</th>
+                <th>Risk Level</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody id="customers-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function updateSliders() {
+      document.getElementById('lbl-tickets').innerText = document.getElementById('sim-tickets').value + ' tickets';
+      document.getElementById('lbl-usage').innerText = document.getElementById('sim-usage').value + '%';
+      document.getElementById('lbl-tenure').innerText = document.getElementById('sim-tenure').value + ' months';
+      document.getElementById('lbl-monthly').innerText = '$' + document.getElementById('sim-monthly').value + '/mo';
+      document.getElementById('lbl-nps').innerText = document.getElementById('sim-nps').value + ' / 10';
+    }
+
+    async function loadMetrics() {
+      try {
+        const res = await fetch('/api/metrics');
+        const data = await res.json();
+        if (data.metrics && data.metrics.roc_auc) {
+          document.getElementById('kpi-roc-auc').innerText = data.metrics.roc_auc;
+        }
+        if (data.total_arr) {
+          document.getElementById('kpi-total-arr').innerText = '$' + Number(data.total_arr).toLocaleString();
+        }
+        if (data.at_risk_arr) {
+          document.getElementById('kpi-at-risk').innerText = '$' + Number(data.at_risk_arr).toLocaleString();
+        }
+        if (data.baseline_churn_rate) {
+          document.getElementById('kpi-churn-rate').innerText = (data.baseline_churn_rate * 100).toFixed(1) + '%';
+        }
+      } catch (e) {
+        console.warn("Metrics API error:", e);
+      }
+    }
+
+    async function runSimulation() {
+      const payload = {
+        contract: document.getElementById('sim-contract').value,
+        support_tickets: Number(document.getElementById('sim-tickets').value),
+        usage_drop_pct: Number(document.getElementById('sim-usage').value),
+        tenure_months: Number(document.getElementById('sim-tenure').value),
+        monthly_charges: Number(document.getElementById('sim-monthly').value),
+        nps_score: Number(document.getElementById('sim-nps').value),
+        login_freq_weekly: 10
+      };
+
+      try {
+        const res = await fetch('/api/simulate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+
+        // Update UI
+        document.getElementById('sim-probability').innerText = data.churn_risk_percentage + '%';
+        document.getElementById('sim-arr-risk').innerText = '$' + Number(data.annual_revenue_at_risk).toLocaleString() + ' / yr';
+        
+        const badge = document.getElementById('sim-badge');
+        badge.innerText = data.risk_level + ' RISK';
+        badge.style.color = data.badge_color;
+        badge.style.borderColor = data.badge_color;
+        badge.style.background = data.badge_color + '22';
+
+        const bar = document.getElementById('sim-bar');
+        bar.style.width = data.churn_risk_percentage + '%';
+        bar.style.backgroundColor = data.badge_color;
+
+        // Populate Drivers
+        const driverContainer = document.getElementById('sim-drivers');
+        driverContainer.innerHTML = '';
+        data.drivers.forEach(d => {
+          const pill = document.createElement('div');
+          pill.className = 'driver-pill';
+          const color = d.type === 'risk' ? '#f87171' : '#34d399';
+          pill.innerHTML = `
+            <span>${d.factor}</span>
+            <span style="color:${color}; font-weight:600; font-family:'JetBrains Mono';">${d.impact}</span>
+          `;
+          driverContainer.appendChild(pill);
+        });
+
+      } catch (e) {
+        console.warn("Simulate error:", e);
+      }
+    }
+
+    async function loadCustomers() {
+      try {
+        const res = await fetch('/api/customers?limit=10');
+        const data = await res.json();
+        const tbody = document.getElementById('customers-body');
+        tbody.innerHTML = '';
+
+        data.customers.forEach(c => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td style="font-family:'JetBrains Mono'; font-weight:600;">${c.customer_id}</td>
+            <td>${c.company_name}</td>
+            <td><span style="color:#94a3b8;">${c.industry}</span></td>
+            <td>${c.contract}</td>
+            <td style="font-family:'JetBrains Mono';">$${c.monthly_charges.toFixed(0)}</td>
+            <td style="font-family:'JetBrains Mono';">${c.support_tickets}</td>
+            <td><span style="color:${c.badge_color}; font-weight:700;">${c.risk_level}</span></td>
+            <td style="font-family:'JetBrains Mono'; font-weight:700;">${c.churn_percentage}%</td>
+          `;
+          tbody.appendChild(row);
+        });
+      } catch (e) {
+        console.warn("Customers API error:", e);
+      }
+    }
+
+    function exportCSV() {
+      window.open('/api/customers?limit=100', '_blank');
+    }
+
+    window.onload = () => {
+      loadMetrics();
+      runSimulation();
+      loadCustomers();
+    };
+  </script>
+</body>
+</html>

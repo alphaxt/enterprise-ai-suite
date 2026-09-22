@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VisionGuard AI | Computer Vision & Industrial Safety Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07090e;
+      --panel: #0d121d;
+      --card: rgba(18, 24, 38, 0.75);
+      --border: rgba(255, 255, 255, 0.08);
+      --neon-green: #10b981;
+      --neon-cyan: #06b6d4;
+      --neon-amber: #f59e0b;
+      --neon-red: #ef4444;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: rgba(13, 18, 29, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, #10b981, #06b6d4);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.3);
+    }
+
+    .stream-status {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+    }
+
+    .pill-live {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--neon-green);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      padding: 4px 10px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pill-live::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--neon-green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--neon-green);
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      flex: 1;
+      padding: 24px 32px;
+      gap: 24px;
+    }
+
+    /* Video Player / Canvas Container */
+    .viewport-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .viewport-header {
+      background: rgba(255, 255, 255, 0.02);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+    }
+
+    .canvas-container {
+      position: relative;
+      flex: 1;
+      min-height: 520px;
+      background: #06080e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Tactical HUD Overlays */
+    .hud-overlay {
+      position: absolute;
+      top: 14px;
+      left: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.5;
+      pointer-events: none;
+    }
+
+    .hud-controls {
+      padding: 14px 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.01);
+    }
+
+    .btn-toggle {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-toggle:hover {
+      background: rgba(16, 185, 129, 0.15);
+      border-color: var(--neon-green);
+    }
+
+    /* Right Sidebar: Telemetry & Alarms */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .kpi-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .kpi-tile {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .kpi-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .kpi-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* Event Logs Card */
+    .events-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .events-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .events-feed {
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .event-item {
+      background: rgba(255, 255, 255, 0.02);
+      border-left: 3px solid #64748b;
+      padding: 10px 12px;
+      border-radius: 4px;
+      font-size: 0.78rem;
+    }
+
+    .event-item.critical {
+      border-left-color: var(--neon-red);
+      background: rgba(239, 68, 68, 0.08);
+    }
+
+    .event-item.warning {
+      border-left-color: var(--neon-amber);
+      background: rgba(245, 158, 11, 0.08);
+    }
+
+    .event-top {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 3px;
+    }
+
+    .event-name {
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+
+    .event-loc {
+      color: var(--muted);
+      font-size: 0.72rem;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 950px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-icon">👁️</div>
+      <div>
+        <div style="font-weight:700; font-size:1.15rem;">VisionGuard AI</div>
+        <div style="font-size:0.75rem; color:var(--muted);">Computer Vision & Virtual Geofence Safety Analytics</div>
+      </div>
+    </div>
+    <div class="stream-status">
+      <div class="pill-live">CHANNEL 01 • ACTIVE</div>
+      <span style="color:var(--neon-cyan);">FPS: 30.2</span>
+      <span style="color:var(--muted);">LATENCY: 22ms</span>
+    </div>
+  </header>
+
+  <div class="main-grid">
+    <!-- Camera Viewport -->
+    <div class="viewport-card">
+      <div class="viewport-header">
+        <span>CAM-01: INDUSTRIAL FLOOR SECTOR A</span>
+        <span style="font-family:'JetBrains Mono'; color:#a5b4fc;">RESOLUTION: 1920x1080 @ 30FPS</span>
+      </div>
+
+      <div class="canvas-container">
+        <canvas id="vision-canvas" width="800" height="500"></canvas>
+        <div class="hud-overlay">
+          <div>MODEL: YOLOv8-NATIVE + DEEPSORT</div>
+          <div>INFERENCE ACC: 94.8% mAP50</div>
+          <div>GEO-FENCE: ACTIVE [ZONE_A]</div>
+        </div>
+      </div>
+
+      <div class="hud-controls">
+        <button class="btn-toggle" onclick="toggleZones()">Toggle Geofence</button>
+        <button class="btn-toggle" onclick="toggleLabels()">Toggle Labels</button>
+        <div style="flex:1;"></div>
+        <a href="/docs" target="_blank" style="color: var(--muted); font-size: 0.8rem; text-decoration: none;">Swagger API</a>
+      </div>
+    </div>
+
+    <!-- Sidebar Telemetry & Alerts -->
+    <div class="sidebar">
+      <div class="kpi-row">
+        <div class="kpi-tile">
+          <div class="kpi-label">Active Personnel</div>
+          <div class="kpi-num" id="kpi-personnel">3</div>
+        </div>
+        <div class="kpi-tile">
+          <div class="kpi-label">Active Vehicles</div>
+          <div class="kpi-num" id="kpi-machinery">2</div>
+        </div>
+      </div>
+
+      <div class="kpi-tile">
+        <div class="kpi-label">Safety Compliance Score</div>
+        <div class="kpi-num" style="color:var(--neon-green);" id="kpi-compliance">82.5%</div>
+        <div style="font-size:0.72rem; color:var(--muted); margin-top:2px;">Calculated based on PPE & safe zone adherence</div>
+      </div>
+
+      <!-- Real-Time Alarms -->
+      <div class="events-card">
+        <div class="events-title">
+          <span>🚨 Live Security & Safety Log</span>
+          <span style="font-size:0.72rem; color:var(--neon-red); font-family:'JetBrains Mono';">REAL-TIME</span>
+        </div>
+        <div class="events-feed" id="events-feed">
+          <!-- Dynamically populated events -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('vision-canvas');
+    const ctx = canvas.getContext('2d');
+    let showZones = true;
+    let showLabels = true;
+
+    function toggleZones() { showZones = !showZones; }
+    function toggleLabels() { showLabels = !showLabels; }
+
+    async function fetchFrameAndRender() {
+      try {
+        const res = await fetch('/api/feed/next-frame');
+        const data = await res.json();
+
+        // Clear canvas
+        ctx.fillStyle = '#06080e';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Draw blueprint grid lines
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.03)';
+        ctx.lineWidth = 1;
+        for (let x = 0; x < canvas.width; x += 40) {
+          ctx.beginPath();
+          ctx.moveTo(x, 0);
+          ctx.lineTo(x, canvas.height);
+          ctx.stroke();
+        }
+        for (let y = 0; y < canvas.height; y += 40) {
+          ctx.beginPath();
+          ctx.moveTo(0, y);
+          ctx.lineTo(canvas.width, y);
+          ctx.stroke();
+        }
+
+        // Draw Hazard Zone Polygon
+        if (showZones && data.hazard_zone) {
+          ctx.save();
+          ctx.beginPath();
+          data.hazard_zone.forEach((pt, i) => {
+            if (i === 0) ctx.moveTo(pt[0], pt[1]);
+            else ctx.lineTo(pt[0], pt[1]);
+          });
+          ctx.closePath();
+          ctx.fillStyle = 'rgba(239, 68, 68, 0.12)';
+          ctx.fill();
+          ctx.strokeStyle = '#ef4444';
+          ctx.lineWidth = 2;
+          ctx.setLineDash([8, 6]);
+          ctx.stroke();
+
+          // Zone Tag
+          ctx.fillStyle = '#ef4444';
+          ctx.font = '600 11px JetBrains Mono';
+          ctx.fillText('⚠ RESTRICTED ZONE A (AUTOMATED MACHINERY)', data.hazard_zone[0][0] + 10, data.hazard_zone[0][1] + 20);
+          ctx.restore();
+        }
+
+        // Draw Detections
+        if (data.detections) {
+          data.detections.forEach(det => {
+            const [x, y, w, h] = det.bbox;
+            const isAlert = det.in_zone || !det.ppe_compliant;
+            const color = det.in_zone ? '#ef4444' : (!det.ppe_compliant ? '#f59e0b' : '#10b981');
+
+            // Draw bounding box
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 2;
+            ctx.strokeRect(x, y, w, h);
+
+            // Corner highlights
+            const cornerLen = 8;
+            ctx.fillStyle = color;
+            ctx.fillRect(x - 1, y - 1, cornerLen, 2);
+            ctx.fillRect(x - 1, y - 1, 2, cornerLen);
+            ctx.fillRect(x + w - cornerLen + 1, y - 1, cornerLen, 2);
+            ctx.fillRect(x + w - 1, y - 1, 2, cornerLen);
+
+            // Centroid foot dot
+            ctx.beginPath();
+            ctx.arc(x + w/2, y + h, 4, 0, Math.PI * 2);
+            ctx.fillStyle = color;
+            ctx.fill();
+
+            // Label tag
+            if (showLabels) {
+              ctx.fillStyle = color;
+              ctx.fillRect(x, y - 20, w > 90 ? w : 90, 20);
+              ctx.fillStyle = '#000';
+              ctx.font = 'bold 10px JetBrains Mono';
+              ctx.fillText(`${det.label} #${det.track_id}`, x + 4, y - 6);
+            }
+          });
+        }
+
+        // Update KPIs
+        if (data.metrics) {
+          document.getElementById('kpi-personnel').innerText = data.metrics.active_personnel;
+          document.getElementById('kpi-machinery').innerText = data.metrics.active_machinery;
+          document.getElementById('kpi-compliance').innerText = data.metrics.compliance_percentage + '%';
+        }
+
+      } catch (err) {
+        console.warn("Frame fetch error:", err);
+      }
+    }
+
+    async function loadAlerts() {
+      try {
+        const res = await fetch('/api/alerts');
+        const data = await res.json();
+        const feed = document.getElementById('events-feed');
+        feed.innerHTML = '';
+
+        data.alerts.forEach(a => {
+          const item = document.createElement('div');
+          item.className = `event-item ${a.severity.toLowerCase()}`;
+          item.innerHTML = `
+            <div class="event-top">
+              <span class="event-name">${a.title}</span>
+              <span style="color:var(--muted);">${a.time}</span>
+            </div>
+            <div class="event-loc">📍 ${a.location}</div>
+          `;
+          feed.appendChild(item);
+        });
+      } catch (e) {
+        console.warn("Alerts fetch error:", e);
+      }
+    }
+
+    // Run animation loop (approx 15 FPS for silky smooth responsiveness)
+    setInterval(fetchFrameAndRender, 65);
+    setInterval(loadAlerts, 2500);
+    loadAlerts();
+  </script>
+</body>
+</html>

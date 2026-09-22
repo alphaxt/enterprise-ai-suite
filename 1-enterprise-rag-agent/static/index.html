@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocuMind AI | Enterprise RAG & Autonomous Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0d14;
+      --bg-secondary: #101522;
+      --bg-card: rgba(22, 28, 45, 0.7);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-active: rgba(99, 102, 241, 0.4);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --primary-glow: rgba(99, 102, 241, 0.25);
+      --accent: #10b981;
+      --accent-glow: rgba(16, 185, 129, 0.2);
+      --danger: #ef4444;
+      --card-radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* Ambient background gradient glow */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -200px;
+      left: 15%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(0,0,0,0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Header */
+    header {
+      background: rgba(16, 21, 34, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 14px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, #6366f1, #a855f7);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 0 20px var(--primary-glow);
+    }
+
+    .brand-title {
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.3px;
+    }
+
+    .badge-live {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-live::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #10b981;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* Main Container Grid */
+    .app-layout {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      flex: 1;
+      height: calc(100vh - 67px);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Left Sidebar */
+    aside {
+      background: var(--bg-secondary);
+      border-right: 1px solid var(--border-color);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      overflow-y: auto;
+    }
+
+    .sidebar-section h3 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .stats-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--card-radius);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+
+    .stat-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      color: #a5b4fc;
+    }
+
+    .doc-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      color: #e2e8f0;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .doc-pill:hover {
+      border-color: var(--primary);
+      background: rgba(99, 102, 241, 0.08);
+    }
+
+    /* Upload Box */
+    .upload-zone {
+      border: 2px dashed rgba(255, 255, 255, 0.12);
+      border-radius: var(--card-radius);
+      padding: 20px 14px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .upload-zone:hover {
+      border-color: var(--primary);
+      background: rgba(99, 102, 241, 0.04);
+    }
+
+    .upload-zone input {
+      display: none;
+    }
+
+    .upload-icon {
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .upload-text {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Main Chat Section */
+    main {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: radial-gradient(circle at 50% 10%, rgba(22, 28, 45, 0.4) 0%, transparent 60%);
+    }
+
+    .quick-chips-bar {
+      padding: 14px 28px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow-x: auto;
+      background: rgba(16, 21, 34, 0.4);
+    }
+
+    .chip-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .chip {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: #cbd5e1;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .chip:hover {
+      background: var(--primary-glow);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    /* Chat Messages Viewport */
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .message {
+      display: flex;
+      gap: 16px;
+      max-width: 880px;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .msg-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .msg-avatar.user {
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    }
+
+    .msg-avatar.bot {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      box-shadow: 0 0 16px var(--primary-glow);
+    }
+
+    .msg-body {
+      flex: 1;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--card-radius);
+      padding: 18px 22px;
+      backdrop-filter: blur(12px);
+    }
+
+    .user .msg-body {
+      background: rgba(99, 102, 241, 0.1);
+      border-color: rgba(99, 102, 241, 0.25);
+    }
+
+    .msg-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .msg-content {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: #e2e8f0;
+      white-space: pre-wrap;
+    }
+
+    /* Citations Panel */
+    .citations-container {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .citations-header {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #a5b4fc;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .citation-card {
+      background: rgba(0, 0, 0, 0.35);
+      border-left: 3px solid #6366f1;
+      padding: 10px 14px;
+      border-radius: 4px 8px 8px 4px;
+      font-size: 0.82rem;
+    }
+
+    .citation-ref {
+      font-weight: 600;
+      color: #818cf8;
+      margin-bottom: 3px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .citation-snippet {
+      color: #94a3b8;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    /* Chat Input Bar */
+    .chat-input-bar {
+      padding: 20px 28px;
+      background: rgba(16, 21, 34, 0.9);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .input-wrapper {
+      flex: 1;
+      position: relative;
+    }
+
+    .input-wrapper input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 14px 20px;
+      font-size: 0.95rem;
+      color: #fff;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .input-wrapper input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 15px var(--primary-glow);
+    }
+
+    .btn-send {
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      color: #fff;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      box-shadow: 0 0 16px var(--primary-glow);
+    }
+
+    .btn-send:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    .btn-send:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .app-layout {
+        grid-template-columns: 1fr;
+      }
+      aside {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-icon">🧠</div>
+      <div>
+        <div class="brand-title">DocuMind AI <span style="font-size:0.75rem; color:#818cf8; font-weight:500;">Enterprise RAG</span></div>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <div class="badge-live">Hybrid Vector Engine Active</div>
+      <a href="/docs" target="_blank" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem; border: 1px solid var(--border-color); padding: 5px 12px; border-radius: 8px;">Swagger API</a>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    <!-- Left Navigation & Stats -->
+    <aside>
+      <div class="sidebar-section">
+        <h3>System Metrics (LLMOps)</h3>
+        <div class="stats-card">
+          <div class="stat-row">
+            <span>Indexed Documents</span>
+            <span class="stat-val" id="stat-docs">2</span>
+          </div>
+          <div class="stat-row">
+            <span>Vector Chunks</span>
+            <span class="stat-val" id="stat-chunks">14</span>
+          </div>
+          <div class="stat-row">
+            <span>Avg Retrieval</span>
+            <span class="stat-val" id="stat-latency">&lt; 15 ms</span>
+          </div>
+          <div class="stat-row">
+            <span>Guardrails</span>
+            <span class="stat-val" style="color:#34d399;">Active</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Loaded Knowledge Base</h3>
+        <div id="doc-list">
+          <div class="doc-pill">📄 enterprise_sla.txt</div>
+          <div class="doc-pill">📄 ai_product_specs.txt</div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Add Knowledge Base</h3>
+        <label class="upload-zone" for="file-upload">
+          <div class="upload-icon">📤</div>
+          <div style="font-weight:600; font-size:0.85rem; margin-bottom:4px;">Upload Document</div>
+          <div class="upload-text">TXT, MD, PDF or Raw Text</div>
+          <input type="file" id="file-upload" onchange="handleFileUpload(event)">
+        </label>
+        <div id="upload-status" style="font-size:0.75rem; color:#34d399; margin-top:6px; display:none;"></div>
+      </div>
+    </aside>
+
+    <!-- Main Chat Workspace -->
+    <main>
+      <div class="quick-chips-bar">
+        <span class="chip-label">Try Demo Prompts:</span>
+        <div class="chip" onclick="askChip('What is the service availability guarantee and penalties for downtime?')">SLA Uptime & Penalties</div>
+        <div class="chip" onclick="askChip('Explain the hybrid search architecture and latency budgets.')">Hybrid Architecture & Latency</div>
+        <div class="chip" onclick="askChip('Are customer documents stored or used for LLM retraining?')">Data Privacy & Zero-Retention</div>
+        <div class="chip" onclick="askChip('Summarize the termination and data destruction process.')">Data Destruction Protocol</div>
+      </div>
+
+      <div class="chat-messages" id="chat-messages">
+        <!-- Initial Welcome Message -->
+        <div class="message">
+          <div class="msg-avatar bot">🤖</div>
+          <div class="msg-body">
+            <div class="msg-meta">
+              <span>DocuMind Autonomous Agent</span>
+              <span>•</span>
+              <span style="color:#10b981;">Hybrid RAG Engine Online</span>
+            </div>
+            <div class="msg-content">Hello! I am your Enterprise Document Intelligence Assistant. I provide **100% cited answers** directly referenced from your business contracts, SLA agreements, and technical architecture specs with zero hallucinations.
+
+Select a sample query above or ask any question about your documents!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Bar -->
+      <div class="chat-input-bar">
+        <div class="input-wrapper">
+          <input type="text" id="query-input" placeholder="Ask a question across your enterprise documents..." onkeydown="if(event.key === 'Enter') sendQuery()">
+        </div>
+        <button class="btn-send" id="btn-send" onclick="sendQuery()">
+          <span>Query Agent</span>
+          <span>⚡</span>
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Fetch system stats
+    async function loadStats() {
+      try {
+        const res = await fetch('/api/stats');
+        const data = await res.json();
+        document.getElementById('stat-docs').innerText = data.total_documents;
+        document.getElementById('stat-chunks').innerText = data.total_chunks;
+      } catch (e) {
+        console.warn("API offline or starting...");
+      }
+    }
+
+    function askChip(text) {
+      document.getElementById('query-input').value = text;
+      sendQuery();
+    }
+
+    async function sendQuery() {
+      const input = document.getElementById('query-input');
+      const query = input.value.trim();
+      if (!query) return;
+
+      const chat = document.getElementById('chat-messages');
+
+      // Append User Message
+      const userMsg = document.createElement('div');
+      userMsg.className = 'message user';
+      userMsg.innerHTML = `
+        <div class="msg-avatar user">👤</div>
+        <div class="msg-body">
+          <div class="msg-meta"><span>You</span></div>
+          <div class="msg-content">${escapeHtml(query)}</div>
+        </div>
+      `;
+      chat.appendChild(userMsg);
+      input.value = '';
+      chat.scrollTop = chat.scrollHeight;
+
+      // Append Loading Indicator
+      const loadingMsg = document.createElement('div');
+      loadingMsg.className = 'message';
+      loadingMsg.id = 'loading-bubble';
+      loadingMsg.innerHTML = `
+        <div class="msg-avatar bot">🤖</div>
+        <div class="msg-body">
+          <div class="msg-meta"><span>Retrieving semantic chunks...</span></div>
+          <div class="msg-content" style="color:#94a3b8;">Searching vector index & verifying citations...</div>
+        </div>
+      `;
+      chat.appendChild(loadingMsg);
+      chat.scrollTop = chat.scrollHeight;
+
+      try {
+        const res = await fetch('/api/query', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query: query, top_k: 3 })
+        });
+        const data = await res.json();
+
+        // Remove loading
+        const loader = document.getElementById('loading-bubble');
+        if (loader) loader.remove();
+
+        // Build Citations HTML
+        let citationsHtml = '';
+        if (data.citations && data.citations.length > 0) {
+          citationsHtml = `<div class="citations-container">
+            <div class="citations-header">🔗 Verified Source Citations (${data.citations.length}):</div>`;
+          data.citations.forEach((c) => {
+            citationsHtml += `
+              <div class="citation-card">
+                <div class="citation-ref">${c.citation_id} ${escapeHtml(c.doc_name)} — Page ${c.page} (${escapeHtml(c.section)})</div>
+                <div class="citation-snippet">"${escapeHtml(c.exact_quote)}"</div>
+              </div>`;
+          });
+          citationsHtml += `</div>`;
+        }
+
+        // Append Bot Response
+        const botMsg = document.createElement('div');
+        botMsg.className = 'message';
+        botMsg.innerHTML = `
+          <div class="msg-avatar bot">🤖</div>
+          <div class="msg-body">
+            <div class="msg-meta">
+              <span>DocuMind Agent</span>
+              <span>•</span>
+              <span style="color:#a5b4fc;">Latency: ${data.latency_ms}ms</span>
+              <span>•</span>
+              <span style="color:${data.guardrail_status === 'OUT_OF_SCOPE_REJECTED' ? '#f59e0b' : '#34d399'};">${data.guardrail_status}</span>
+            </div>
+            <div class="msg-content">${formatAnswer(data.answer)}</div>
+            ${citationsHtml}
+          </div>
+        `;
+        chat.appendChild(botMsg);
+        document.getElementById('stat-latency').innerText = `${data.latency_ms} ms`;
+        chat.scrollTop = chat.scrollHeight;
+
+      } catch (err) {
+        const loader = document.getElementById('loading-bubble');
+        if (loader) loader.remove();
+
+        const errMsg = document.createElement('div');
+        errMsg.className = 'message';
+        errMsg.innerHTML = `
+          <div class="msg-avatar bot">🤖</div>
+          <div class="msg-body" style="border-color: rgba(239, 68, 68, 0.4);">
+            <div class="msg-meta"><span style="color:#ef4444;">Error</span></div>
+            <div class="msg-content">Failed to connect to backend server. Make sure <code>python backend/main.py</code> is running.</div>
+          </div>
+        `;
+        chat.appendChild(errMsg);
+      }
+    }
+
+    async function handleFileUpload(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const status = document.getElementById('upload-status');
+      status.style.display = 'block';
+      status.style.color = '#a5b4fc';
+      status.innerText = `Ingesting ${file.name}...`;
+
+      const formData = new FormData();
+      formData.append('file', file);
+
+      try {
+        const res = await fetch('/api/upload', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await res.json();
+        status.style.color = '#34d399';
+        status.innerText = `✅ Indexed ${data.chunks_indexed} new chunks!`;
+
+        // Update list
+        const docList = document.getElementById('doc-list');
+        const pill = document.createElement('div');
+        pill.className = 'doc-pill';
+        pill.innerText = `📄 ${file.name}`;
+        docList.appendChild(pill);
+        loadStats();
+      } catch (err) {
+        status.style.color = '#ef4444';
+        status.innerText = '❌ Failed to upload document.';
+      }
+    }
+
+    function formatAnswer(text) {
+      // Basic markdown styling for bullets and headers
+      return text
+        .replace(/### (.*)/g, '<strong style="color:#818cf8; font-size:1.05rem; display:block; margin-bottom:6px;">$1</strong>')
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/• (.*)/g, '<div style="margin-left:8px; margin-bottom:4px;">• $1</div>')
+        .replace(/- (.*)/g, '<div style="margin-left:8px; margin-bottom:4px;">• $1</div>');
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>"']/g, function(m) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
+      });
+    }
+
+    window.onload = loadStats;
+  </script>
+</body>
+</html>
