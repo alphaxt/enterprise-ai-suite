@@ -133,15 +133,6 @@ python backend/main.py
 
 ---
 
-## 💼 Freelancing & Client Deployment Blueprint
-
-Refer to [FREELANCING_PLAYBOOK.md](FREELANCING_PLAYBOOK.md) for:
-- Tailored **Upwork profile titles** and portfolio descriptions.
-- High-converting **proposal templates** for GenAI/RAG, Predictive ML, Computer Vision, and Scraping.
-- Live client demo strategy and pricing tiers ($400 – $3,000+ per milestone).
-
----
-
 ## 👤 Author
 
 **Muhammad Danish**
